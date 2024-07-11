@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
           <button
             className="icon-button"
             style={{ backgroundImage: `url('images/Group 427318961.svg')` }}
-            onClick={() => openNewPage('https://example.com/page3')}
+            onClick={() => openNewPage('http://localhost:3000/setting1')}
           ></button>
         </div>
       </footer>
