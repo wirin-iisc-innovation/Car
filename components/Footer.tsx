@@ -7,6 +7,8 @@ const openNewPage = (url: string) => {
 
 const Footer: React.FC = () => {
   const [isAcPopupVisible, setAcPopupVisible] = useState(false);
+  const [temperature, setTemperature] = useState(24);
+  const [fanSpeed, setFanSpeed] = useState(3);
 
   const toggleAcPopup = () => {
     setAcPopupVisible(!isAcPopupVisible);
@@ -49,7 +51,7 @@ const Footer: React.FC = () => {
           <button
             className="icon-button"
             style={{ backgroundImage: `url('images/Group 427318961.svg')` }}
-            onClick={() => openNewPage('http://localhost:3000/setting1')}
+            onClick={() => openNewPage('https://example.com/page3')}
           ></button>
         </div>
       </footer>
@@ -64,15 +66,37 @@ const Footer: React.FC = () => {
               <div className="temperature-control">
                 <span>❆ Temperature</span>
                 <div className="slider-container">
-                  <span>24°C</span>
-                  <input type="range" min="16" max="30" defaultValue="24" />
+                  <span>{temperature}°C</span>
+                  <input
+                    type="range"
+                    min="16"
+                    max="30"
+                    value={temperature}
+                    onChange={(e) => setTemperature(parseInt(e.target.value))}
+                    className="temperature-slider"
+                  />
                 </div>
               </div>
               <div className="fan-speed-control">
                 <span>♺ Fan speed</span>
                 <div className="slider-container">
-                  <span>3</span>
-                  <input type="range" min="1" max="5" defaultValue="3" />
+                  <span>{fanSpeed}</span>
+                  <input
+                    type="range"
+                    min="1"
+                    max="5"
+                    value={fanSpeed}
+                    onChange={(e) => setFanSpeed(parseInt(e.target.value))}
+                    className="fan-speed-slider"
+                  />
+                  <div className="fan-speed-dots">
+                    {[1, 2, 3, 4, 5].map((speed) => (
+                      <span
+                        key={speed}
+                        className={`dot ${fanSpeed >= speed ? 'active' : ''}`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
