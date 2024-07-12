@@ -1,30 +1,21 @@
 import React from 'react';
+import Header from '../components/Header';
+import Head from 'next/head';
+import Footer from '../components/Footer';
 
 const Start: React.FC = () => {
   return (
     <div className="container">
-      <header className="header">
-        <div className="left-section">
-          <div className="time-date-weather">
-            <div className="time-date">
-              <div className="time">12:45 PM</div>
-              <div className="date">Sunday, 5 May</div>
-            </div>
-            <div className="weather">
-            <img src="/images/tabler_sun-filled.svg" alt="Weather Icon" />
-              <span>23°C / 27°C</span>
-            </div>
-          </div>
-        </div>
-        <div className="right-section">
-          <div className="connectivity-icons">
-            <div className="icon wifi-icon" style={{backgroundImage: "url('images/signal.svg')"}}></div>
-            <div className="icon bluetooth-icon" style={{backgroundImage: "url('images/bluetooth.svg')"}}></div>
-            <div className="icon signal-icon" style={{backgroundImage: "url('images/5g.svg')"}}></div>
-          </div>
-        </div>
-      </header>
-
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="/styles/globals.css" />
+        <title>Car Dashboard with Music Toolbar</title>
+      </Head>
+      <Header />
+      
       <main className="main-content" role="main">
         <div className="start-screen">
           <div className="chevrons left-chevrons">
@@ -45,7 +36,7 @@ const Start: React.FC = () => {
           </div>
         </div>
       </main>
-
+      
       <div className="battery-info-bar">
         <div className="battery-info">
           <div className="remaining">
@@ -69,10 +60,12 @@ const Start: React.FC = () => {
             <div id="battery-bar-fill" className="battery-bar-fill"></div>
           </div>
         </div>
+        
       </div>
-
-      <div className="toolbar"></div>
+      <Footer />
+      
     </div>
+    
   );
 };
 
