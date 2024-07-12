@@ -70,8 +70,8 @@ export default function Home() {
       <Header />
 
       <main className="main-content">
-        <img src="/images/Frame 4564.svg" alt="Frame" className="frame-image" />
-        <img src="/images/map.svg" alt="Map" className="map-image" />
+        <img src="/images_map/Frame 4564.svg" alt="Frame" className="frame-image" />
+        <img src="/images_map/map.svg" alt="Map" className="map-image" />
       </main>
 
       <Footer />

@@ -6,13 +6,13 @@ const MainContent = () => {
             <p className="select-mode-text">Select a mode to start driving</p>
             <div className="mode-buttons">
                 <div className="mode-button">
-                    <img src="/images/Drive Glow.svg" alt="Drive Icon" />
+                    <img src="/images_mode/Drive Glow.svg" alt="Drive Icon" />
                 </div>
                 <div className="mode-button">
-                    <img src="/images/parked.svg" alt="Parked Icon" />
+                    <img src="/images_mode/parked.svg" alt="Parked Icon" />
                 </div>
                 <div className="mode-button">
-                    <img src="/images/auto.svg" alt="Auto Icon" />
+                    <img src="/images_mode/auto.svg" alt="Auto Icon" />
                 </div>
             </div>
             <div className="battery-info-bar">
