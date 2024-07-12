@@ -3,11 +3,11 @@ import LightSettingPage from "../pages/settings/LightsSetting";
 
 const SettingsLayout = ({children} : {children: ReactNode}) => {
     return (
-        <>
-            <div
-            style={
+        <div
+        style={
                 {
-                    width: '1964px',
+                    width: '2000px',
+                    height: '522px',
                     display: 'flex'
                 }
             }
@@ -16,7 +16,6 @@ const SettingsLayout = ({children} : {children: ReactNode}) => {
             {children}
 
         </div>
-        </>
     )
 }
 

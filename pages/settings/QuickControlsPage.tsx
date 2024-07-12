@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import { Button } from '../../components/Button';
 import { GroupButtonItem } from '../../components/GroupButtonItem';
-import SettingsLabel from '../../components/SettingsLabel';
 
 const Container = styled.div`
   display: flex;
@@ -74,17 +73,7 @@ const QuickControlsSettingsPage = () => {
   return (
     <Container>
         <MainContent>
-            <ContentSection>
-                <SettingsLabel title='Display Brightness'/>
-            </ContentSection>
-
-            <ContentSection>
-                <SettingsLabel title='Exterior Lights'/>
-            </ContentSection>
-
-            <ContentSection>
-                <SettingsLabel title='Adjustments'/>
-            </ContentSection>
+            <text>HIIIIIIIIIIIIII</text>
         </MainContent>
     </Container>
   );

@@ -8,7 +8,7 @@ import { GroupButtonItem } from '../../components/GroupButtonItem';
 
 const Container = styled.div`
   display: flex;
-  height: 434px;
+  height: 522px;
   width: 1964px;
 `;
 

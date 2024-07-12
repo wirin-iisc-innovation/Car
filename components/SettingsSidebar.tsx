@@ -43,13 +43,13 @@ export const SettingsSidebar = ( {selectedItem, selectedIndex, setSelectedIndex}
                     color: '#fff',
                     verticalAlign: 'center',
                     paddingTop: '12px',
-                    maxHeight: '434px'
+                    maxHeight: '522px'
                 }
             }
         >
         {
             items.map((value, index) => (
-                <SidebarMenuItem title={value} isSelected={selectedIndex === index} clickHandler={() => clickHandle(value, index)} icon={icons[index]}/>
+                <SidebarMenuItem key={index} title={value} isSelected={selectedIndex === index} clickHandler={() => clickHandle(value, index)} icon={icons[index]}/>
             ))
         }
         </div>

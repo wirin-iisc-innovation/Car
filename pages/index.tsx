@@ -13,7 +13,7 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 {/* <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400&display=swap" rel="stylesheet" /> */}
             </Head>
-            <div className="container2">
+            <div className="container">
                 <RootLayout>
                     <SettingsPage/>
                 </RootLayout>

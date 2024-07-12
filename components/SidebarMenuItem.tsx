@@ -14,6 +14,7 @@ export const SidebarMenuItem = ({title, isSelected, icon, clickHandler} : Sideba
 
     return (
         <div
+            key={title}
             style={
                 {
                     color: '#737373',
@@ -29,6 +30,7 @@ export const SidebarMenuItem = ({title, isSelected, icon, clickHandler} : Sideba
         >
         
         <button
+            key={title}
             onClick={clickHandler}
             style={
                 {
