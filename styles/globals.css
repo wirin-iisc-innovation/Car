@@ -584,6 +584,37 @@ body {
   
 
   
+.mode-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+  }
+  
+  .mode-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 217.31px; /* Square button size */
+    height: 263.88px; /* Square button size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .mode-button img {
+    width: 217.31px; /* Icon size */
+    height: 263.88px; /* Icon size */
+  }
+  
+  .mode-button p {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .mode-button:hover {
+    
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow to give a pop-up effect */
+  }
   
   
 

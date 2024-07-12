@@ -1,0 +1,306 @@
+body {
+  font-family: 'Urbanist', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #131D43 0%, #131E41 25%, #1D2A5D 40%, #12224F 68%, #081F44 100%);
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 2000px; /* Increased width to fit the icons */
+  height: 100%;
+  max-height: 600px; /* Full height with a max */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  border: 2px solid #fff; /* Thin white border */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+}
+
+.left-section, .right-section {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.time-date-weather {
+  display: flex;
+  align-items: center;
+}
+
+.time-date {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  margin-right: 10px;
+}
+
+.time {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.date {
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.weather #weather-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.weather #temperature {
+  font-size: 18px;
+}
+
+.connectivity-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.chevrons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.left-chevrons {
+  transform: scale(-1, 1);
+}
+
+.chevron {
+  width: 100px;
+  height: 100px;
+  border-style: solid;
+  border-width: 3px 3px 0 0;
+  border-color: #00ffff;
+  transform: rotate(45deg);
+  margin: 0 -40px;
+  opacity: 0.2;
+}
+
+.chevron:nth-child(1) { animation: pulse 2s infinite; }
+.chevron:nth-child(2) { animation: pulse 2s infinite 0.1s; }
+.chevron:nth-child(3) { animation: pulse 2s infinite 0.2s; }
+.chevron:nth-child(4) { animation: pulse 2s infinite 0.3s; }
+.chevron:nth-child(5) { animation: pulse 2s infinite 0.4s; }
+.chevron:nth-child(6) { animation: pulse 2s infinite 0.5s; }
+.chevron:nth-child(7) { animation: pulse 2s infinite 0.6s; }
+.chevron:nth-child(8) { animation: pulse 2s infinite 0.7s; }
+.chevron:nth-child(9) { animation: pulse 2s infinite 0.8s; }
+.chevron:nth-child(10) { animation: pulse 2s infinite 0.9s; }
+.chevron:nth-child(11) { animation: pulse 2s infinite 1s; }
+.chevron:nth-child(12) { animation: pulse 2s infinite 1.1s; }
+.chevron:nth-child(13) { animation: pulse 2s infinite 1.2s; }
+.chevron:nth-child(14) { animation: pulse 2s infinite 1.3s; }
+
+@keyframes pulse {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+.start-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.start-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #1e3a5f, #0f1c2e);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.start-circle::before,
+.start-circle::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #00ffff;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.start-circle::before {
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+}
+
+.start-circle::after {
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+}
+
+.start-circle:hover {
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
+}
+
+.start-circle:hover::before {
+  opacity: 0.7;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.start-circle:hover::after {
+  opacity: 0.9;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+.start-text {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.mode-text {
+  font-size: 14px;
+  color: #00ffff;
+  opacity: 0.7;
+  margin-top: 5px;
+}
+
+.battery-info-bar {
+  display: flex;
+  align-items: center; /* Align items to the center vertically */
+  justify-content: flex-end; /* Align items to the right */
+  margin-right: 50px; /* Adjust margin to align */
+  margin-top: auto; /* Push to the bottom */
+  padding-bottom: 20px; /* Add padding to create space */
+  position: absolute; /* Position absolute for precise alignment */
+  top: 50%; /* Align vertically in the middle */
+  transform: translateY(-50%); /* Center vertically */
+  right: 0; /* Align to the right */
+}
+
+.battery-info {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 255px;
+  margin-right: 60px; /* Increased margin to push stats left */
+}
+
+.remaining-km {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400; /* Reduced font weight */
+  font-size: 38px;
+  margin-bottom: 0; /* Reduce margin */
+}
+
+.unit {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400; /* Reduced font weight */
+  font-size: 18px;
+  margin-bottom: 0; /* Reduce margin */
+}
+
+.remaining-text, .battery-text, .average-text {
+  font-size: 15px;
+  font-weight: 400; /* Reduced font weight */
+  margin-top: 0; /* Reduce margin */
+  margin-bottom: 5px; /* Adjust margin */
+}
+
+.battery-percentage {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400; /* Reduced font weight */
+  font-size: 38px;
+  margin-bottom: 0; /* Reduce margin */
+}
+
+.avg-wh {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400; /* Reduced font weight */
+  font-size: 38px;
+  margin-bottom: 0; /* Reduce margin */
+}
+
+.battery-bar-container {
+  width: 16px;
+  height: 306px; /* Adjusted height */
+  border-radius: 170px;
+  background-color: #D9D9D9;
+  position: absolute; /* Changed to absolute for precise positioning */
+  top: -5%; /* Adjust to align with stats */
+  right: 20px; /* Adjust to align with stats */
+}
+
+.battery-bar-base {
+  width: 100%;
+  height: 100%;
+  background-color: #D9D9D9;
+  position: absolute;
+  bottom: 0;
+  border-radius: 170px; /* Rounded bottom */
+}
+.battery-bar-fill {
+  width: 100%;
+  background-color: #2CBE6B;
+  position: absolute;
+  bottom: 0;
+  height: 85%; /* Initially set to 85% */
+  border-radius:  0px 0px 170px 170px; /* Rounded top and bottom */
+  
+}
