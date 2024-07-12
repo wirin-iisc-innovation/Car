@@ -1,6 +1,5 @@
 import { MouseEvent, MouseEventHandler, ReactEventHandler, ReactNode } from "react";
 import { IconType } from "react-icons";
-import { MenuItemIcon } from "./Icon";
 
 type clickFunc = (item: string, index: number) => void
 
