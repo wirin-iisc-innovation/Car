@@ -7,6 +7,7 @@ import '../styles/globals.css';
 import '../styles/auto.css'; 
 
 
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
