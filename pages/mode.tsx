@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import MainContent from '../components/MainContent_mode';
 import Footer from '../components/Footer';
 
+
 const Home = () => {
     return (
         <div className="container">
