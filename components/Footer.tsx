@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
     <>
       <footer className="footer">
         <div className="toolbar">
-          <Link href="/page1" legacyBehavior>
+          <Link href="/mode" legacyBehavior>
             <a>
               <button
                 className="icon-button"
