@@ -1,9 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
-import MainContent from '../components/MainContent_mode';
+import MainContent from '../components/alert_comp';
 import Footer from '../components/Footer';
-
 
 const Home = () => {
     return (
