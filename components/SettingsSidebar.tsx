@@ -1,20 +1,19 @@
+"use client"
+
 import { ReactElement, useState } from "react"
 import { SidebarMenuItem } from "./SidebarMenuItem";
-import { MenuItemIcon } from "./Icon";
 
-import { FaLightbulb, FaLock, FaCar, FaKey, FaCog, FaToggleOff } from 'react-icons/fa';
-import { AiFillCar } from 'react-icons/ai';
-import { MdDirectionsCar, MdSecurity, MdMiscellaneousServices, MdArrowBack} from 'react-icons/md';
-
+type stateHandler = () => void;
 
 interface SettingsSidebarProps {
-    items: string[];
-    icons: ReactElement[];
-    selectedItem: string;
-    selectedIndex: number;
+    items?: string[];
+    icons?: ReactElement[];
+    selectedItem?: string;
+    selectedIndex?: number;
+    setSelectedIndex? : any;
 }
 
-export const SettingsSidebar = () => {
+export const SettingsSidebar = ( {selectedItem, selectedIndex, setSelectedIndex} : SettingsSidebarProps) => {
 
     const items = [
         'Quick Controls', 'Lights', 'Locks', 'Display', 'Driving', 'Autopilot', 'Safety & Security', 'Service'
@@ -26,14 +25,12 @@ export const SettingsSidebar = () => {
     
 
     
-      const [selectedItem, setSelectedItem] = useState(items[0]);
-      const [selectedIndex, setSelectedIndex] = useState(0);
+      const [selectedItemState, setSelectedItem] = useState(items[0]);
 
 
     const clickHandle = (clickedItem: string, index: number) => {
         setSelectedIndex(index);
         setSelectedItem(clickedItem);
-        console.log('HII');
     }
 
 
@@ -46,13 +43,13 @@ export const SettingsSidebar = () => {
                     color: '#fff',
                     verticalAlign: 'center',
                     paddingTop: '12px',
-                    maxHeight: '434px'
+                    maxHeight: '522px'
                 }
             }
         >
         {
             items.map((value, index) => (
-                <SidebarMenuItem title={value} isSelected={selectedIndex === index} clickHandler={() => clickHandle(value, index)} icon={icons[index]}/>
+                <SidebarMenuItem key={index} title={value} isSelected={selectedIndex === index} clickHandler={() => clickHandle(value, index)} icon={icons[index]}/>
             ))
         }
         </div>

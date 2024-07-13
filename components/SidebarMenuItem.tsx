@@ -1,6 +1,5 @@
 import { MouseEvent, MouseEventHandler, ReactEventHandler, ReactNode } from "react";
 import { IconType } from "react-icons";
-import { MenuItemIcon } from "./Icon";
 
 type clickFunc = (item: string, index: number) => void
 
@@ -15,6 +14,7 @@ export const SidebarMenuItem = ({title, isSelected, icon, clickHandler} : Sideba
 
     return (
         <div
+            key={title}
             style={
                 {
                     color: '#737373',
@@ -30,6 +30,7 @@ export const SidebarMenuItem = ({title, isSelected, icon, clickHandler} : Sideba
         >
         
         <button
+            key={title}
             onClick={clickHandler}
             style={
                 {
