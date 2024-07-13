@@ -770,3 +770,13 @@ span {
     
     animation: fadeInOut 1s 7s forwards; /* Starts after 7 seconds */
 }
+.select-mode-text {
+    position: absolute;
+    top: 75px; /* Adjust this value to move the text higher or lower */
+    left: 54%;
+    transform: translateX(-70%);
+    text-align: center;
+    font-size: 23px; /* Adjust font size as needed */
+    color: #fff; /* Ensure the text color is visible */
+  }
+  
