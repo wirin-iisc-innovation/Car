@@ -695,7 +695,7 @@ span {
 
 .fade-in-car-image {
     animation: fadeIn 1s forwards;
-    animation-delay: 4s;
+    animation-delay: 3s;
 }
 
 .fade-in-text {
@@ -780,3 +780,221 @@ span {
     color: #fff; /* Ensure the text color is visible */
   }
   
+  @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap');
+
+
+
+ 
+  
+  .container2 {
+      position: relative;
+      width: 100vw !important; /* Full viewport width */
+      height: 100vh !important; /* Full viewport height */
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+  }
+  
+  .text {
+      position: absolute;
+      font-size: 100px;
+      color: white;
+      text-align: center;
+      opacity: 0;
+  }
+  
+  .text.sanskrit {
+      animation: fadeIn 1s forwards, glow 1s ease-in-out 2s 2 alternate, moveOutLeft 1s ease-in-out 4s forwards;
+      
+      top: 30%; /* Center vertically */
+      left: 50%;
+      
+      transform: translate(-50%, -50%);
+  }
+  
+  .text.english {
+    animation: moveInEnglish 1s ease-in-out 5s forwards, fadeOutEnglish 1s ease-in-out 7s forwards;
+      
+      top: 30%; /* Center vertically */
+      left: 50%;
+      
+      transform: translate(-50%, -50%);
+  }
+  
+  .text.kannada {
+      animation: moveInKannada 1s ease-in-out 8s forwards, fadeIn1 0s ease-in-out 8s forwards, moveOutRightKannada 1s ease-in-out 10s forwards;
+      
+      top: 30%; /* Center vertically */
+      left: 50%;
+      
+      transform: translate(-50%, -50%);
+  }
+  
+  .screen {
+      position: absolute;
+      font-size: 150px;
+      color: white;
+      text-align: center;
+      opacity: 0;
+  }
+  
+  .screen#screen2 {
+      animation: fadeIn 2s 11s forwards, fadeOut 2s 13s forwards;
+     
+      top: 30%; /* Center vertically */
+      left: 50%;
+     
+      transform: translate(-50%, -50%);
+  }
+  
+  .screen#screen4 {
+      animation: fadeIn 2s 17s forwards, glow 2s 19s forwards, fadeOut 2s 23s forwards;
+      
+      top: 30%; /* Center vertically */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, -50%);
+  }
+  
+  @keyframes glow {
+      0% {
+          text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+          opacity: 1;
+      }
+      100% {
+          text-shadow: 0 0 40px rgba(255, 255, 255, 1);
+          opacity: 1;
+      }
+  }
+  
+  @keyframes moveOutLeft {
+      0% {
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 1;
+      }
+      100% {
+          left: -200px;
+          transform: translateX(0);
+          opacity: 0;
+      }
+  }
+  
+  @keyframes moveIn {
+      0% {
+          left: 100%;
+          transform: translateX(0);
+          opacity: 0;
+      }
+      100% {
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 1;
+      }
+  }
+  
+  @keyframes moveOutRight {
+      0% {
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 1;
+      }
+      100% {
+          left: 100%;
+          transform: translateX(0);
+          opacity: 0;
+      }
+  }
+  
+  @keyframes moveInKannada {
+      0% {
+          left: 100%;
+          transform: translateX(0);
+          opacity: 0;
+      }
+      100% {
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 1;
+      }
+  }
+  
+  @keyframes moveOutRightKannada {
+      0% {
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 1;
+      }
+      100% {
+          left: 100%;
+          transform: translateX(0);
+          opacity: 0;
+      }
+  }
+  
+  @keyframes fadeIn1 {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+  
+  @keyframes fadeIn {
+      0% {
+          opacity: 0;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+      100% {
+          opacity: 1;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+  }
+  
+  @keyframes fadeOut {
+      from {
+          opacity: 1;
+      }
+      to {
+          opacity: 0;
+      }
+  }
+  .container1 {
+    animation: slideIn 0.5s ease-out; /* Example animation */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes moveInEnglish {
+    0% {
+        left: 100%;
+        transform: translateX(0);
+        opacity: 0;
+    }
+    100% {
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutEnglish {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        left: 100%; /* Ensures it moves off screen */
+        transform: translateX(0);
+    }
+}
