@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-
-// Define the function to open a new page
-const openNewPage = (url: string) => {
-  window.open(url, '_blank');
-};
+import Link from 'next/link';
 
 const Footer: React.FC = () => {
   const [isAcPopupVisible, setAcPopupVisible] = useState(false);
@@ -18,41 +14,59 @@ const Footer: React.FC = () => {
     <>
       <footer className="footer">
         <div className="toolbar">
-          <button
-            className="icon-button"
-            style={{ backgroundImage: `url('images/Group 4548.svg')` }}
-            onClick={() => openNewPage('https://example.com/page1')}
-          ></button>
-          <button
-            className="icon-button"
-            style={{ backgroundImage: `url('images/Vector (1).svg')` }}
-            onClick={() => openNewPage('https://example.com/page2')}
-          ></button>
-          <button
-            className="icon-button"
-            style={{ backgroundImage: `url('images/Group 427318962.svg')` }}
-            onClick={() => openNewPage('https://example.com/page6')}
-          ></button>
-          <button
-            className="icon-button"
-            style={{ backgroundImage: `url('images/tesla.svg')` }}
-            onClick={() => openNewPage('https://example.com/page4')}
-          ></button>
-          <button
-            className="icon-button"
-            style={{ backgroundImage: `url('images/Vector (2).svg')` }}
-            onClick={() => openNewPage('https://example.com/page5')}
-          ></button>
+          <Link href="/page1" legacyBehavior>
+            <a>
+              <button
+                className="icon-button"
+                style={{ backgroundImage: `url('images/Group 4548.svg')` }}
+              ></button>
+            </a>
+          </Link>
+          <Link href="/page2" legacyBehavior>
+            <a>
+              <button
+                className="icon-button"
+                style={{ backgroundImage: `url('images/Vector (1).svg')` }}
+              ></button>
+            </a>
+          </Link>
+          <Link href="/music" legacyBehavior>
+            <a>
+              <button
+                className="icon-button"
+                style={{ backgroundImage: `url('images/Group 427318962.svg')` }}
+              ></button>
+            </a>
+          </Link>
+          <Link href="/dashboard" legacyBehavior>
+            <a>
+              <button
+                className="icon-button"
+                style={{ backgroundImage: `url('images/tesla.svg')` }}
+              ></button>
+            </a>
+          </Link>
+          <Link href="/maps" legacyBehavior>
+            <a>
+              <button
+                className="icon-button"
+                style={{ backgroundImage: `url('images/Vector (2).svg')` }}
+              ></button>
+            </a>
+          </Link>
           <button
             className="icon-button"
             style={{ backgroundImage: `url('images/Vector (3).svg')` }}
             onClick={toggleAcPopup}
           ></button>
-          <button
-            className="icon-button"
-            style={{ backgroundImage: `url('images/Group 427318961.svg')` }}
-            onClick={() => openNewPage('https://example.com/page3')}
-          ></button>
+          <Link href="/page3" legacyBehavior>
+            <a>
+              <button
+                className="icon-button"
+                style={{ backgroundImage: `url('images/Group 427318961.svg')` }}
+              ></button>
+            </a>
+          </Link>
         </div>
       </footer>
 
