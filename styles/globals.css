@@ -117,7 +117,7 @@ body {
     align-items: center; /* Align items to the center vertically */
     justify-content: flex-end; /* Align items to the right */
     margin-right: 50px; /* Adjust margin to align */
-    margin-top: auto; /* Push to the bottom */
+    margin-top: 80px; /* Push to the bottom */
     padding-bottom: 20px; /* Add padding to create space */
     position: absolute; /* Position absolute for precise alignment */
     top: 50%; /* Align vertically in the middle */
@@ -208,7 +208,7 @@ body {
 .frame-image {
     width: 310px;
     height: 265px;
-    margin-right: 100px; /* Adjusted spacing */
+    margin-right: 190px; /* Adjusted spacing */
 }
 
 .music-toolbar {
@@ -217,12 +217,16 @@ body {
     width: 1035px; /* Same width as before */
     height: 394px; /* Same height as before */
     padding: 0px;
-    
+    background: rgba(255, 255, 255, 0.07);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.9px);
+-webkit-backdrop-filter: blur(8.9px);
     border-radius: 38px; /* Optional: Add rounded corners */
 }
 
 .main-screen {
-    position: relative; /* Adjusted to relative for proper positioning */
+    position: absolute; /* Adjusted to relative for proper positioning */
     width: 100%;
     height: 100%;
 }
@@ -248,6 +252,7 @@ body {
     background: none;
     border: none;
     color: white;
+    font-family: 'Inter';
 }
 
 .current-song-title {
@@ -439,6 +444,41 @@ body {
     width: 100%;
     height: 100%;
 }
+.car-diagnostics {
+    position: absolute;
+    text-align: center;
+    left:1000px;
+}
+
+.car-image {
+    width: 590px;
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+}
+.status-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0;
+    
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin: 0 05px;
+   
+}
+
+.dot.green {
+    background-color: green;
+}
+
+.dot.yellow {
+    background-color: yellow;
+}
+
 
 .footer {
     display: flex;
