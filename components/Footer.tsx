@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import AppPopup from './AppPopup';  // Import the new component
 
 const Footer: React.FC = () => {
   const [isAcPopupVisible, setAcPopupVisible] = useState(false);
+  const [isAppPopupVisible, setAppPopupVisible] = useState(false);  // State for the new pop-up
+
   const [temperature, setTemperature] = useState(24);
   const [fanSpeed, setFanSpeed] = useState(3);
 
@@ -10,18 +13,19 @@ const Footer: React.FC = () => {
     setAcPopupVisible(!isAcPopupVisible);
   };
 
+  const toggleAppPopup = () => {  // Handler for the new pop-up
+    setAppPopupVisible(!isAppPopupVisible);
+  };
+
   return (
     <>
       <footer className="footer">
         <div className="toolbar">
-          <Link href="/mode" legacyBehavior>
-            <a>
-              <button
-                className="icon-button"
-                style={{ backgroundImage: `url('images/Group 4548.svg')` }}
-              ></button>
-            </a>
-          </Link>
+          <button
+            className="icon-button"
+            style={{ backgroundImage: `url('images/Group 4548.svg')` }}
+            onClick={toggleAppPopup}  // Update click handler
+          ></button>
           <Link href="/page2" legacyBehavior>
             <a>
               <button
@@ -117,6 +121,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
       )}
+
+      {isAppPopupVisible && <AppPopup onClose={toggleAppPopup} />}  {/* Render the new pop-up */}
     </>
   );
 };
