@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import AppPopup from './AppPopup';  // Import the new component
+import AppPopup from './AppPopup';
+import FullScreenPopup from './Fullscreen'; // Import the FullScreenPopup component
 
 const Footer: React.FC = () => {
   const [isAcPopupVisible, setAcPopupVisible] = useState(false);
-  const [isAppPopupVisible, setAppPopupVisible] = useState(false);  // State for the new pop-up
+  const [isAppPopupVisible, setAppPopupVisible] = useState(false);
+  const [isFullScreenPopupVisible, setFullScreenPopupVisible] = useState(false); // State for the full screen pop-up
 
   const [temperature, setTemperature] = useState(24);
   const [fanSpeed, setFanSpeed] = useState(3);
@@ -13,8 +15,12 @@ const Footer: React.FC = () => {
     setAcPopupVisible(!isAcPopupVisible);
   };
 
-  const toggleAppPopup = () => {  // Handler for the new pop-up
+  const toggleAppPopup = () => {
     setAppPopupVisible(!isAppPopupVisible);
+  };
+
+  const toggleFullScreenPopup = () => { // Handler for the full screen pop-up
+    setFullScreenPopupVisible(!isFullScreenPopupVisible);
   };
 
   return (
@@ -24,7 +30,7 @@ const Footer: React.FC = () => {
           <button
             className="icon-button"
             style={{ backgroundImage: `url('images/Group 4548.svg')` }}
-            onClick={toggleAppPopup}  // Update click handler
+            onClick={toggleAppPopup}
           ></button>
           <Link href="/page2" legacyBehavior>
             <a>
@@ -42,14 +48,11 @@ const Footer: React.FC = () => {
               ></button>
             </a>
           </Link>
-          <Link href="/dashboard" legacyBehavior>
-            <a>
-              <button
-                className="icon-button"
-                style={{ backgroundImage: `url('images/tesla.svg')` }}
-              ></button>
-            </a>
-          </Link>
+          <button
+            className="icon-button"
+            style={{ backgroundImage: `url('images/tesla.svg')` }}
+            onClick={toggleFullScreenPopup} // Update click handler to toggle FullScreenPopup
+          ></button>
           <Link href="/maps" legacyBehavior>
             <a>
               <button
@@ -122,7 +125,8 @@ const Footer: React.FC = () => {
         </div>
       )}
 
-      {isAppPopupVisible && <AppPopup onClose={toggleAppPopup} />}  {/* Render the new pop-up */}
+      {isAppPopupVisible && <AppPopup onClose={toggleAppPopup} />} {/* Render the AppPopup */}
+      {isFullScreenPopupVisible && <FullScreenPopup onClose={toggleFullScreenPopup} />} {/* Render the FullScreenPopup */}
     </>
   );
 };
