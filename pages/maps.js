@@ -14,34 +14,9 @@ export default function Home() {
       const minutes = now.getMinutes().toString().padStart(2, '0');
       const day = now.getDate();
       const month = now.toLocaleString('default', { month: 'long' });
-      // const dateStyle = {
-      //   fontSize: '30px',
-      //   margintop: '2px' /* Reduced line width */,
-      //   marginBottom:'20px'
-      // };
-
-      // const timeStyle = {
-      //   fontSize: '45px',
-      //   marginBottom: '2px', /* Reduced line width */
-      //   margintop: '20px'
-      // };
-
-      // const time_date_css={
-      //   display: 'flex',
-      //   flexdirection: 'column',
-      //   paddingleft: '20px',
-      //   marginright: '10px',        
-      //   margintop: '40px'
-      // }
-
 
       document.querySelector('#time').innerHTML = `${hours}:${minutes} PM`;
-      // document.querySelector('#time').style=timestyle;
       document.querySelector('#date').innerHTML = `Sunday, ${day} ${month}`;
-
-      // Object.assign(document.querySelector('#time').style, timeStyle);
-      // Object.assign(document.querySelector('#date').style, dateStyle);
-      // Object.assign(document.querySelector('.time-date').style, time_date_css);
     };
 
     // Update the weather information
@@ -71,7 +46,14 @@ export default function Home() {
 
       <main className="main-content">
         <img src="/images_map/Frame 4564.svg" alt="Frame" className="frame-image" />
-        <img src="/images_map/map.svg" alt="Map" className="map-image" />
+        <div className="map-container">
+          <iframe
+            src="http://127.0.0.1:5000/"
+            className="map-iframe"
+            frameBorder="0"
+            allowFullScreen
+          ></iframe>
+        </div>
       </main>
 
       <Footer />

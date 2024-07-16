@@ -116,7 +116,7 @@ body {
     display: flex;
     align-items: center; /* Align items to the center vertically */
     justify-content: flex-end; /* Align items to the right */
-    margin-right: 50px; /* Adjust margin to align */
+   
     margin-top: 80px; /* Push to the bottom */
     padding-bottom: 20px; /* Add padding to create space */
     position: absolute; /* Position absolute for precise alignment */
@@ -446,8 +446,8 @@ backdrop-filter: blur(8.9px);
 }
 .car-diagnostics {
     position: absolute;
-    text-align: center;
-    left:1000px;
+   
+    left:50%;
 }
 
 .car-image {
@@ -794,6 +794,9 @@ span {
     100% {
         opacity: 0;
     }
+}
+.textss{
+    left: 50%;
 }
 
 .text-insert1 {
@@ -1225,4 +1228,21 @@ span {
       opacity: 1;
     }
   }
+  /* styles.css or a relevant CSS file */
+
+  .map-container {
+    width: 50%;
+    height: 100%; /* Adjust to match the height of the map SVG */
+    margin-top: 0px; /* Adjust as necessary to position correctly */
+    border: 2px solid #000000; /* Blue border */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure the iframe content does not overflow the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Add a subtle shadow */
+  }
   
+  .map-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px; /* Match the border-radius of the container */
+  }
