@@ -223,7 +223,7 @@ body {
   display: flex;
   align-items: center; /* Align items to the center vertically */
   justify-content: flex-end; /* Align items to the right */
-  margin-right: 50px; /* Adjust margin to align */
+  
   margin-top: auto; /* Push to the bottom */
   padding-bottom: 20px; /* Add padding to create space */
   position: absolute; /* Position absolute for precise alignment */
