@@ -17,7 +17,7 @@ const FullScreen: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             <span>Parking Assist</span>
           </div>
           <div className="icon-container emergency-stop">
-            <img src="images_fullpage/Vector2.svg" alt="Emergency Stop" />
+            <img src="images_fullpage/Vector3.svg" alt="Emergency Stop" />
             <span>Emergency Stop</span>
           </div>
           <div className="icon-container mode-switch">
@@ -25,7 +25,7 @@ const FullScreen: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             <span>Mode Switch</span>
           </div>
           <div className="icon-container car-controls">
-            <img src="images_fullpage/Vector3.svg" alt="Car Controls" />
+            <img src="images_fullpage/Vector2.svg" alt="Car Controls" />
             <span>Car Controls</span>
           </div>
         </div>
