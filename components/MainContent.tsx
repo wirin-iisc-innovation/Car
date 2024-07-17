@@ -15,7 +15,7 @@ const MainContent: React.FC = () => {
 
   return (
     <main className="main-content">
-      <img src="images/Frame 4564.svg" alt="Frame" className="frame-image" />
+      <img src="images/Frame 4564.svg" alt="Frame" className="frame-image1" />
       <div className="music-toolbar">
         <div className="main-screen">
           <div className="current-song">
