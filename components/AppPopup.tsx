@@ -1,6 +1,8 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 const AppPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
+  const router = useRouter();
   const apps = [
     { name: 'YouTube', icon: 'images_pop/Group 427319037.svg' },
     { name: 'Google', icon: 'images_pop/Group 427319036.svg' },
@@ -14,8 +16,14 @@ const AppPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     { name: 'Phone', icon: 'images_pop/Group 427319047.svg' },
     { name: 'Netflix', icon: 'images_pop/Vector.svg' },
     { name: 'Calculator', icon: 'images_pop/Group 427319050.svg' },
-    { name: 'Assistant', icon: 'images_pop/Group 427319051.svg' },
+    { name: 'Assistant', icon: 'images_pop/Group 427319051.svg', link: '/AI' },
   ];
+
+  const handleAppClick = (app) => {
+    if (app.link) {
+      router.push(app.link);
+    }
+  };
 
   return (
     <div className="app-popup-container">
@@ -31,7 +39,7 @@ const AppPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             <h3>Frequently used</h3>
             <div className="app-icons">
               {apps.slice(0, 4).map((app, index) => (
-                <div className="app-icon" key={index}>
+                <div className="app-icon" key={index} onClick={() => handleAppClick(app)}>
                   <img src={app.icon} alt={`${app.name} icon`} />
                   <span>{app.name}</span>
                 </div>
@@ -41,7 +49,7 @@ const AppPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           <div className="app-section">
             <div className="app-icons">
               {apps.slice(4, 12).map((app, index) => (
-                <div className="app-icon" key={index}>
+                <div className="app-icon" key={index} onClick={() => handleAppClick(app)}>
                   <img src={app.icon} alt={`${app.name} icon`} />
                   <span>{app.name}</span>
                 </div>
@@ -51,7 +59,7 @@ const AppPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           <div className="app-section">
             <div className="app-icons">
               {apps.slice(12).map((app, index) => (
-                <div className="app-icon" key={index}>
+                <div className="app-icon" key={index} onClick={() => handleAppClick(app)}>
                   <img src={app.icon} alt={`${app.name} icon`} />
                   <span>{app.name}</span>
                 </div>

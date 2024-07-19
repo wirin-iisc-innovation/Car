@@ -23,8 +23,8 @@ body {
     background: 
       radial-gradient(
         circle at 15% 50%, 
-        rgba(0, 0, 0, 0.8) 0%, 
-        rgba(0, 0, 0, 0.5) 20%, 
+        rgb(0, 0, 0) 0%, 
+        rgba(0, 0, 0, 0.635) 20%, 
         rgba(0, 0, 0, 0.2) 30%, 
         transparent 60%
       ), 
@@ -1362,4 +1362,69 @@ span {
     order: 1;
     margin-left: 0;
     margin-right: 30%;
+  }
+  
+.unique-left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    margin-bottom: -10%;
+  }
+  
+  .unique-ai-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+   
+  }
+  
+  .unique-welcome-text {
+    font-family: 'Urbanist', sans-serif;
+  }
+  
+  .unique-welcome-text h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .unique-welcome-text p {
+    font-size: 38px;
+    margin: 5px 0 0 0;
+  }
+  
+  .unique-right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -10%;
+  }
+  
+  .unique-right-side h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .unique-quick-requests {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .unique-request {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: 'Urbanist', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 25px;
+  }
+  
+  .unique-request:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .ai-image{
+    margin-bottom: 4%;
   }
