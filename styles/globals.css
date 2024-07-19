@@ -13,24 +13,33 @@ body {
 
 .container {
     width: 100%;
-    max-width: 2000px; /* Increased width to fit the icons */
+    max-width: 2000px;
     height: 100%;
-    max-height: 600px; /* Full height with a max */
+    max-height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: absolute;
-    background: linear-gradient(
+    background: 
+      radial-gradient(
+        circle at 15% 50%, 
+        rgb(0, 0, 0) 0%, 
+        rgba(0, 0, 0, 0.635) 20%, 
+        rgba(0, 0, 0, 0.2) 30%, 
+        transparent 60%
+      ), 
+      linear-gradient(
         to bottom,
         #131D43 0%,
         #131E41 25%,
         #1D2A5D 40%,
         #12224F 68%,
         #081F44 100%
-    ), #313131;
+      );
     border: 2px solid #fff; /* Thin white border */
-    transform: translate(-50%,-50%);
-}
+    transform: translate(-50%, -50%);
+  }
+  
 
 .header, .footer {
     display: flex;
@@ -1247,7 +1256,7 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
     
   }
   
@@ -1327,7 +1336,7 @@ span {
     color: #fff;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
     
   }
   
@@ -1353,4 +1362,69 @@ span {
     order: 1;
     margin-left: 0;
     margin-right: 30%;
+  }
+  
+.unique-left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    margin-bottom: -10%;
+  }
+  
+  .unique-ai-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+   
+  }
+  
+  .unique-welcome-text {
+    font-family: 'Urbanist', sans-serif;
+  }
+  
+  .unique-welcome-text h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .unique-welcome-text p {
+    font-size: 38px;
+    margin: 5px 0 0 0;
+  }
+  
+  .unique-right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -10%;
+  }
+  
+  .unique-right-side h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .unique-quick-requests {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .unique-request {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: 'Urbanist', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 25px;
+  }
+  
+  .unique-request:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .ai-image{
+    margin-bottom: 4%;
   }
