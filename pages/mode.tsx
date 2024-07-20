@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 const Home = () => {
     return (
-        <div className="container">
+        <div className="container3">
             <Head>
                 <title>Car Dashboard</title>
                 <meta name="description" content="Car dashboard interface" />
