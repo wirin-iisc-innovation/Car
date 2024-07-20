@@ -1,12 +1,14 @@
-// _app.tsx
 import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import '../styles/globals.css';
+import '../styles/auto.css';
 
-import '../styles/auto.css'; 
-
-
+const BrowserRouter = dynamic(() =>
+  import('react-router-dom').then(mod => mod.BrowserRouter),
+  { ssr: false }
+);
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -19,15 +21,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="stylesheet" href="/styles/globals.css" />
         <title>Car Dashboard with Music Toolbar</title>
       </Head>
-     
-      <Component {...pageProps} />
-
+      <BrowserRouter>
+        <Component {...pageProps} />
+      </BrowserRouter>
     </>
   );
 }
 
 export default MyApp;
-
-
-
-
