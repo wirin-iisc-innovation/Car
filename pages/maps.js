@@ -89,7 +89,7 @@ export default function Home() {
         <div className={`right-side ${isSwitched ? 'switched' : ''}`}>
           <div className="map-container">
             <iframe
-              src="http://127.0.0.1:5000/"
+              src="https://ayushratan.pythonanywhere.com/"
               className="map-iframe"
               frameBorder="0"
               allowFullScreen
