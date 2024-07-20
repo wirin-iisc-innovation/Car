@@ -19,7 +19,7 @@ const AppPopup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     { name: 'Assistant', icon: 'images_pop/Group 427319051.svg', link: '/AI' },
   ];
 
-  const handleAppClick = (app) => {
+  const handleAppClick = (app: { name: string; icon: string; link?: undefined; } | { name: string; icon: string; link: string; }) => {
     if (app.link) {
       router.push(app.link);
     }

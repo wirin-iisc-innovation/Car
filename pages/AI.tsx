@@ -12,7 +12,7 @@ const Start: React.FC = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container3">
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
