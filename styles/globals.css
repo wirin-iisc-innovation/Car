@@ -23,10 +23,10 @@ body {
     background: 
       radial-gradient(
         circle at 15% 50%, 
-        rgb(0, 0, 0) 0%, 
+        rgba(0, 0, 0, 0.932) 0%, 
         rgba(0, 0, 0, 0.635) 20%, 
         rgba(0, 0, 0, 0.2) 30%, 
-        transparent 60%
+        transparent 70%
       ), 
       linear-gradient(
         to bottom,
@@ -70,7 +70,7 @@ body {
 
 .header {
     width: 100%;
-    height: 60px; /* Adjust as needed */
+    
     padding: 0 20px; /* Added padding for spacing */
 }
 
@@ -232,6 +232,14 @@ body {
     justify-content: center;
     align-items: center;
     padding: 30px; /* Adjusted padding for better spacing */
+}
+
+.main-content5 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 
@@ -1315,7 +1323,7 @@ span {
   }
   
   .map-container {
-    width: 60%;
+    width: 75%;
     height: 100%; /* Adjust to match the height of the map SVG */
     margin-top: 0px; /* Adjust as necessary to position correctly */
     border: 2px solid #000000; /* Black border */
@@ -1324,7 +1332,7 @@ span {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Add a subtle shadow */
     position: relative; /* To position the resize handle */
     resize: horizontal;
-    margin-left: 10%;
+    margin-right: 10%;
    
   }
   
@@ -1350,7 +1358,7 @@ span {
   .switch-arrow {
     position: absolute;
     top: 50%;
-    left: 45%;
+    left: 30%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     z-index: 10;
@@ -1361,7 +1369,7 @@ span {
     justify-content: center;
     color: #fff;
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
     transition: transform 0.5s ease, box-shadow 0.3s ease;
     
   }
@@ -1454,3 +1462,404 @@ span {
   .ai-image{
     margin-bottom: 4%;
   }
+
+  
+span {
+    font-size: 20px;
+}
+
+
+.sidebar {
+  width: 25%;
+  padding: 0px;
+  background-color: #161616;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.sidebar-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 7px 0px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-align: left;
+  font-size: 23px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.sidebar-button:hover,
+.sidebar-button.active {
+  background-color: #2d2d2d;
+}
+
+.sidebar-icon {
+  margin-right: 10px; /* Adjust the spacing between the icon and text */
+  width: 40px; /* Adjust the size of the icon as needed */
+  height: 40px;
+}
+
+.settings {
+  flex: 1;
+  padding-left: 3%;
+  
+}
+
+.settings-group {
+  margin-bottom: 30px;
+}
+
+.settings-group-title {
+  font-size: 21px;
+  font-family: 'Urbanist', sans-serif;
+  
+}
+
+.settings-options {
+  display: flex;
+  position: relative;
+  padding: 10px 0;
+}
+
+.settings-option-l {
+  padding: 10px 20px;
+  width: 240px;
+  height: 48px;
+  border: none;
+  background-color: #2d2d2d;
+  color: white;
+  font-size: 21px;
+  font-family: 'Urbanist', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+.settings-option-m {
+  padding: 10px 20px;
+  width: 240px;
+  height: 48px;
+  border: none;
+  background-color: #2d2d2d;
+  color: white;
+  font-size: 21px;
+  cursor: pointer;
+  font-family: 'Urbanist', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.settings-option-r {
+  padding: 10px 20px;
+  width: 240px;
+  height: 48px;
+  border: none;
+  background-color: #2d2d2d;
+  color: white;
+  font-size: 21px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Urbanist', sans-serif;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.settings-option-l.active {
+  background-color: #4d4d4d;
+}
+
+.settings-option-m.active {
+  background-color: #4d4d4d;
+}
+
+.settings-option-r.active {
+  background-color: #4d4d4d;
+}
+
+.settings-option-l2 {
+  padding: 10px 20px;
+  width: 380px;
+  height: 48px;
+  border: none;
+  background-color: #2d2d2d;
+  color: white;
+  font-size: 21px;
+  cursor: pointer;
+  font-family: 'Urbanist', sans-serif;
+  transition: background-color 0.3s ease;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+.settings-option-r2 {
+  padding: 10px 20px;
+  width: 342px;
+  height: 48px;
+  border: none;
+  background-color: #2d2d2d;
+  color: white;
+  font-size: 21px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Urbanist', sans-serif;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.settings-option-l2.active {
+  background-color: #4d4d4d;
+}
+
+.settings-option-r2.active {
+  background-color: #4d4d4d;
+}
+
+/* Existing styles */
+
+/* Brightness slider customization */
+.brightness-slider {
+  display: flex;
+  align-items: center;
+  width: 735px;
+  height: 52px;
+  position: relative;
+}
+
+.brightness-slider input[type='range'] {
+  margin: 0 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #4d4d4d;
+  height: 40px;
+  border-radius: 40px;
+  width: 100%;
+  position: relative; /* Ensure the thumb is positioned relative to the input */
+}
+
+.brightness-slider input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 70px;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 20px; /* Make the thumb circular */
+  cursor: pointer;
+  position: relative;
+  background: url('/images/brightness.svg') no-repeat center center;
+  background-size: 50px 50px; /* Adjust the size of the icon */
+}
+
+.brightness-slider input[type='range']::-moz-range-thumb {
+  width: 70px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 20px; /* Make the thumb circular */
+  cursor: pointer;
+  position: relative;
+  background: url('/images/brightness.svg') no-repeat center center;
+  background-size: 70px 70px; /* Adjust the size of the icon */
+}
+
+.slider-thumb-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 21px;
+  color: #ffff;
+  pointer-events: none;
+}
+
+.traction-control {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.traction-control-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px; /* Add margin-bottom to create space between the two options */
+}
+
+.traction-control-button {
+  padding: 10px 20px;
+  width: 230px;
+  height: 48px;
+  border: 2px solid white; /* Added border */
+  background-color: #0E0E0E;
+  color: white;
+  font-size: 21px;
+  cursor: pointer;
+  font-family: 'Urbanist', sans-serif;
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+}
+
+.traction-control-button:hover,
+.traction-control-button.active {
+  background-color: #4d4d4d;
+  border: 2px solid white; /* Ensure the border stays white on hover and active states */
+}
+
+.settings-description {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #bbbbbb;
+}
+
+.settings-description-regenerative {
+  font-size: 19px;
+  margin-top: 10px;
+  color: #bbbbbb;
+  position: absolute;
+  top: 40%;
+  left: calc(63%); /* Adjust this value as needed */
+  transform: translateY(-54%);
+  white-space: nowrap;
+}
+
+.settings-description-traction {
+  font-size: 19px;
+  margin-left: 20px; /* Adjust this value as needed */
+  color: #bbbbbb;
+  white-space: nowrap;
+}
+
+.wiper-service-mode-button,
+.adjust-headlights-button,
+.headlight-reset-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  margin-bottom:20px;
+}
+
+.wiper-service-mode-button {
+  padding: 15px 25px;
+  width: 330px;
+  height: 54px;
+  border: 2px solid white;
+  background-color: #0E0E0E;
+  border-radius: 30px;
+}
+
+.wiper-service-mode-button:hover {
+  background-color: #4d4d4d;
+}
+
+.adjust-headlights-button,
+.headlight-reset-button {
+  padding: 65px 25px;
+  width: 264px;
+  height: 146px;
+  background-color: #2d2d2d;
+  border-radius: 20px;
+  border:none;
+}
+
+.adjust-headlights-button:hover,
+.headlight-reset-button:hover {
+  background-color: #4d4d4d;
+}
+
+.button-icon {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.button-text {
+  margin: 0;
+}
+
+.empty-content {
+  color: white;
+  font-size: 24px;
+}
+
+.setting-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+  padding: 10px 0;
+  font-size: 21px;
+  font-family: 'Urbanist', sans-serif;
+  margin-bottom:20px;
+}
+
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  transform: translate(-200%,0%);
+
+
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+  
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+.main-content3 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background-color: #000;
+}
+
+
