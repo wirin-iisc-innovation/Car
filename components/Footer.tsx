@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
             style={{ backgroundImage: `url('images/Vector (3).svg')` }}
             onClick={toggleAcPopup}
           ></button>
-          <Link href="/page3" legacyBehavior>
+          <Link href="/settings" legacyBehavior>
             <a>
               <button
                 className="icon-button"
