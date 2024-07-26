@@ -26,7 +26,7 @@ const Start: React.FC = () => {
       <main className="main-content" role="main">
         <div className="start-screen">
           <div className="chevrons left-chevrons">
-            {[...Array(13)].map((_, i) => (
+            {[...Array(11)].map((_, i) => (
               <div key={`left-chevron-${i}`} className="chevron"></div>
             ))}
           </div>
@@ -37,7 +37,7 @@ const Start: React.FC = () => {
             </div>
           </div>
           <div className="chevrons right-chevrons">
-            {[...Array(13)].map((_, i) => (
+            {[...Array(11)].map((_, i) => (
               <div key={`right-chevron-${i}`} className="chevron"></div>
             ))}
           </div>
