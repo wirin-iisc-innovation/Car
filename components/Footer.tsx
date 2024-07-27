@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
             style={{ backgroundImage: `url('images/Group 4548.svg')` }}
             onClick={toggleAppPopup}
           ></button>
-          <Link href="/page2" legacyBehavior>
+          <Link href="/call" legacyBehavior>
             <a>
               <button
                 className="icon-button"
