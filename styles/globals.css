@@ -1860,3 +1860,159 @@ input:checked + .slider:before {
 }
 
 
+
+.frame-image2 {
+  position:absolute;
+ 
+  transform: translate(-190%,0%);
+ 
+}
+.call-screen {
+  position:absolute;
+  display: flex;
+  background-color: #1D2C53;
+  width: 55%;
+  height: 65%;
+  padding: 20px;
+ 
+  transform: translate(15%, -5%);
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.9px);
+  -webkit-backdrop-filter: blur(8.9px);
+  border-radius: 38px;
+}
+
+.keypad-section {
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;     
+  justify-content: center;
+  align-items: center;
+  background-color: #4A5675;
+  border-radius: 16px;
+  padding: 10px;
+}
+
+.keypad-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.keypad-top-button {
+  background-color: #4A5675;
+  color: white;
+  font-size: 18px;
+  font-family: 'Urbanist', sans-serif;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.keypad-input {
+  color: white;
+  font-size: 24px;
+  font-family: 'Urbanist', sans-serif;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.separator {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 0px;
+}
+
+.keypad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  padding: 10px;
+  border-radius: 16px;
+}
+
+.keypad-row {
+  display: flex;
+}
+
+.keypad-button {
+  width: 60px;
+  height: 60px;
+  margin: 5px 20px; 
+  background-color: #4A5675;
+  color: white;
+  font-size: 30px;
+  font-family: 'Urbanist', sans-serif;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.keypad-button:active {
+  background-color: #6A7BA7; /* Glowing effect when pressed */
+}
+
+.contact-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+/* Other existing styles */
+
+.tab-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  gap: 20px; /* Increase spacing between tab buttons */
+}
+
+.tab-button {
+  flex: 1;
+  background-color: #4A5675;
+  color: white;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  border-radius: 37px;
+  margin: 0 10px;
+  padding: 20px 0; /* Increase height of the tab buttons */
+  width: 150px; /* Increase width of the tab buttons */
+  cursor: pointer;
+  text-align: center;
+}
+
+.tab-button.active {
+  background-color: #6A7BA7;
+}
+
+
+.contact-list {
+  color: white;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  margin-left:100px;
+}
+/* Add these styles to your existing CSS file */
+
+.keypad-top-button img {
+  width: 26px; /* Adjust as needed */
+  height: 26px; /* Adjust as needed */
+}
+
+.tab-icon {
+  margin-right: 10px; /* Space between icon and text */
+  width: 30px; /* Adjust as needed */
+  height: 30px; /* Adjust as needed */
+}
