@@ -4,6 +4,7 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import '../styles/globals.css';
 import '../styles/auto.css';
+import VoiceAssistant from '../components/VoiceAssistant';
 
 const BrowserRouter = dynamic(() =>
   import('react-router-dom').then(mod => mod.BrowserRouter),
@@ -24,6 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <BrowserRouter>
         <Component {...pageProps} />
       </BrowserRouter>
+      <VoiceAssistant />
     </>
   );
 }
