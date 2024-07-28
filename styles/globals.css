@@ -2016,3 +2016,11 @@ input:checked + .slider:before {
   width: 30px; /* Adjust as needed */
   height: 30px; /* Adjust as needed */
 }
+/* components/VoiceAssistant.css */
+
+ 
+/* styles/globals.css */
+.blurred {
+  transition: filter 1.5s ease;
+  filter: blur(50%);
+}
