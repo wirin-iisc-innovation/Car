@@ -18,7 +18,7 @@ const MainContent: React.FC = () => {
 
   return (
     <main className="main-content">
-      <img src="images_call/Frame 4564.svg" alt="Frame" className="frame-image2" />
+     
       <div className="call-screen">
         <div className="keypad-section">
           <div className="keypad-top">
@@ -56,7 +56,16 @@ const MainContent: React.FC = () => {
               <button className="keypad-button" onClick={() => handleKeypadClick('#')}>#</button>
             </div>
           </div>
+
+          {/* Call button */}
+          <div className="call-button-container">
+            <button className="call-button">
+              <img src="/images_call/material-symbols_call.svg" alt="Call" />
+              Call
+            </button>
+          </div>
         </div>
+        
         <div className="contact-section">
           <div className="tab-buttons">
             <button 

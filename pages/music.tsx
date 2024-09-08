@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import MainContent from '../components/MainContent';
 import Footer from '../components/Footer';
+import Speedometer from '../components/speed'
 
 const Home: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const Home: React.FC = () => {
 
       <Header />
       <MainContent />
+      <Speedometer />
       <Footer />
     </div>
   );

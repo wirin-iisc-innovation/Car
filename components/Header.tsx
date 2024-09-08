@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 const Header: React.FC = () => {
   const [time, setTime] = useState('');
   const [date, setDate] = useState('');
+  const [batteryPercentage, setBatteryPercentage] = useState(85); // Initial battery percentage
 
   useEffect(() => {
     const updateDateTime = () => {
@@ -18,10 +19,23 @@ const Header: React.FC = () => {
       setDate(formattedDate);
     };
 
-    updateDateTime();
-    const intervalId = setInterval(updateDateTime, 1000);
+    const generateRandomBattery = () => {
+      const randomBattery = Math.floor(Math.random() * 101); // Generate random battery percentage (0-100)
+      setBatteryPercentage(randomBattery);
+    };
 
-    return () => clearInterval(intervalId);
+    // Update time every second
+    updateDateTime();
+    const timeIntervalId = setInterval(updateDateTime, 1000);
+
+    // Update battery percentage randomly every 5 seconds
+    const batteryIntervalId = setInterval(generateRandomBattery, 1000);
+
+    // Cleanup intervals when component unmounts
+    return () => {
+      clearInterval(timeIntervalId);
+      clearInterval(batteryIntervalId);
+    };
   }, []);
 
   return (
@@ -51,7 +65,7 @@ const Header: React.FC = () => {
               <div className="remaining-text">Remaining</div>
             </div>
             <div className="battery">
-              <span className="battery-percentage" id="battery">85</span><span className="unit">%</span>
+              <span className="battery-percentage" id="battery">{batteryPercentage}</span><span className="unit">%</span>
               <div className="battery-text">Battery</div>
             </div>
             <div className="average">
@@ -61,7 +75,12 @@ const Header: React.FC = () => {
           </div>
           <div className="battery-bar-container">
             <div className="battery-bar-base">
-              <div className="battery-bar-fill" id="battery-bar-fill"></div>
+              {/* Dynamically set the height of the battery fill based on battery percentage */}
+              <div
+                className="battery-bar-fill"
+                id="battery-bar-fill"
+                style={{ height: `${batteryPercentage}%` }}  // Adjust battery fill based on percentage
+              ></div>
             </div>
           </div>
         </div>

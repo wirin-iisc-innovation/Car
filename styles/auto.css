@@ -14,7 +14,7 @@ body {
   width: 100%;
   max-width: 2000px; /* Increased width to fit the icons */
   height: 100%;
-  max-height: 600px; /* Full height with a max */
+  max-height: 650px; /* Full height with a max */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -110,11 +110,14 @@ body {
 }
 
 .left-chevrons {
-  transform: scale(-1, 1);
+  transform: scale(-1, 1.8);
+}
+.right-chevrons{
+  transform: scale(1, 1.8);
 }
 
 .chevron {
-  width: 90px;
+  width: 95px;
   height: 100px;
   border-style: solid;
   border-width: 3px 3px 0 0;
@@ -153,8 +156,8 @@ body {
 }
 
 .start-circle {
-  width: 180px;
-  height: 180px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   background: linear-gradient(145deg, #1e3a5f, #0f1c2e);
   display: flex;
@@ -299,7 +302,7 @@ body {
   background-color: #2CBE6B;
   position: absolute;
   bottom: 0;
-  height: 85%; /* Initially set to 85% */
+ 
   border-radius:  0px 0px 170px 170px; /* Rounded top and bottom */
   
 }

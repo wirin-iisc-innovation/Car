@@ -15,7 +15,7 @@ body {
     width: 100%;
     max-width: 2000px;
     height: 100%;
-    max-height: 600px;
+    max-height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -222,7 +222,7 @@ body {
     background-color: #2CBE6B;
     position: absolute;
     bottom: 0;
-    height: 85%; /* Initially set to 85% */
+  
     border-radius: 170px; /* Rounded top and bottom */
 }
 
@@ -243,27 +243,24 @@ body {
 }
 
 
-.frame-image1 {
-    width: 310px;
-    height: 265px;
-   
-}
+
 
 .music-toolbar {
-    position: relative;
-    background-color: #1D2C53;
-    width: 62%; /* Same width as before */
-    height: 394px; /* Same height as before */
-    padding: 0px;
-    margin-left:2%;
-    background: rgba(255, 255, 255, 0.07);
+  position: absolute;
+  background-color: #1D2C53;
+  width: 1035px; /* Same width as before */
+  height: 394px; /* Same height as before */
+  padding: 0px;
+  margin-left:2%;
+  transform: translate(20%,-5%);
+  background: rgba(255, 255, 255, 0.07);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(8.9px);
+backdrop-filter: blur(8.9px); 
 -webkit-backdrop-filter: blur(8.9px);
-    border-radius: 38px; /* Optional: Add rounded corners */
+  border-radius: 38px; /* Optional: Add rounded corners */
+  transform: translate(25%,45%);
 }
-
 .main-screen {
     position: absolute; /* Adjusted to relative for proper positioning */
     width: 100%;
@@ -366,31 +363,41 @@ backdrop-filter: blur(8.9px);
 }
 
 .spotify-button {
-    position: absolute;
-    top: 32px;
-    left: 770px;
-    width: 62px;
-    height: 62px;
-    background-color: #4A5675;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
+  position: absolute;
+  top: 32px;
+  left: 770px;
+  width: 62px;
+  height: 62px;
+  background-color: #4A5675;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.spotify-button:hover {
+  box-shadow: 0 0 10px 2px white;
 }
 
 .youtube-button {
-    position: absolute;
-    top: 32px;
-    left: 860px;
-    width: 62px;
-    height: 62px;
-    background-color: #4A5675;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
+  position: absolute;
+  top: 32px;
+  left: 860px;
+  width: 62px;
+  height: 62px;
+  background-color: #4A5675;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.youtube-button:hover {
+  box-shadow: 0 0 10px 2px white;
 }
 
 .down-button {
@@ -465,18 +472,23 @@ backdrop-filter: blur(8.9px);
 }
 
 .favourite-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .favourite-button {
-    width: 85.18px;
-    height: 85.18px;
-    background: none;
-    border: none;
+  width: 85.18px;
+  height: 85.18px;
+  background: none;
+  border: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.favourite-button:hover {
+  box-shadow: 0 0 10px 2px black;
 }
 
 .favourite-button img {
@@ -496,11 +508,15 @@ backdrop-filter: blur(8.9px);
     margin: 0 auto;
 }
 .status-dots {
-    display: flex;
-    justify-content: center;
-    margin: 0px 0;
-    
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  
+  top: 490px; /* Adjust the value to set the vertical position */
+  left: 200px; /* Adjust the value to set the horizontal position */
 }
+
 
 .dot {
     height: 10px;
@@ -1202,8 +1218,9 @@ span {
     z-index: 999;
   }
   
-  .fullscreen-popup {
+  .fullscreen-popup { 
     width: 80%;
+    height:175px;
     padding: 10%;
     border-radius: 10px;
     color: white;
@@ -1469,6 +1486,7 @@ span {
 .sidebar {
   width: 25%;
   padding: 0px;
+  height:100%;
   background-color: #161616;
   font-family: 'Urbanist', sans-serif;
 }
@@ -1478,7 +1496,7 @@ span {
   align-items: center;
   width: 100%;
   padding: 7px 0px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   background-color: transparent;
   border: none;
   color: white;
@@ -1646,7 +1664,7 @@ span {
   border-radius: 20px; /* Make the thumb circular */
   cursor: pointer;
   position: relative;
-  background: url('/images/brightness.svg') no-repeat center center;
+  background: url('/images_set/brightness.svg') no-repeat center center;
   background-size: 50px 50px; /* Adjust the size of the icon */
 }
 
@@ -1657,7 +1675,7 @@ span {
   border-radius: 20px; /* Make the thumb circular */
   cursor: pointer;
   position: relative;
-  background: url('/images/brightness.svg') no-repeat center center;
+  background: url('/images_set/brightness.svg') no-repeat center center;
   background-size: 70px 70px; /* Adjust the size of the icon */
 }
 
@@ -1715,7 +1733,7 @@ span {
   color: #bbbbbb;
   position: absolute;
   top: 40%;
-  left: calc(63%); /* Adjust this value as needed */
+  left: calc(54%); /* Adjust this value as needed */
   transform: translateY(-54%);
   white-space: nowrap;
 }
@@ -1863,19 +1881,19 @@ input:checked + .slider:before {
 
 .frame-image2 {
   position:absolute;
- 
-  transform: translate(-190%,0%);
+  transform: translate(-219.7%,0%);
+  
  
 }
 .call-screen {
   position:absolute;
   display: flex;
   background-color: #1D2C53;
-  width: 55%;
-  height: 65%;
-  padding: 20px;
+  width: 50%;
+  height: 68%;
+  padding: 10px;
  
-  transform: translate(15%, -5%);
+  transform: translate(28%, 37%);
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1885,14 +1903,14 @@ input:checked + .slider:before {
 }
 
 .keypad-section {
-  flex: 0 0 35%;
+  flex: 0 0 33%;
   display: flex;
   flex-direction: column;     
   justify-content: center;
   align-items: center;
   background-color: #4A5675;
-  border-radius: 16px;
-  padding: 10px;
+  border-radius: 25px;
+  padding: 20px;
 }
 
 .keypad-top {
@@ -1900,7 +1918,7 @@ input:checked + .slider:before {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .keypad-top-button {
@@ -1910,7 +1928,7 @@ input:checked + .slider:before {
   font-family: 'Urbanist', sans-serif;
   border: none;
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 5px 5px;
   cursor: pointer;
 }
 
@@ -1936,16 +1954,19 @@ input:checked + .slider:before {
   
   padding: 10px;
   border-radius: 16px;
+
 }
 
 .keypad-row {
   display: flex;
+
 }
 
 .keypad-button {
-  width: 60px;
+  width: 70px;
   height: 60px;
-  margin: 5px 20px; 
+  margin: 0px 20px; 
+  margin-bottom: 0px;
   background-color: #4A5675;
   color: white;
   font-size: 30px;
@@ -2016,6 +2037,38 @@ input:checked + .slider:before {
   width: 30px; /* Adjust as needed */
   height: 30px; /* Adjust as needed */
 }
+.call-button-container {
+  margin-top: 20px; /* Adds space between the keypad and call button */
+  display: flex;
+  justify-content: center;
+}
+
+.call-button {
+  width: 150px;
+  height: 60px;
+  background-color: #28A745; /* Green color */
+  color: white;
+  font-size: 25px;
+  font-family: 'Urbanist', sans-serif;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom:-30px;
+}
+
+.call-button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px; /* Space between the icon and text */
+}
+
+.call-button:active {
+  background-color: #218838; /* Darker green when pressed */
+}
+
 /* components/VoiceAssistant.css */
 
  
@@ -2023,4 +2076,161 @@ input:checked + .slider:before {
 .blurred {
   transition: filter 1.5s ease;
   filter: blur(50%);
+} 
+.speedometer-container {
+ 
+  position: relative;
+  width: 100px; 
+  height: 140vh;
+  transform: translate(20%,10%);
+}
+
+.circle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  transform: translate(0%,10%);
+}
+
+.circle {
+  position: relative;
+  width: 16vw;
+  height: 16vw;
+  max-width: 220px;
+  max-height: 220px;
+  transform: translate(0%,12%);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.arc {
+  fill: none;
+  stroke-width:12;
+  stroke-linecap: round;
+}
+
+.circle-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Urbanist';
+  text-align: center;
+
+  color: #fff;
+}
+
+.circle-text .number {
+  font-size: 2vw;
+  max-font-size: 40px;
+}
+
+.circle-text .unit {
+  font-size: 1.25vw;
+  max-font-size: 25px;
+}
+
+.car-container {
+  position: relative;
+  width: 25vw;
+  height: 25vw;
+  max-width: 250px;
+  max-height: 210px;
+}
+
+.gear-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 8px;
+  top: -50px;
+  left: 5px;
+}
+
+.gear-button {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  letter-spacing: -1px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.gear-selector-line {
+  position: absolute;
+  bottom: -10px;
+  left: calc(45% - 84.65px);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(to right, #6EBFF4 22.4%, #00BCF7 59%, #00CBF8 85%);
+  
+}
+
+.gear-arrow {
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gear-arrow-left {
+  background-image: url('/images_speed/Union (1).svg');
+  margin-right: 8px;
+}
+
+.gear-arrow-right {
+  background-image: url('/images_speed/Union (2).svg');
+  margin-left: 8px;
+}
+
+.svg-composition {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.group-svg {
+  position: absolute;
+  top: -20%;
+  left: -40%;
+  width: 8%;
+  height: auto;
+}
+
+.headlight-svg {
+  position: absolute;
+  top: -22%;
+  left: -25%;
+  width: 10%;
+  height: auto;
+
+}
+
+.blue-path, .white-glow, .car-image90,.ellipse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+
+}
+
+.car-image90 {
+  opacity: 1; /* Ensure it's fully visible */
+  visibility: visible; /* Ensure it's not hidden */
+  position: absolute;
+  top: 35%;
+  left: 37.5%;
+  width: 25%;
+  height: auto;
+  z-index: 5; /* Ensure it’s above other elements if needed */
 }
