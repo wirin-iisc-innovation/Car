@@ -1,7 +1,5 @@
-
-
-.sidebar {
-  position:absolute;
+.sidebar2 {
+  position: absolute;
   width: 17%;
   height: 570px;
   background-color: #161616;
@@ -10,7 +8,7 @@
   flex-direction: column;
 }
 
-.sidebar-button {
+.sidebar2-button {
   display: block;
   width: 100%;
   padding: 15px 20px;
@@ -22,16 +20,16 @@
   font-size: 23px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: 'Urbanist', sans-serif;
+  font-family: "Urbanist", sans-serif;
 }
 
-.sidebar-button.active .sidebar-text {
+.sidebar2-button.active .sidebar2-text {
   color: white; /* Makes the text glow white */
   font-weight: bold; /* Optional: Make the text bold */
   text-shadow: 0 0 5px white; /* Optional: Add a glowing effect */
 }
 
-.sidebar-text{
+.sidebar2-text {
   margin-left: 60px;
   margin-bottom: 0px;
   color: #737373;
@@ -39,35 +37,35 @@
   font-size: x-large;
 }
 
-.sidebar-text:hover{
+.sidebar2-text:hover {
   color: white;
 }
 
-.sidebar-icon{
+.sidebar2-icon {
   margin-top: 0px;
   position: absolute;
   align-content: center;
 }
 
-.arrow{
+.arrow {
   margin-left: 50px;
   margin-bottom: 490px;
 }
 
-.mini-sidebar {
-  position:absolute;
+.mini-sidebar2 {
+  position: absolute;
   width: 17%;
-  height: 570px;  
+  height: 570px;
   margin-left: 20%;
   margin-top: -570px;
   padding: 0px;
   background-color: #292929;
-  font-family: 'Urbanist', sans-serif;
-  transform: translate(-20%,100%);
+  font-family: "Urbanist", sans-serif;
+  transform: translate(-20%, 100%);
   z-index: 2;
 }
 
-.mini-sidebar-button {
+.mini-sidebar2-button {
   display: block;
   width: 100%;
   padding: 15px 20px;
@@ -80,17 +78,17 @@
   font-size: 23px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: 'Urbanist', sans-serif;
+  font-family: "Urbanist", sans-serif;
   transition: color 0.3s ease;
 }
 
-.mini-sidebar-button.active .mini-sidebar-text {
+.mini-sidebar2-button.active .mini-sidebar2-text {
   color: white; /* Makes the text glow white */
   font-weight: bold; /* Optional: Make the text bold */
   text-shadow: 0 0 5px white; /* Optional: Add a glowing effect */
 }
 
-.mini-sidebar-text{
+.mini-sidebar2-text {
   margin-left: 0px;
   margin-bottom: 0px;
   color: #737373;
@@ -98,18 +96,18 @@
   font-size: x-large;
 }
 
-.mini-sidebar-text:hover{
+.mini-sidebar2-text:hover {
   color: white;
 }
 
-.diagnostics-arrow-section{
+.diagnostics-arrow-section {
   margin-left: 40%;
   top: 40%;
   margin-top: -625px;
   height: 570px;
 }
 
-.diagnostics-arrow-button{
+.diagnostics-arrow-button {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,13 +116,14 @@
   outline: none;
   border: #090909;
   background: linear-gradient(
-    to bottom,
-    #131D43 0%,
-    #131E41 25%,
-    #1D2A5D 40%,
-    #12224F 68%,
-    #081f44 100%
-  ), #313131;
+      to bottom,
+      #131d43 0%,
+      #131e41 25%,
+      #1d2a5d 40%,
+      #12224f 68%,
+      #081f44 100%
+    ),
+    #313131;
   position: relative;
   width: 25;
   height: 50px;
@@ -132,7 +131,7 @@
   max-height: 5;
 }
 
-.diagnostics-arrow{
+.diagnostics-arrow {
   margin-left: 20px;
   margin-bottom: 0px;
 }
@@ -144,16 +143,14 @@
   margin-left: 250px;
   padding: 90px;
   width: 100%;
-  font-family: 'Urbanist', sans-serif; /* Apply Urbanist font */
+  font-family: "Urbanist", sans-serif; /* Apply Urbanist font */
 }
 .seating-lights-container {
-  
   display: flex;
   justify-content: space-between;
   padding: 0px;
   color: white;
   transform: translate(13%, 30%);
- 
 }
 
 /* Lighting */
@@ -161,7 +158,7 @@
   width: 262px;
   height: 310px;
   background-color: rgba(81, 81, 81, 0.75);
-  padding: 20px;  
+  padding: 20px;
   border-radius: 8px;
   transform: translate(165%, -20%);
   text-align: center;
@@ -174,7 +171,7 @@
   margin-bottom: 15px;
   font-size: 22px;
   font-weight: bold;
-  font-family: 'Urbanist', sans-serif;
+  font-family: "Urbanist", sans-serif;
 }
 
 .lighting-item {
@@ -191,14 +188,14 @@
 .lighting-status {
   flex: 1;
   text-align: center;
-  color: #00FF00;
+  color: #00ff00;
   font-weight: bold;
 }
 
 .lighting-status-detail {
   flex: 1;
   text-align: center;
-  font-family: 'Urbanist', sans-serif;
+  font-family: "Urbanist", sans-serif;
 }
 
 .car-external-lighting-container {
@@ -228,7 +225,7 @@
   height: auto;
   top: 18%;
   left: 50.25%;
-  transform: translate(-127%,-20%);
+  transform: translate(-127%, -20%);
 }
 
 .arrow-vertical {
@@ -237,11 +234,11 @@
   height: 100px;
   top: 18.5%;
   left: 38.8%;
-  transform: translate(-55%,-0%);
+  transform: translate(-55%, -0%);
 }
 
 .external-lighting-box {
-  width:262px;
+  width: 262px;
   height: 310px;
   background-color: rgba(81, 81, 81, 0.75);
   text-align: center;
@@ -260,7 +257,7 @@
 }
 
 /*Seating*/
-.captain-seat-container{
+.captain-seat-container {
   background-color: rgba(81, 81, 81, 0.75);
   opacity: 1;
   padding: 10px;
@@ -274,7 +271,7 @@
   text-align: center;
 }
 
-.co-captain-seat-container{
+.co-captain-seat-container {
   background-color: rgba(81, 81, 81, 0.75);
   opacity: 1;
   padding: 10px;
@@ -309,15 +306,15 @@
 .seating-status {
   flex: 1;
   text-align: center;
-  font-family: 'Urbanist', sans-serif;
-  color:#fff;
+  font-family: "Urbanist", sans-serif;
+  color: #fff;
 }
 
 .seating-status-detail {
   flex: 1;
   text-align: center;
-  font-family: 'Urbanist', sans-serif;
-  color:#fff;
+  font-family: "Urbanist", sans-serif;
+  color: #fff;
 }
 
 .arrow-seating1 {
@@ -326,7 +323,7 @@
   height: auto;
   top: 18%;
   left: 50.25%;
-  transform: translate(-149%,-60%);
+  transform: translate(-149%, -60%);
 }
 
 .arrow-seating2 {
@@ -335,10 +332,10 @@
   height: auto;
   top: 18%;
   left: 50.25%;
-  transform: translate(-155%,1500%);
+  transform: translate(-155%, 1500%);
 }
 
-.table-status-box{
+.table-status-box {
   background-color: rgba(81, 81, 81, 0.75);
   opacity: 1;
   padding: 10px;
@@ -352,7 +349,7 @@
   text-align: center;
 }
 
-.table-lighting-box{
+.table-lighting-box {
   background-color: rgba(81, 81, 81, 0.75);
   opacity: 1;
   padding: 10px;
@@ -381,15 +378,15 @@
 .table-lighting-status {
   flex: 1;
   text-align: center;
-  font-family: 'Urbanist', sans-serif;
-  color:#fff;
+  font-family: "Urbanist", sans-serif;
+  color: #fff;
 }
 
 .table-lighting-status-detail {
   flex: 1;
   text-align: center;
-  font-family: 'Urbanist', sans-serif;
-  color:#fff;
+  font-family: "Urbanist", sans-serif;
+  color: #fff;
 }
 
 .arrow-table-lighting1 {
@@ -398,7 +395,7 @@
   height: auto;
   top: 18%;
   left: 50.25%;
-  transform: translate(-149%,-50%);
+  transform: translate(-149%, -50%);
 }
 
 .arrow-table-lighting2 {
@@ -407,7 +404,7 @@
   height: auto;
   top: 18%;
   left: 50.25%;
-  transform: translate(-155%,2000%);
+  transform: translate(-155%, 2000%);
 }
 
 .car-image-table-lighting {
@@ -416,6 +413,6 @@
   transform: translate(-10%, 60%);
 }
 
-@import 'Battery.css';
-@import 'OBC.css';
-@import 'VehicularControl.css';
+@import "Battery.css";
+@import "OBC.css";
+@import "VehicularControl.css";

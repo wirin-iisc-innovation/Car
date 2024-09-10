@@ -1,6 +1,13 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const FullScreen: React.FC<{ onClose: () => void }> = ({ onClose }) => {
+  const navigate = useNavigate();
+
+  const handleDiagnosticsClick = () => {
+    navigate("/diag"); // Navigates to the diag page
+  };
+
   return (
     <div className="fullscreen-popup-container">
       <div className="fullscreen-popup">
@@ -8,7 +15,10 @@ const FullScreen: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           &times;
         </button>
         <div className="popup-content">
-          <div className="icon-container diagnostics">
+          <div
+            className="icon-container diagnostics"
+            onClick={handleDiagnosticsClick}
+          >
             <img src="images_fullpage/Diagnostics.svg" alt="Diagnostics" />
             <span>Diagnostics</span>
           </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface VoltageCurrentContentProps {
   currentDrawn: number;
@@ -7,12 +7,12 @@ interface VoltageCurrentContentProps {
 
 const VoltageCurrentContent: React.FC<VoltageCurrentContentProps> = ({
   currentDrawn,
-  batteryVoltage
+  batteryVoltage,
 }) => {
   return (
     <div className="voltage-current-container">
-      <div className="car-container">
-        <img src="/images/Car image.svg" alt="Car"/>
+      <div className="car-container2">
+        <img src="/images/Car image.svg" alt="Car" />
       </div>
       <div className="battery-current">
         <div className="panel-title">Battery Current</div>

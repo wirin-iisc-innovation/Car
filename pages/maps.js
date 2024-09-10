@@ -1,52 +1,49 @@
 // pages/index.js
 
-import Head from 'next/head';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { useEffect, useState } from 'react';
+import Head from "next/head";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [isSwitched, setIsSwitched] = useState(false);
 
   useEffect(() => {
     // Update the time and date
-   
 
     // Update the weather information
-   
-
-  
 
     // Handle resizing
-    const mapContainer = document.querySelector('.map-container');
-    const resizeHandle = document.querySelector('.resize-handle');
+    const mapContainer = document.querySelector(".map-container");
+    const resizeHandle = document.querySelector(".resize-handle");
 
     let isResizing = false;
 
     const handleMouseDown = (event) => {
       isResizing = true;
-      document.addEventListener('mousemove', handleMouseMove);
-      document.addEventListener('mouseup', handleMouseUp);
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleMouseUp);
     };
 
     const handleMouseMove = (event) => {
       if (!isResizing) return;
-      const newWidth = event.clientX - mapContainer.getBoundingClientRect().left;
+      const newWidth =
+        event.clientX - mapContainer.getBoundingClientRect().left;
       mapContainer.style.width = `${newWidth}px`;
     };
 
     const handleMouseUp = () => {
       isResizing = false;
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
     };
 
-    resizeHandle.addEventListener('mousedown', handleMouseDown);
+    resizeHandle.addEventListener("mousedown", handleMouseDown);
 
     return () => {
-      resizeHandle.removeEventListener('mousedown', handleMouseDown);
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
+      resizeHandle.removeEventListener("mousedown", handleMouseDown);
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
     };
   }, []);
 
@@ -63,10 +60,14 @@ export default function Home() {
       <Header />
 
       <main className="main-content5">
-        <div className={`left-side ${isSwitched ? 'switched' : ''}`}>
-          <img src="/images_map/Frame 4564.svg" alt="Frame" className="frame-image" />
+        <div className={`left-side ${isSwitched ? "switched" : ""}`}>
+          <img
+            src="/images_map/Frame 4564.svg"
+            alt="Frame"
+            className="frame-image"
+          />
         </div>
-        <div className={`right-side ${isSwitched ? 'switched' : ''}`}>
+        <div className={`right-side ${isSwitched ? "switched" : ""}`}>
           <div className="map-container">
             <iframe
               src="https://ayushratan.pythonanywhere.com/"

@@ -1,14 +1,17 @@
-import React from 'react';
+import React from "react";
 
 interface AcVoltageAndCurrentProps {
   acCurrent: string;
   acVoltage: string;
 }
 
-const AcVoltageAndCurrent: React.FC<AcVoltageAndCurrentProps> = ({ acCurrent, acVoltage }) => {
+const AcVoltageAndCurrent: React.FC<AcVoltageAndCurrentProps> = ({
+  acCurrent,
+  acVoltage,
+}) => {
   return (
     <div className="voltage-current-container">
-      <div className="car-container">
+      <div className="car-container2">
         <img src="/images/Car image.svg" alt="Car" />
       </div>
       <div className="battery-current">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface TemperatureDataProps {
   currentTemp: string;
@@ -7,7 +7,7 @@ interface TemperatureDataProps {
 const TemperatureData1: React.FC<TemperatureDataProps> = ({ currentTemp }) => {
   return (
     <div className="voltage-current-container">
-      <div className="car-container">
+      <div className="car-container2">
         <img src="/images/Car image.svg" alt="Car" />
       </div>
       <div className="temp-data">

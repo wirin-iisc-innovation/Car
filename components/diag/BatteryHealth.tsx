@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface BatteryHealthProps {
   temperature: number;
@@ -7,10 +7,15 @@ interface BatteryHealthProps {
   totalCells: number;
 }
 
-const BatteryHealth: React.FC<BatteryHealthProps> = ({ temperature, goodCells, poorCells, totalCells }) => {
+const BatteryHealth: React.FC<BatteryHealthProps> = ({
+  temperature,
+  goodCells,
+  poorCells,
+  totalCells,
+}) => {
   return (
     <div className="voltage-current-container">
-      <div className="car-container">
+      <div className="car-container2">
         <img src="/images/Car image.svg" alt="Car" />
       </div>
       <div className="battery-health">
@@ -23,7 +28,9 @@ const BatteryHealth: React.FC<BatteryHealthProps> = ({ temperature, goodCells, p
           <div className="cell-image">
             <img src="images/Good cell.svg" alt="GoodCell" />
           </div>
-          <div className="cells-value">{goodCells}/{totalCells}</div>
+          <div className="cells-value">
+            {goodCells}/{totalCells}
+          </div>
           <div className="cells">cells</div>
         </div>
         <div className="main">
@@ -31,7 +38,9 @@ const BatteryHealth: React.FC<BatteryHealthProps> = ({ temperature, goodCells, p
           <div className="cell-image">
             <img src="images/Poor cell.svg" alt="PoorCell" />
           </div>
-          <div className="cells-value">{poorCells}/{totalCells}</div>
+          <div className="cells-value">
+            {poorCells}/{totalCells}
+          </div>
           <div className="cells">cells</div>
         </div>
         <div className="battery-health-line"></div>

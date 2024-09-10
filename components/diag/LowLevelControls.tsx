@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface LowLevelControlsProps {
   autonomousStatus: string;
@@ -9,11 +9,11 @@ interface LowLevelControlsProps {
 const LowLevelControls: React.FC<LowLevelControlsProps> = ({
   autonomousStatus,
   manualModeStatus,
-  hardwareModeStatus
+  hardwareModeStatus,
 }) => {
   return (
     <div className="voltage-current-container">
-      <div className="car-container">
+      <div className="car-container2">
         <img src="/images/Car image.svg" alt="Car" className="car-image" />
       </div>
       <div className="status-charge">
