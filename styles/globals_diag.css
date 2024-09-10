@@ -1,0 +1,421 @@
+
+
+.sidebar {
+  position:absolute;
+  width: 17%;
+  height: 570px;
+  background-color: #161616;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-button {
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-align: left;
+  font-size: 23px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.sidebar-button.active .sidebar-text {
+  color: white; /* Makes the text glow white */
+  font-weight: bold; /* Optional: Make the text bold */
+  text-shadow: 0 0 5px white; /* Optional: Add a glowing effect */
+}
+
+.sidebar-text{
+  margin-left: 60px;
+  margin-bottom: 0px;
+  color: #737373;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.sidebar-text:hover{
+  color: white;
+}
+
+.sidebar-icon{
+  margin-top: 0px;
+  position: absolute;
+  align-content: center;
+}
+
+.arrow{
+  margin-left: 50px;
+  margin-bottom: 490px;
+}
+
+.mini-sidebar {
+  position:absolute;
+  width: 17%;
+  height: 570px;  
+  margin-left: 20%;
+  margin-top: -570px;
+  padding: 0px;
+  background-color: #292929;
+  font-family: 'Urbanist', sans-serif;
+  transform: translate(-20%,100%);
+  z-index: 2;
+}
+
+.mini-sidebar-button {
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  position: static;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-align: left;
+  font-size: 23px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Urbanist', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.mini-sidebar-button.active .mini-sidebar-text {
+  color: white; /* Makes the text glow white */
+  font-weight: bold; /* Optional: Make the text bold */
+  text-shadow: 0 0 5px white; /* Optional: Add a glowing effect */
+}
+
+.mini-sidebar-text{
+  margin-left: 0px;
+  margin-bottom: 0px;
+  color: #737373;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.mini-sidebar-text:hover{
+  color: white;
+}
+
+.diagnostics-arrow-section{
+  margin-left: 40%;
+  top: 40%;
+  margin-top: -625px;
+  height: 570px;
+}
+
+.diagnostics-arrow-button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  border: #090909;
+  background: linear-gradient(
+    to bottom,
+    #131D43 0%,
+    #131E41 25%,
+    #1D2A5D 40%,
+    #12224F 68%,
+    #081f44 100%
+  ), #313131;
+  position: relative;
+  width: 25;
+  height: 50px;
+  max-width: 25;
+  max-height: 5;
+}
+
+.diagnostics-arrow{
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+
+.screen-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 250px;
+  padding: 90px;
+  width: 100%;
+  font-family: 'Urbanist', sans-serif; /* Apply Urbanist font */
+}
+.seating-lights-container {
+  
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+  color: white;
+  transform: translate(13%, 30%);
+ 
+}
+
+/* Lighting */
+.lighting-box {
+  width: 262px;
+  height: 310px;
+  background-color: rgba(81, 81, 81, 0.75);
+  padding: 20px;  
+  border-radius: 8px;
+  transform: translate(165%, -20%);
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Vertical orientation */
+  justify-content: space-between;
+}
+
+.lighting-box h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.lighting-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.lighting-label {
+  flex: 2;
+}
+
+.lighting-status {
+  flex: 1;
+  text-align: center;
+  color: #00FF00;
+  font-weight: bold;
+}
+
+.lighting-status-detail {
+  flex: 1;
+  text-align: center;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.car-external-lighting-container {
+  position: absolute;
+}
+
+.car-internal-lighting-container {
+  position: relative;
+  transform: translate(-34.5%, -6%);
+}
+
+.car-image-internal-lighting {
+  width: 900px;
+  height: 377.5px;
+  transform: translate(10%, 10%);
+}
+
+.car-image-external-lighting {
+  width: 900px;
+  height: 377.5px;
+  transform: translate(40%, 25%);
+}
+
+.arrow-internal-lighting {
+  position: absolute;
+  width: 350px;
+  height: auto;
+  top: 18%;
+  left: 50.25%;
+  transform: translate(-127%,-20%);
+}
+
+.arrow-vertical {
+  position: absolute;
+  width: auto;
+  height: 100px;
+  top: 18.5%;
+  left: 38.8%;
+  transform: translate(-55%,-0%);
+}
+
+.external-lighting-box {
+  width:262px;
+  height: 310px;
+  background-color: rgba(81, 81, 81, 0.75);
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  color: #ffffff;
+  transform: translate(249%, 5%);
+  display: flex;
+  flex-direction: column; /* Vertical orientation */
+  justify-content: space-between;
+}
+
+.arrow-external-lighting-image {
+  position: absolute;
+  transform: translate(-152%, 40%);
+}
+
+/*Seating*/
+.captain-seat-container{
+  background-color: rgba(81, 81, 81, 0.75);
+  opacity: 1;
+  padding: 10px;
+  border-radius: 12px;
+  width: 434px;
+  height: 183px;
+  transform: translate(108%, -20%);
+  display: flex;
+  flex-direction: column; /* Vertical orientation */
+  justify-content: space-between;
+  text-align: center;
+}
+
+.co-captain-seat-container{
+  background-color: rgba(81, 81, 81, 0.75);
+  opacity: 1;
+  padding: 10px;
+  border-radius: 12px;
+  width: 434px;
+  height: 183px;
+  transform: translate(-17.8%, 95%);
+  display: flex;
+  flex-direction: column; /* Vertical orientation */
+  justify-content: space-between;
+  text-align: center;
+}
+
+.car-image-seating {
+  width: 900px;
+  height: 177.5px;
+  transform: translate(-10%, 60%);
+}
+
+.seating-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.seating-label {
+  flex: 2;
+  color: #c9c9c9;
+}
+
+.seating-status {
+  flex: 1;
+  text-align: center;
+  font-family: 'Urbanist', sans-serif;
+  color:#fff;
+}
+
+.seating-status-detail {
+  flex: 1;
+  text-align: center;
+  font-family: 'Urbanist', sans-serif;
+  color:#fff;
+}
+
+.arrow-seating1 {
+  position: absolute;
+  width: 350px;
+  height: auto;
+  top: 18%;
+  left: 50.25%;
+  transform: translate(-149%,-60%);
+}
+
+.arrow-seating2 {
+  position: absolute;
+  width: 350px;
+  height: auto;
+  top: 18%;
+  left: 50.25%;
+  transform: translate(-155%,1500%);
+}
+
+.table-status-box{
+  background-color: rgba(81, 81, 81, 0.75);
+  opacity: 1;
+  padding: 10px;
+  border-radius: 12px;
+  width: 434px;
+  height: 183px;
+  transform: translate(108%, -20%);
+  display: flex;
+  flex-direction: column; /* Vertical orientation */
+  justify-content: space-between;
+  text-align: center;
+}
+
+.table-lighting-box{
+  background-color: rgba(81, 81, 81, 0.75);
+  opacity: 1;
+  padding: 10px;
+  border-radius: 12px;
+  width: 434px;
+  height: 183px;
+  transform: translate(-18%, 100%);
+  display: flex;
+  flex-direction: column; /* Vertical orientation */
+  justify-content: space-between;
+  text-align: center;
+}
+
+.table-lighting-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.table-lighting-label {
+  flex: 2;
+  color: #c9c9c9;
+}
+
+.table-lighting-status {
+  flex: 1;
+  text-align: center;
+  font-family: 'Urbanist', sans-serif;
+  color:#fff;
+}
+
+.table-lighting-status-detail {
+  flex: 1;
+  text-align: center;
+  font-family: 'Urbanist', sans-serif;
+  color:#fff;
+}
+
+.arrow-table-lighting1 {
+  position: absolute;
+  width: 350px;
+  height: auto;
+  top: 18%;
+  left: 50.25%;
+  transform: translate(-149%,-50%);
+}
+
+.arrow-table-lighting2 {
+  position: absolute;
+  width: 350px;
+  height: auto;
+  top: 18%;
+  left: 50.25%;
+  transform: translate(-155%,2000%);
+}
+
+.car-image-table-lighting {
+  width: 900px;
+  height: 177.5px;
+  transform: translate(-10%, 60%);
+}
+
+@import 'Battery.css';
+@import 'OBC.css';
+@import 'VehicularControl.css';

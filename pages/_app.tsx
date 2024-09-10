@@ -6,6 +6,7 @@ import '../styles/globals.css';
 import '../styles/auto.css';
 import VoiceAssistant from '../components/VoiceAssistant';
 
+
 const BrowserRouter = dynamic(() =>
   import('react-router-dom').then(mod => mod.BrowserRouter),
   { ssr: false }

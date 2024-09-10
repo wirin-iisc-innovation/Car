@@ -1,0 +1,50 @@
+.charge-level-value{
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-left: 190px;
+  margin-top: -80px;
+}
+
+.charging-time-value{
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-left: 190px;
+  margin-top: -50px;
+}
+
+.temp-data{
+  position: fixed;
+  background-color: #515151;
+  opacity: .75;
+  color: #FFFFFF;
+  padding: 10px;
+  border-radius: 12px;
+  width: 260px;
+  height: 150px;
+  margin-left: -20px;
+  margin-bottom: 85px;
+}
+
+.temperature-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-left: 160px;
+  margin-top: -27px;
+}
+
+.temp-data-image{
+  margin-left: 210px;
+  margin-top: -22px;
+}
+
+.temp-line {
+  position: absolute;
+  top: 50%; /* Adjust according to your design */
+  left: 100%;
+  width: 221px; /* Adjust length as needed */
+  height: 1.5px;
+  background-color: white;
+}

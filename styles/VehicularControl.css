@@ -1,0 +1,474 @@
+
+/* Low Level Controls Screen Specific Styling */
+.low-level-controls-screen {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Space between controls and car */
+  }
+  
+  .controls-container {
+    background-color: rgba(81, 81, 81, 0.75);
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff; /* White text color */
+    min-width: 230px; /* Minimum width for the controls container */
+    transform: translate(-10%, -15%);
+  }
+  
+  .control-item {
+    display: flex;
+    justify-content: space-between; /* Ensure spacing between label and status */
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .control-label {
+    display: flex;
+    flex-direction: column; 
+    font-weight: bold;
+  }
+  
+  .control-detail {
+    font-size: 16px; /* Slightly smaller font for the detail text */
+    transform: translate(-108%, 103%);
+  }
+  
+  .control-status {
+    color: #0f0; /* Green for ON, red for OFF */
+    margin-left: 10px; /* Small space between the label and status */
+  }
+  
+  .control-hint {
+    font-style: italic;
+    text-align: center; /* Center text horizontally */
+    margin-top: 20px; /* Add margin for spacing */
+  }
+  
+  /*.car-container {
+    position: relative;
+    transform: translate(10%, 35%);
+  }*/
+  
+  .car-image {
+    width: 677.5px; /* Adjust width as needed */
+  }
+  
+  .arrow-image {  
+    position: absolute;
+    
+    left: 100px; /* Adjust position as needed */
+    transform: translate(-60%,-900%);
+    width: 400px; /* Adjust width as needed */
+  }
+  .arrow1-image {
+    position: absolute;
+    height:121px;
+    left: 260px; /* Adjust position as needed */
+    transform: translate(40%,-43%);
+    width: 1.1px; /* Adjust width as needed */
+  }
+  .pid-master-values-screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    /* Background color to match the design */
+  }
+  
+  .pid-values-container {
+    position: fixed;
+    background-color: #515151;
+    opacity: .75;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 12px;
+    width: 413px;
+    height: 310px;
+    margin-left: 0px;
+    margin-top: -180px;
+  }
+
+  .pid-values-container::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 97px; /* Adjust this height as needed */
+    background-color: white;
+    right: -293px; /* Align with the end of the horizontal line */
+    top: 50%; /* Start the vertical line from the center of the box */
+    transform: translateY(-101%);
+  }
+  
+  .pid-values {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .pid-value-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    /* Card background color */
+    border-radius: 8px;
+  }
+  
+  .pid-label {
+    font-size: 20px;
+    color: #ffffff; /* Text color */
+    font-family: 'Urbanist', sans-serif;
+  }
+  
+  .pid-value {
+    font-size: 20px;
+    margin-right: 25px;
+    color: #00ff00; /* Text color for values */
+  }
+  
+  
+  
+  .car-image-container {
+    position: relative;
+    width: 60%;
+    max-width: 600px;
+    margin: auto;
+    margin-left: 1280px;
+    margin-top: 105px;
+  }
+  
+  .car-image1 {
+    width: 677.5px; /* Adjust based on your design */
+    
+  }
+  .pid-controls-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .pid-controls-box {
+    position: fixed;
+    background-color: #515151;
+    opacity: .75;
+    color: white;
+    padding: 10px;
+    border-radius: 12px;
+    width: 260px;
+    height: 285px;    
+    margin-left: -20px;
+    margin-bottom: 215px;
+  }
+
+  .pid-controls-box::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 97px; /* Adjust this height as needed */
+    background-color: white;
+    right: -378px; /* Align with the end of the horizontal line */
+    top: 50%; /* Start the vertical line from the center of the box */
+    transform: translateY(-109%);
+  }
+
+  .pid-controls-box h3 {
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    font-family: 'Urbanist', sans-serif;
+  }
+  
+  .control-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .control-label {
+    font-weight: bold;
+    font-family: 'Urbanist', sans-serif;
+    
+  }
+  
+  .control-status {
+    font-weight: normal;
+    font-family: 'Urbanist', sans-serif;
+  
+  }
+  
+  .car-container2 {
+    position: absolute;
+  }
+  
+  /*.car-image2 {
+    width: 677.5px;
+    
+    transform: translate(4%, 35%);
+  }*/
+  
+  .arrow3-image {
+    position: absolute;
+    
+    transform: translate(-199%, 700%);
+  }
+  
+  
+  .arrow4-image {
+    position: absolute;
+    top: 27%;
+    left: 40.3%;
+    transform: translate(-50%, -30%);
+  }
+  .control-unit-screen {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    
+    color: white;
+  }
+  
+  
+  .control-unit-box {
+    position: fixed;
+    background-color: #515151;
+    opacity: .75;
+    color: white;
+    padding: 10px;
+    border-radius: 12px;
+    width: 509px;
+    height: 372px;    
+    margin-left: -20px;
+    margin-bottom: 115px;
+  }
+
+  .control-unit-box::after{  
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 85px; /* Adjust this height as needed */
+    background-color: white;
+    right: -253px; /* Align with the end of the horizontal line */
+    top: 50%; /* Start the vertical line from the center of the box */
+    transform: translateY(-161%);
+  }
+  
+  .control-unit-box h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Urbanist', sans-serif;
+  }
+  
+  .control-unit-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .control-unit-label {
+    flex: 2;
+  }
+  
+  .control-unit-status {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .control-unit-status-detail {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+    color: #00FF00;
+    font-family: 'Urbanist', sans-serif;
+  }
+  
+  .car-container3 {
+    position: relative;
+  
+  }
+  
+  .car-image3 {
+    width: 677.5px;
+    transform: translate(3%, 39%);
+    
+  }
+  
+  .arrow-horizontal {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: 18%;
+    left: 50.25%;
+    transform: translate(-131%,30%);
+  }
+  
+  .arrow-vertical {
+    position: absolute;
+    width: auto;
+    height: 100px;
+    top: 18.5%;
+    left: 38.8%;
+    transform: translateX(-50%);
+  }
+  .control-unit2-screen {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    color: white;
+  }
+  
+  .control-unit2-box {
+    width: 509px;
+    height: 350px;
+    background-color: rgba(81, 81, 81, 0.75);
+    padding: 20px;
+    border-radius: 8px;
+    transform: translate(3%, 4%);
+  }
+  
+  .control-unit2-box h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Urbanist', sans-serif;
+  }
+  
+  .control-unit2-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .control-unit2-label {
+    grid-column: 1 / 2;
+    padding-left: 0; /* Remove padding */
+  }
+  
+  .control-unit2-status {
+    grid-column: 2 / 3;
+    text-align: right;
+  }
+  
+  .control-unit2-status-detail {
+    grid-column: 3 / 4;
+    text-align: right;
+    font-weight: bold;
+    color: #00FF00;
+    font-family: 'Urbanist', sans-serif;
+  }
+  
+  .car-container4 {
+    position: relative;
+  }
+  
+  .car-image4 {
+    width: 677.5px;
+    transform: translate(3%, 39%);
+  }
+  
+  .arrow-horizontal2 {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: 18%;
+    left: 50.25%;
+    transform: translate(-131%, 30%);
+  }
+  
+  .arrow-vertical2 {
+    position: absolute;
+    width: auto;
+    height: 100px;
+    top: 18.5%;
+    left: 38.8%;
+    transform: translateX(-50%);
+  }
+  .control-unit3-screen {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    color: white;
+  }
+  
+  .control-unit3-box {
+    width: 509px;
+    height: 350px;
+    background-color: rgba(81, 81, 81, 0.75);
+    padding: 20px;  
+    border-radius: 8px;
+    transform: translate(3%, 4%);
+  }
+  
+  .control-unit3-box h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Urbanist', sans-serif;
+  }
+  
+  .control-unit3-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .control-unit3-label {
+    flex: 2;
+  }
+  
+  .control-unit3-status {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .control-unit3-status-detail {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+    color: #00FF00;
+    font-family: 'Urbanist', sans-serif;
+  }
+  
+  .car-container-unit3 {
+    position: relative;
+  }
+  
+  .car-image-unit3 {
+    width: 677.5px;
+    transform: translate(3%, 39%);
+  }
+  
+  .arrow-horizontal-unit3 {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: 18%;
+    left: 50.25%;
+    transform: translate(-131%,30%);
+  }
+  
+  .arrow-vertical-unit3 {
+    position: absolute;
+    width: auto;
+    height: 100px;
+    top: 18.5%;
+    left: 38.8%;
+    transform: translateX(-50%);
+  }
+
+.pid-master-line{  
+  position: absolute;
+  top: 20%; /* Adjust according to your design */
+  left: 100%;
+  width: 293px; /* Adjust length as needed */
+  height: 1.5px;
+  background-color: white;
+}
+
+.control-unit-line{
+  position: absolute;
+  top: 15%; /* Adjust according to your design */
+  left: 100%;
+  width: 253px; /* Adjust length as needed */
+  height: 1.5px;
+  background-color: white;
+}
