@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface PIDMasterValuesProps {
   steeringPIDOutput: number;
@@ -13,12 +13,12 @@ const PIDMasterValues: React.FC<PIDMasterValuesProps> = ({
   brakePIDOutput,
   motorRPIDOutput1,
   motorRPIDOutput2,
-  masterPIDOutput
+  masterPIDOutput,
 }) => {
   return (
     <div className="voltage-current-container">
       <div className="pid-values-container">
-        <div className='panel-title'>PID Master Values</div>
+        <div className="panel-title">PID Master Values</div>
         <div className="pid-values">
           <div className="pid-value-item">
             <span className="pid-label">Steering PID Output (+/- 1024)</span>
@@ -43,8 +43,8 @@ const PIDMasterValues: React.FC<PIDMasterValuesProps> = ({
         </div>
         <div className="pid-master-line"></div>
       </div>
-      <div className="car-container">
-        <img src="/images/Car image.svg" alt="Car"/>
+      <div className="car-container2">
+        <img src="/images/Car image.svg" alt="Car" />
       </div>
     </div>
   );

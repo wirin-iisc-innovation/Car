@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface ACPowerProps {
   acPower: string;
@@ -7,7 +7,7 @@ interface ACPowerProps {
 const ACPower: React.FC<ACPowerProps> = ({ acPower }) => {
   return (
     <div className="voltage-current-container">
-      <div className="car-container">
+      <div className="car-container2">
         <img src="/images/Car image.svg" alt="Car" />
       </div>
       <div className="charge-level">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface ChargingStatusProps {
   mosfetCharging: string;
@@ -6,10 +6,14 @@ interface ChargingStatusProps {
   chargerStatus: string;
 }
 
-const ChargingStatus: React.FC<ChargingStatusProps> = ({ mosfetCharging, mosfetDischarging, chargerStatus }) => {
+const ChargingStatus: React.FC<ChargingStatusProps> = ({
+  mosfetCharging,
+  mosfetDischarging,
+  chargerStatus,
+}) => {
   return (
     <div className="voltage-current-container">
-      <div className="car-container">
+      <div className="car-container2">
         <img src="/images/Car image.svg" alt="Car" />
       </div>
       <div className="status-charge">

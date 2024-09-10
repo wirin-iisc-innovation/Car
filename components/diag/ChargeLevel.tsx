@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface ChargeLevelProps {
   chargePercentage: number;
@@ -7,8 +7,8 @@ interface ChargeLevelProps {
 const ChargeLevel: React.FC<ChargeLevelProps> = ({ chargePercentage }) => {
   return (
     <div className="voltage-current-container">
-      <div className="car-container">
-        <img src="/images/Car image.svg" alt="Car"/>
+      <div className="car-container2">
+        <img src="/images/Car image.svg" alt="Car" />
       </div>
       <div className="charge-level">
         <div className="panel-title">Charge Level</div>

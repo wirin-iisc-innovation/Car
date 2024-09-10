@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface PIDControlsProps {
   masterControlStatus: string;
@@ -11,7 +11,7 @@ const PIDControls: React.FC<PIDControlsProps> = ({
   masterControlStatus,
   steeringRackStatus,
   brakeStatus,
-  motorsStatus
+  motorsStatus,
 }) => {
   return (
     <div className="voltage-current-container">
@@ -36,7 +36,7 @@ const PIDControls: React.FC<PIDControlsProps> = ({
         </div>
         <div className="status-charge-line"></div>
       </div>
-      <div className="car-container">
+      <div className="car-container2">
         <img src="/images/Car image.svg" alt="Car2" />
       </div>
     </div>

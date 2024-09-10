@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface CellVoltageProps {
   avgVoltage: number;
@@ -8,10 +8,16 @@ interface CellVoltageProps {
   maxCellCount: number;
 }
 
-const CellVoltage: React.FC<CellVoltageProps> = ({ avgVoltage, minVoltage, maxVoltage, minCellCount, maxCellCount }) => {
+const CellVoltage: React.FC<CellVoltageProps> = ({
+  avgVoltage,
+  minVoltage,
+  maxVoltage,
+  minCellCount,
+  maxCellCount,
+}) => {
   return (
     <div className="voltage-current-container">
-      <div className="car-container">
+      <div className="car-container2">
         <img src="/images/Car image.svg" alt="Car" />
       </div>
       <div className="cell-voltage">
@@ -33,7 +39,9 @@ const CellVoltage: React.FC<CellVoltageProps> = ({ avgVoltage, minVoltage, maxVo
         <div className="voltage-value-avg">{avgVoltage} V</div>
         <div className="voltage-value-min">{minVoltage} V</div>
         <div className="voltage-value-max">{maxVoltage} V</div>
-        <div className="min-max">{minCellCount} cells min / {maxCellCount} cells max</div>
+        <div className="min-max">
+          {minCellCount} cells min / {maxCellCount} cells max
+        </div>
       </div>
     </div>
   );
