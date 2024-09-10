@@ -174,6 +174,33 @@ const MainContent: React.FC = () => {
               </div>
             </div>
           </>
+        ) : activeTab === 'Lights' ? (
+          <>
+            <div className="settings-group">
+              <div className="settings-group-title">Headlights</div>
+              <div className="settings-options">
+                <button className="button-light-adjust">
+                  <img src="images_set/headlight-adjust.svg" alt="Adjust Headlights" className="button-icon" />
+                  <span className="button-text">Adjust Headlights</span>
+                </button>
+                <button className="button-light-reset">
+                  <img src="images_set/headlight-reset.svg" alt="Reset Headlights" className="button-icon" />
+                  <span className="button-text">Reset Headlights</span>
+                </button>
+              </div>
+            </div>
+            <div className="settings-group">
+              <div className="settings-group-title">Interior Lights</div>
+              <div className="settings-options">
+                <label className="switch">
+                  <input type="checkbox" />
+                  <span className="slider"></span>
+                </label>
+                <span>Enable Interior Lights</span>
+              </div>
+            </div>
+          </>
+        
         ) : (
           <div className="settings-content">{activeTab}</div>
         )}
