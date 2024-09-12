@@ -14,7 +14,7 @@ body {
   width: 100%;
   max-width: 2000px; /* Increased width to fit the icons */
   height: 100%;
-  max-height: 650px; /* Full height with a max */
+  max-height: 670px; /* Full height with a max */
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -14,7 +14,7 @@ const LowLevelControls: React.FC<LowLevelControlsProps> = ({
   return (
     <div className="voltage-current-container">
       <div className="car-container2">
-        <img src="/images/Car image.svg" alt="Car" className="car-image" />
+        <img src="/images/Car image.svg" alt="Car" />
       </div>
       <div className="status-charge">
         <div className="panel-title">Low Level Controls</div>

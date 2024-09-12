@@ -1,7 +1,7 @@
 .sidebar2 {
   position: absolute;
   width: 17%;
-  height: 570px;
+  height: 587px;
   background-color: #161616;
   color: white;
   display: flex;
@@ -55,9 +55,9 @@
 .mini-sidebar2 {
   position: absolute;
   width: 17%;
-  height: 570px;
+  height: 587px;
   margin-left: 20%;
-  margin-top: -570px;
+  margin-top: -587px;
   padding: 0px;
   background-color: #292929;
   font-family: "Urbanist", sans-serif;

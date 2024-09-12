@@ -48,7 +48,7 @@ const ControlUnit2: React.FC<ControlUnit2Props> = ({ heartbeat1Status, activeSta
         </div>
         <div className="control-unit-line"></div>
       </div>
-      <div className="car-container">
+      <div className="car-container2">
         <img src="/images/Car image.svg" alt="Car3" />
       </div>
     </div>

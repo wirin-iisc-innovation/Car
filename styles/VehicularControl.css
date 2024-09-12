@@ -196,6 +196,8 @@
   
   .car-container2 {
     position: absolute;
+    margin-top: 111px;
+    margin-right: -25px;    
   }
   
   /*.car-image2 {

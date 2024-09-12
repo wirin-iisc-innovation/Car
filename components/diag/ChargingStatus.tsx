@@ -23,6 +23,7 @@ const ChargingStatus: React.FC<ChargingStatusProps> = ({
         <div className="panel-info">Charging</div>
         <div className="mosfet-status">{mosfetCharging}</div>
         <br></br>
+        <br></br>
         <div className="panel-info">MOSFET</div>
         <div className="panel-info">Discharging</div>
         <div className="mosfet-status">{mosfetDischarging}</div>
