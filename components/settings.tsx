@@ -122,6 +122,7 @@ const MainContent: React.FC = () => {
             <div className="settings-group">
               <div className="settings-group-title">Traction Control</div>
               <div className="traction-control">
+                <br></br>
                 <div className="traction-control-option">
                   <button className={`traction-control-button ${tractionControl === 'slip start' ? 'active' : ''}`} onClick={() => setTractionControl('slip start')}>slip start</button>
                   <div className="settings-description-traction">

@@ -10,6 +10,7 @@ const ControlUnit1: React.FC<ControlUnit1Props> = ({ heartbeatStatus }) => {
       <div className="control-unit-box">
         <div className="panel-title">Control Unit 1</div>
         <br></br>
+        <br></br>
         <div className="control-unit-item">
           <span className="control-unit-label">ECU2-ICU</span>
           <span className="control-unit-status">Heartbeat</span>

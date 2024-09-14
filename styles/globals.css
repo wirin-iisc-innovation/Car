@@ -534,7 +534,8 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px 0;
-  background-color: #000; /* Black background */
+  background-color: #000;
+  z-index:2; /* Black background */
 }
 
 .toolbar {
@@ -1312,17 +1313,19 @@ span {
 }
 
 .map-container {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 0;
-  top: -15%;
+  
+  top: -20%;
+  right:0.1%;
 }
 
 .map-iframe {
   width: 100%;
-  height: 100%;
+  height: 585px;
   border: none;
+  border-radius: 0;  
 }
 
 .resize-handle {
@@ -1458,12 +1461,12 @@ span {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 7px 0px;
+  padding: 9px 50px;
   margin-bottom: 15px;
   background-color: transparent;
   border: none;
   color: white;
-  text-align: left;
+  text-align: center;
   font-size: 23px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -1476,7 +1479,7 @@ span {
 }
 
 .sidebar-icon {
-  margin-right: 10px; /* Adjust the spacing between the icon and text */
+  margin-right: 20px; /* Adjust the spacing between the icon and text */
   width: 40px; /* Adjust the size of the icon as needed */
   height: 40px;
 }
@@ -1840,11 +1843,11 @@ input:checked + .slider:before {
   position: absolute;
   display: flex;
   background-color: #1d2c53;
-  width: 45%;
+  width: 48.5%;
   height: 68%;
   padding: 10px;
   margin-left: 8%;
-  transform: translate(28%, 37%);
+  transform: translate(23%, 37%);
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2009,8 +2012,8 @@ input:checked + .slider:before {
 }
 
 .call-button img {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   margin-right: 10px; /* Space between the icon and text */
 }
 
@@ -2027,7 +2030,7 @@ input:checked + .slider:before {
 }
 .speedometer-container {
   position: relative;
-  width: 0%;
+  width: 10%;
   height: 140vh;
   transform: translate(20%, 10%);
 }
@@ -2187,7 +2190,7 @@ input:checked + .slider:before {
   z-index: 5; /* Ensure it’s above other elements if needed */
 }
 .cont {
-  position: fixed;
+  position: absolute;
   right: 10%;
   top: 10%;
   width: 45%;

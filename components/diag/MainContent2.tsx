@@ -22,6 +22,9 @@ import Seating from "./Seating";
 import InternalLighting from "./InternalLighting";
 import ExternalLighting from "./ExternalLighting";
 import TableStatus from "./TableStatus";
+import Tyres from "./Tyres";
+import SideDoors from "./sidedoors";
+import RoofAndBootDoors from "./roofandbootdoors";
 
 const MainContent: React.FC = () => {
   const [activeSidebar2, setActiveSidebar2] = useState("Battery");
@@ -348,6 +351,17 @@ const MainContent: React.FC = () => {
     ) {
       return <TableStatus />;
     }
+    if(activeSidebar2 ==="Doors and Tyres" && activeMiniSidebar2 ==="Tyres"){
+      return <Tyres />;
+    }
+    if(activeSidebar2 ==="Doors and Tyres" && activeMiniSidebar2 ==="Side Doors"){
+      return <SideDoors/>;
+    }
+    if(activeSidebar2 ==="Doors and Tyres" && activeMiniSidebar2 ==="Roof and Boot Doors"){
+      return <RoofAndBootDoors/>;
+    }
+    
+    
     return null;
   };
 

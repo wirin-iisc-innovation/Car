@@ -12,6 +12,7 @@ const ControlUnit2: React.FC<ControlUnit2Props> = ({ heartbeat1Status, activeSta
       <div className="control-unit-box">
         <div className="panel-title">Control Unit 2</div>
         <br />
+        <br></br>
         <div className="control-unit2-item">
           <span className="control-unit2-label">MPU Motion Planner</span>
           <span className="control-unit2-status">Status</span>
