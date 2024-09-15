@@ -699,7 +699,7 @@ input[type="range"] {
   gap: 12px;
 }
 
-.dot {
+.dot12{
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -707,7 +707,7 @@ input[type="range"] {
   opacity: 0.5;
 }
 
-.dot.active {
+.dot12.active {
   opacity: 1;
 }
 
@@ -793,18 +793,17 @@ span {
   }
 }
 
-.dot {
-  position:relative;
+
+.dot{
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  transform:translateY(350%);
 }
 
-.dot green {
+.dot.green {
   position:relative;
   background-color: green;
-  transform:translateY(350%);
+  transform:translateY(380%);
 }
 
 .dot.yellow {
@@ -813,19 +812,19 @@ span {
   animation-name: colorChangeGreen;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  transform:translateY(350%);
+  transform:translateY(380%);
 }
 
 .dot.yellow.color-change1 {
   position:relative;
   animation-delay: 6s;
-  transform:translateY(350%);
+  transform:translateY(380%);
 }
 
 .dot.yellow.color-change2 {
   position: relative;
   animation-delay: 7s;
-  transform:translateY(350%);
+  transform:translateY(380%);
 }
 @keyframes fadeInOut {
   0% {
