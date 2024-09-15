@@ -15,7 +15,7 @@ body {
   width: 100%;
   max-width: 2000px;
   height: 100%;
-  max-height: 650px;
+  max-height: 670px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -42,7 +42,7 @@ body {
   width: 100%;
   max-width: 2000px;
   height: 100%;
-  max-height: 600px;
+  max-height: 670px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -794,29 +794,38 @@ span {
 }
 
 .dot {
-  height: 10px;
-  width: 10px;
+  position:relative;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
-  margin: 0 5px;
+  transform:translateY(350%);
 }
 
-.dot.green {
+.dot green {
+  position:relative;
   background-color: green;
+  transform:translateY(350%);
 }
 
 .dot.yellow {
+  position:relative;
   background-color: yellow;
   animation-name: colorChangeGreen;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+  transform:translateY(350%);
 }
 
 .dot.yellow.color-change1 {
+  position:relative;
   animation-delay: 6s;
+  transform:translateY(350%);
 }
 
 .dot.yellow.color-change2 {
+  position: relative;
   animation-delay: 7s;
+  transform:translateY(350%);
 }
 @keyframes fadeInOut {
   0% {
@@ -837,15 +846,24 @@ span {
 }
 
 .text-insert1 {
+  position:relative;
   animation: fadeInOut 1s 5s forwards;
+  font-size: 20px;
+  transform:translate(-15%,0%);
 }
 
 .text-insert2 {
+  position:relative;
   animation: fadeInOut 1s 6s forwards; /* Starts after 6 seconds */
+  font-size: 20px;
+  transform:translate(-14%,0%);
 }
 
 .text-insert3 {
+  position:relative;
   animation: fadeInOut 1s 7s forwards; /* Starts after 7 seconds */
+  font-size: 20px;
+  transform:translate(-14%,0%);
 }
 .select-mode-text {
   position: absolute;
