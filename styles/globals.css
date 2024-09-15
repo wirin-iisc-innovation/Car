@@ -837,14 +837,17 @@ span {
 
 .text-insert1 {
   animation: fadeInOut 1s 5s forwards;
+  transform: translateX(-12%);
 }
 
 .text-insert2 {
   animation: fadeInOut 1s 6s forwards; /* Starts after 6 seconds */
+  transform: translateX(-12%);
 }
 
 .text-insert3 {
   animation: fadeInOut 1s 7s forwards; /* Starts after 7 seconds */
+  transform: translateX(-12%);
 }
 .select-mode-text {
   position: absolute;
