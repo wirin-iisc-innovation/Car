@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import VoltageCurrentContent from "./VoltageCurrentContent";
 import ChargeLevel from "./ChargeLevel";
 import BatteryHealth from "./BatteryHealth";
@@ -22,15 +22,13 @@ import Seating from "./Seating";
 import InternalLighting from "./InternalLighting";
 import ExternalLighting from "./ExternalLighting";
 import TableStatus from "./TableStatus";
-import Tyres from "./Tyres";
-import SideDoors from "./sidedoors";
-import RoofAndBootDoors from "./roofandbootdoors";
 
 const MainContent: React.FC = () => {
   const [activeSidebar2, setActiveSidebar2] = useState("Battery");
   const [activeMiniSidebar2, setActiveMiniSidebar2] = useState<string | null>(
-    null
+    "Voltage and Current"
   );
+
   const [heartbeatStatus, setHeartbeatStatus] = useState("BEATING");
   const heartbeat1Status = "BEATING";
   const activeStatus = "ACTIVE";
@@ -82,15 +80,17 @@ const MainContent: React.FC = () => {
   const temperature2 = 37; // Example dynamic temperature value
   const isGood = true;
 
+  // Function to update the active sidebar and select the first mini-sidebar option by default
   const handleSidebar2Click = (category: string) => {
     setActiveSidebar2(category);
-    setActiveMiniSidebar2(null);
+    setActiveMiniSidebar2(miniSidebar2Buttons[category][0]);
   };
 
   const handleMiniSidebar2Click = (buttonLabel: string) => {
     setActiveMiniSidebar2(buttonLabel);
   };
 
+  // List of sidebar and mini-sidebar items
   const miniSidebar2Buttons: { [key: string]: string[] } = {
     Battery: [
       "Voltage and Current",
@@ -137,6 +137,13 @@ const MainContent: React.FC = () => {
     ],
   };
 
+  // Automatically set to Battery page and first mini-sidebar option when navigating to "diag" page
+  useEffect(() => {
+      setActiveSidebar2("Battery");
+      setActiveMiniSidebar2(miniSidebar2Buttons["Battery"][0]);
+  }, []);
+
+  // Function to render the mini-sidebar options
   const renderMiniSidebar2 = () => {
     return (
       <div className="mini-sidebar2">
@@ -155,6 +162,7 @@ const MainContent: React.FC = () => {
     );
   };
 
+  // Function to render the content area based on the selected sidebar and mini-sidebar
   const renderContent = () => {
     if (
       activeSidebar2 === "Battery" &&
@@ -247,9 +255,7 @@ const MainContent: React.FC = () => {
       activeSidebar2 === "OBC" &&
       activeMiniSidebar2 === "DC Voltage and Current"
     ) {
-      return (
-        <DcVoltageAndCurrent dcCurrent={dcCurrent} dcVoltage={dcVoltage} />
-      );
+      return <DcVoltageAndCurrent dcCurrent={dcCurrent} dcVoltage={dcVoltage} />;
     }
     if (activeSidebar2 === "OBC" && activeMiniSidebar2 === "OBC Status") {
       return (
@@ -351,100 +357,27 @@ const MainContent: React.FC = () => {
     ) {
       return <TableStatus />;
     }
-    if(activeSidebar2 ==="Doors and Tyres" && activeMiniSidebar2 ==="Tyres"){
-      return <Tyres />;
-    }
-    if(activeSidebar2 ==="Doors and Tyres" && activeMiniSidebar2 ==="Side Doors"){
-      return <SideDoors/>;
-    }
-    if(activeSidebar2 ==="Doors and Tyres" && activeMiniSidebar2 ==="Roof and Boot Doors"){
-      return <RoofAndBootDoors/>;
-    }
-    
-    
+    // Add additional content rendering logic for other mini-sidebar selections
     return null;
   };
 
   return (
     <div className="body">
       <div className="sidebar2">
-        <button
-          className={`sidebar2-button ${
-            activeSidebar2 === "Battery" ? "active" : ""
-          }`}
-          onClick={() => handleSidebar2Click("Battery")}
-        >
-          <div className="sidebar2-icon">
-            <img src="images/Battery.svg" alt="Battery" />
-          </div>
-          <div className="sidebar2-text">Battery</div>
-        </button>
-        <button
-          className={`sidebar2-button ${
-            activeSidebar2 === "OBC" ? "active" : ""
-          }`}
-          onClick={() => handleSidebar2Click("OBC")}
-        >
-          <div className="sidebar2-icon">
-            <img src="images/OBC.svg" alt="OBC" />
-          </div>
-          <div className="sidebar2-text">OBC</div>
-        </button>
-        <button
-          className={`sidebar2-button ${
-            activeSidebar2 === "AC" ? "active" : ""
-          }`}
-          onClick={() => handleSidebar2Click("AC")}
-        >
-          <div className="sidebar2-icon">
-            <img src="images/AC.svg" alt="AC" />
-          </div>
-          <div className="sidebar2-text">AC</div>
-        </button>
-        <button
-          className={`sidebar2-button ${
-            activeSidebar2 === "Seating and Lights" ? "active" : ""
-          }`}
-          onClick={() => handleSidebar2Click("Seating and Lights")}
-        >
-          <div className="sidebar2-icon">
-            <img src="images/Seating and Lights.svg" alt="Seating and Lights" />
-          </div>
-          <div className="sidebar2-text">Seating and Lights</div>
-        </button>
-        <button
-          className={`sidebar2-button ${
-            activeSidebar2 === "Car Status" ? "active" : ""
-          }`}
-          onClick={() => handleSidebar2Click("Car Status")}
-        >
-          <div className="sidebar2-icon">
-            <img src="images/tesla.svg" alt="Car Status" />
-          </div>
-          <div className="sidebar2-text">Car Status</div>
-        </button>
-        <button
-          className={`sidebar2-button ${
-            activeSidebar2 === "Doors and Tyres" ? "active" : ""
-          }`}
-          onClick={() => handleSidebar2Click("Doors and Tyres")}
-        >
-          <div className="sidebar2-icon">
-            <img src="images/Doors and Tyres.svg" alt="Doors and Tyres" />
-          </div>
-          <div className="sidebar2-text">Doors and Tyres</div>
-        </button>
-        <button
-          className={`sidebar2-button ${
-            activeSidebar2 === "Vehicular Control" ? "active" : ""
-          }`}
-          onClick={() => handleSidebar2Click("Vehicular Control")}
-        >
-          <div className="sidebar2-icon">
-            <img src="images/Vehicular Control.svg" alt="Vehicular Control" />
-          </div>
-          <div className="sidebar2-text">Vehicular Control</div>
-        </button>
+        {Object.keys(miniSidebar2Buttons).map((category) => (
+          <button
+            key={category}
+            className={`sidebar2-button ${
+              activeSidebar2 === category ? "active" : ""
+            }`}
+            onClick={() => handleSidebar2Click(category)}
+          >
+            <div className="sidebar2-icon">
+              <img src={`images/${category}.svg`} alt={category} />
+            </div>
+            <div className="sidebar2-text">{category}</div>
+          </button>
+        ))}
       </div>
       {renderMiniSidebar2()}
       <div className="content-area">{renderContent()}</div>

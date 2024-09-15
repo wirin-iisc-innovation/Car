@@ -534,8 +534,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px 0;
-  background-color: #000;
-  z-index:2; /* Black background */
+  background-color: #000; /* Black background */
 }
 
 .toolbar {
@@ -838,14 +837,17 @@ span {
 
 .text-insert1 {
   animation: fadeInOut 1s 5s forwards;
+  transform: translateX(-12%);
 }
 
 .text-insert2 {
   animation: fadeInOut 1s 6s forwards; /* Starts after 6 seconds */
+  transform: translateX(-12%);
 }
 
 .text-insert3 {
   animation: fadeInOut 1s 7s forwards; /* Starts after 7 seconds */
+  transform: translateX(-12%);
 }
 .select-mode-text {
   position: absolute;
@@ -1313,19 +1315,17 @@ span {
 }
 
 .map-container {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
-  
-  top: -20%;
-  right:0.1%;
+  z-index: 0;
+  top: -15%;
 }
 
 .map-iframe {
   width: 100%;
-  height: 585px;
+  height: 100%;
   border: none;
-  border-radius: 0;  
 }
 
 .resize-handle {
@@ -1461,12 +1461,12 @@ span {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 9px 50px;
+  padding: 7px 0px;
   margin-bottom: 15px;
   background-color: transparent;
   border: none;
   color: white;
-  text-align: center;
+  text-align: left;
   font-size: 23px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -1479,7 +1479,7 @@ span {
 }
 
 .sidebar-icon {
-  margin-right: 20px; /* Adjust the spacing between the icon and text */
+  margin-right: 10px; /* Adjust the spacing between the icon and text */
   width: 40px; /* Adjust the size of the icon as needed */
   height: 40px;
 }
@@ -1843,11 +1843,11 @@ input:checked + .slider:before {
   position: absolute;
   display: flex;
   background-color: #1d2c53;
-  width: 48.5%;
+  width: 45%;
   height: 68%;
   padding: 10px;
   margin-left: 8%;
-  transform: translate(23%, 37%);
+  transform: translate(28%, 37%);
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2012,8 +2012,8 @@ input:checked + .slider:before {
 }
 
 .call-button img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   margin-right: 10px; /* Space between the icon and text */
 }
 
@@ -2030,7 +2030,7 @@ input:checked + .slider:before {
 }
 .speedometer-container {
   position: relative;
-  width: 10%;
+  width: 0%;
   height: 140vh;
   transform: translate(20%, 10%);
 }
@@ -2190,7 +2190,7 @@ input:checked + .slider:before {
   z-index: 5; /* Ensure it’s above other elements if needed */
 }
 .cont {
-  position: absolute;
+  position: fixed;
   right: 10%;
   top: 10%;
   width: 45%;

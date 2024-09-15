@@ -28,7 +28,6 @@ const Home: React.FC = () => {
       <div className="cont">
         <iframe
           src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M"
-        
           width="300"
           height="380"
           frameBorder="0"
