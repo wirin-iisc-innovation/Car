@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 const SideDoors: React.FC = () => {
+  // State for the left and right door statuses
+  const [leftDoorStatus, setLeftDoorStatus] = useState("Open");
+  const [rightDoorStatus, setRightDoorStatus] = useState("Open");
+
   return (
     <div className="side-doors-container">
       {/* Left Door Status */}
@@ -8,7 +12,7 @@ const SideDoors: React.FC = () => {
         <h3>Left Door</h3>
         <p className="status-row">
           <span>Status</span>
-          <span className="status">Open</span>
+          <span className="status">{leftDoorStatus}</span> {/* Using the variable */}
         </p>
         <p>(Open/Close/Opening/Closing)</p>
       </div>
@@ -18,7 +22,7 @@ const SideDoors: React.FC = () => {
         <h3>Right Door</h3>
         <p className="status-row">
           <span>Status</span>
-          <span className="status">Open</span>
+          <span className="status">{rightDoorStatus}</span> {/* Using the variable */}
         </p>
         <p>(Open/Close/Opening/Closing)</p>
       </div>

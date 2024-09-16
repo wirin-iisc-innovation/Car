@@ -154,7 +154,7 @@ body {
 }
 
 .battery-info {
-  text-align: right;
+  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1205,7 +1205,7 @@ span {
   position: fixed;
   top: 0;
   right: 0;
-  bottom: 7%;
+  bottom: 11.5%;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -1331,7 +1331,7 @@ span {
 
 .map-container {
   position: absolute;
-  width: 100%;
+  width: 92%;
   height: 100%;
   
   top: -20%;

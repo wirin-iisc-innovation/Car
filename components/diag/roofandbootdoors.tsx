@@ -1,7 +1,10 @@
-import React from "react";
-
+import React, { useState } from "react";
 
 const NewComponent: React.FC = () => {
+  // State variables for door statuses
+  const [firstDoorStatus, setFirstDoorStatus] = useState("Open");
+  const [secondDoorStatus, setSecondDoorStatus] = useState("Open");
+
   return (
     <div className="new-doors-container">
       {/* First Door Status */}
@@ -9,7 +12,7 @@ const NewComponent: React.FC = () => {
         <h3>First Door</h3>
         <p>Status</p>
         <p>(Open/Close/Opening/Closing)</p>
-        <p className="new-status">Open</p>
+        <p className="new-status">{firstDoorStatus}</p> {/* Using the variable */}
       </div>
 
       {/* Second Door Status */}
@@ -17,7 +20,7 @@ const NewComponent: React.FC = () => {
         <h3>Second Door</h3>
         <p>Status</p>
         <p>(Open/Close/Opening/Closing)</p>
-        <p className="new-status">Open</p>
+        <p className="new-status">{secondDoorStatus}</p> {/* Using the variable */}
       </div>
 
       {/* Car Image */}
