@@ -40,9 +40,7 @@ const Speedometer = () => {
 
         // Update the SVG arc with the new speed value
         updateArc("kmph-arc", "kmph-pointer", newSpeed, 240);
-      } catch (error) {
-        console.error("Error fetching speed:", error.message);
-      }
+      } catch (error) {}
     };
 
     const intervalId = setInterval(updateSpeedAndPower, 1000);

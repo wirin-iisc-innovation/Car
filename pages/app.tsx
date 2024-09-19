@@ -6,9 +6,6 @@ import Maps from "../pages/maps"; // Ensure the path to Maps page is correct
 import Dashboard from "../pages/dashboard"; // Ensure the path to Dashboard page is correct
 import Mode from "../pages/mode"; // Ensure the path to Mode page is correct
 import Diag from "../pages/diag"; // Ensure the path to Diag page is correct
-const express = require("express");
-const cors = require("cors");
-const app = express();
 
 const App: React.FC = () => {
   return (
@@ -27,13 +24,5 @@ const App: React.FC = () => {
     </Router>
   );
 };
-app.use(cors()); // This will allow all origins. For more control, pass an options object.
 
-app.get("/speed", (req, res) => {
-  res.json({ speed: 45.0 });
-});
-
-app.listen(8000, () => {
-  console.log("Server running on port 8000");
-});
 export default App;
