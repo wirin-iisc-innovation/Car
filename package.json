@@ -1,11 +1,13 @@
 {
-  "name": "music-screen",
+  "name": "wipod",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "concurrently \"npm run start-car\" \"npm run start-maps\"",
+    "start-car": "next dev",
+    "start-maps": "cd ./maps-mapbox-v2 && python app.py",
     "lint": "next lint"
   },
   "dependencies": {
@@ -25,6 +27,7 @@
     "@types/node": "^20",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "concurrently": "^9.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
     "typescript": "^5.5.3"
