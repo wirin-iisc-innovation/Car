@@ -5,15 +5,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "concurrently \"npm run start-car\" \"npm run start-maps\"",
+    "start": "concurrently \"npm run start-car\" \"npm run start-maps\" \"npm run start-backend\"",
     "start-car": "next dev",
     "start-maps": "cd ./maps-mapbox-v2 && python app.py",
+    "start-backend": "cd ./speedometer_app &&  uvicorn real_time_app:app --host 0.0.0.0 --port 8000",
     "lint": "next lint"
   },
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.24.7",
     "@babel/runtime": "^7.25.0",
     "core-js": "^3.37.1",
+    "cors": "^2.8.5",
     "next": "^14.2.4",
     "next-transpile-modules": "^10.0.1",
     "react": "^18.3.1",

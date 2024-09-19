@@ -16,7 +16,7 @@ const App: React.FC = () => {
           <Route path="/page2" element={<Maps />} />
           <Route path="/page3" element={<Dashboard />} />
           <Route path="/page4" element={<Mode />} />
-          <Route path="/diag" element={<Diag />}  />{" "}
+          <Route path="/diag" element={<Diag />} />{" "}
           {/* Add more routes as needed */}
         </Routes>
         <Footer />
