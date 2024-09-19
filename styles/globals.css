@@ -535,7 +535,7 @@ body {
   align-items: center;
   padding: 10px 0;
   background-color: #000;
-  z-index:2; /* Black background */
+  z-index: 2; /* Black background */
 }
 
 .toolbar {
@@ -699,7 +699,7 @@ input[type="range"] {
   gap: 12px;
 }
 
-.dot12{
+.dot12 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -728,8 +728,8 @@ span {
   justify-content: center;
   width: 25vw; /* Square button size */
   height: 30vw; /* Square button size */
-  max-width:350px;
-  max-height:400px;
+  max-width: 350px;
+  max-height: 400px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -795,38 +795,37 @@ span {
   }
 }
 
-
-.dot{
+.dot {
   height: 15px;
   width: 15px;
   border-radius: 50%;
 }
 
 .dot.green {
-  position:relative;
+  position: relative;
   background-color: green;
-  transform:translateY(380%);
+  transform: translateY(380%);
 }
 
 .dot.yellow {
-  position:relative;
+  position: relative;
   background-color: yellow;
   animation-name: colorChangeGreen;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  transform:translateY(380%);
+  transform: translateY(380%);
 }
 
 .dot.yellow.color-change1 {
-  position:relative;
+  position: relative;
   animation-delay: 6s;
-  transform:translateY(380%);
+  transform: translateY(380%);
 }
 
 .dot.yellow.color-change2 {
   position: relative;
   animation-delay: 7s;
-  transform:translateY(380%);
+  transform: translateY(380%);
 }
 @keyframes fadeInOut {
   0% {
@@ -847,24 +846,24 @@ span {
 }
 
 .text-insert1 {
-  position:relative;
+  position: relative;
   animation: fadeInOut 1s 5s forwards;
   font-size: 20px;
-  transform:translate(-15%,0%);
+  transform: translate(-15%, 0%);
 }
 
 .text-insert2 {
-  position:relative;
+  position: relative;
   animation: fadeInOut 1s 6s forwards; /* Starts after 6 seconds */
   font-size: 20px;
-  transform:translate(-14%,0%);
+  transform: translate(-14%, 0%);
 }
 
 .text-insert3 {
-  position:relative;
+  position: relative;
   animation: fadeInOut 1s 7s forwards; /* Starts after 7 seconds */
   font-size: 20px;
-  transform:translate(-14%,0%);
+  transform: translate(-14%, 0%);
 }
 .select-mode-text {
   position: absolute;
@@ -1101,15 +1100,15 @@ span {
   display: flex;
   align-items: flex-end;
   z-index: 999;
-  padding-left: 40%;
+
   padding-bottom: 5%;
 }
 
 .app-popup {
   background-color: rgba(7, 45, 96, 0.5);
-  width: 90%;
-  max-width: 800px;
-  padding: 3%;
+  width: 100%;
+
+  padding: 2%;
   border-radius: 10px;
   color: white;
   backdrop-filter: blur(10px); /* Glossy look */
@@ -1332,20 +1331,20 @@ span {
 }
 
 .map-container {
-  position: absolute; 
+  position: absolute;
   width: 92%;
   height: 100%;
-  left:40%;
-   
-  transform:translate(1.8%,-10%);
+  left: 40%;
+
+  transform: translate(1.8%, -10%);
 }
 
 .map-iframe {
   width: 96%;
   height: 585px;
   border: none;
-  border-radius: 0;  
-  transform:translate(-10%,-16.7%);
+  border-radius: 0;
+  transform: translate(-10%, -16.7%);
 }
 
 .resize-handle {
