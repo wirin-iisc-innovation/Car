@@ -2225,3 +2225,49 @@ iframe {
   width: 100%;
   height: 100%;
 }
+.main-content-xy29 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 50px;
+}
+
+.car-image-xy29 {
+  width: 600px; /* Increase the size of the car */
+  height: auto;
+  margin-right: 50px; /* Adds spacing between the car and the text */
+}
+
+.animated-car {
+  animation: slideInFromLeft 2s ease-out; /* Car animation */
+}
+
+.welcome-text-xy29 {
+  text-align: left;
+  color: white;
+  max-width: 400px; /* Limit the width of the text */
+}
+
+.welcome-text-xy29 h1 strong {
+  color: #e1e1e1;
+}
+
+.action-button-xy29 {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Animation for the car coming in from the left */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%); /* Start off-screen on the left */
+  }
+  100% {
+    transform: translateX(0); /* Slide in to original position */
+  }
+}
