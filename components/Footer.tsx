@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import AppPopup from './AppPopup';
-import FullScreenPopup from './Fullscreen'; // Import the FullScreenPopup component
+import React, { useState } from "react";
+import Link from "next/link";
+import AppPopup from "./AppPopup";
+import FullScreenPopup from "./Fullscreen"; // Import the FullScreenPopup component
+import { useRouter } from "next/router"; // Import useRouter for back navigation
 
 const Footer: React.FC = () => {
   const [isAcPopupVisible, setAcPopupVisible] = useState(false);
@@ -11,6 +12,8 @@ const Footer: React.FC = () => {
   const [temperature, setTemperature] = useState(24);
   const [fanSpeed, setFanSpeed] = useState(3);
 
+  const router = useRouter(); // Initialize router for navigation
+
   const toggleAcPopup = () => {
     setAcPopupVisible(!isAcPopupVisible);
   };
@@ -19,13 +22,24 @@ const Footer: React.FC = () => {
     setAppPopupVisible(!isAppPopupVisible);
   };
 
-  const toggleFullScreenPopup = () => { // Handler for the full screen pop-up
+  const toggleFullScreenPopup = () => {
     setFullScreenPopupVisible(!isFullScreenPopupVisible);
+  };
+
+  const goBack = () => {
+    router.back(); // Navigate to the previous page
   };
 
   return (
     <>
       <footer className="footer">
+        {/* Back Button on the left */}
+        <button
+          className="icon-button back-button" // Add a unique class for back button
+          style={{ backgroundImage: `url('images/triangular.svg')` }} // Use your triangular arrow SVG
+          onClick={goBack} // Go back to the previous page on click
+        ></button>
+
         <div className="toolbar">
           <button
             className="icon-button"
@@ -75,8 +89,14 @@ const Footer: React.FC = () => {
             </a>
           </Link>
         </div>
-      </footer>
 
+        {/* Add Emergency Button at the right end of the footer */}
+        <button
+          className="icon-button emergency-button" // Add a unique class for emergency button
+          style={{ backgroundImage: `url('images/emergency.svg')` }} // Use your emergency SVG
+          onClick={() => alert("Emergency!")} // Handle emergency click action
+        ></button>
+      </footer>
       {isAcPopupVisible && (
         <div className="ac-popup">
           <div className="ac-popup-content">
@@ -114,7 +134,7 @@ const Footer: React.FC = () => {
                     {[1, 2, 3, 4, 5].map((speed) => (
                       <span
                         key={speed}
-                        className={`dot12 ${fanSpeed >= speed ? 'active' : ''}`}
+                        className={`dot ${fanSpeed >= speed ? "active" : ""}`}
                       />
                     ))}
                   </div>
@@ -124,9 +144,12 @@ const Footer: React.FC = () => {
           </div>
         </div>
       )}
-
-      {isAppPopupVisible && <AppPopup onClose={toggleAppPopup} />} {/* Render the AppPopup */}
-      {isFullScreenPopupVisible && <FullScreenPopup onClose={toggleFullScreenPopup} />} {/* Render the FullScreenPopup */}
+      {isAppPopupVisible && <AppPopup onClose={toggleAppPopup} />}{" "}
+      {/* Render the AppPopup */}
+      {isFullScreenPopupVisible && (
+        <FullScreenPopup onClose={toggleFullScreenPopup} />
+      )}{" "}
+      {/* Render the FullScreenPopup */}
     </>
   );
 };
