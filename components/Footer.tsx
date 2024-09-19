@@ -134,7 +134,7 @@ const Footer: React.FC = () => {
                     {[1, 2, 3, 4, 5].map((speed) => (
                       <span
                         key={speed}
-                        className={`dot ${fanSpeed >= speed ? "active" : ""}`}
+                        className={`dot12 ${fanSpeed >= speed ? "active" : ""}`}
                       />
                     ))}
                   </div>
