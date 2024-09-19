@@ -726,14 +726,16 @@ span {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 217.31px; /* Square button size */
-  height: 263.88px; /* Square button size */
+  width: 25vw; /* Square button size */
+  height: 30vw; /* Square button size */
+  max-width:350px;
+  max-height:400px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .mode-button img {
-  width: 217.31px; /* Icon size */
-  height: 263.88px; /* Icon size */
+  width: 350px; /* Icon size */
+  height: 400px; /* Icon size */
 }
 
 .mode-button p {
@@ -1330,19 +1332,20 @@ span {
 }
 
 .map-container {
-  position: absolute;
+  position: absolute; 
   width: 92%;
   height: 100%;
-  
-  top: -20%;
-  right:0.1%;
+  left:40%;
+   
+  transform:translate(1.8%,-10%);
 }
 
 .map-iframe {
-  width: 100%;
+  width: 96%;
   height: 585px;
   border: none;
   border-radius: 0;  
+  transform:translate(-10%,-16.7%);
 }
 
 .resize-handle {
@@ -2047,9 +2050,9 @@ input:checked + .slider:before {
 }
 .speedometer-container {
   position: relative;
-  width: 10%;
-  height: 140vh;
-  transform: translate(20%, 10%);
+  width: 6%;
+  height: 150vh;
+  transform: translate(20%, 17%);
 }
 
 .circle-container {

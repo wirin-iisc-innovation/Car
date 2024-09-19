@@ -3,11 +3,10 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import Speedometer from '../components/speed'
 
 export default function Home() {
-  const [isSwitched, setIsSwitched] = useState(false);
-
   useEffect(() => {
     // Update the time and date
 
@@ -47,10 +46,6 @@ export default function Home() {
     };
   }, []);
 
-  const handleSwitch = () => {
-    setIsSwitched(!isSwitched);
-  };
-
   return (
     <div className="container">
       <Head>
@@ -60,14 +55,7 @@ export default function Home() {
       <Header />
 
       <main className="main-content5">
-        <div className={`left-side ${isSwitched ? "switched" : ""}`}>
-          <img
-            src="/images_map/Frame 4564.svg"
-            alt="Frame"
-            className="frame-image"
-          />
-        </div>
-        <div className={`right-side ${isSwitched ? "switched" : ""}`}>
+        <div className="right-side">
           <div className="map-container">
             <iframe
               src="https://ayushratan.pythonanywhere.com/"
@@ -78,11 +66,8 @@ export default function Home() {
             <div className="resize-handle"></div>
           </div>
         </div>
-        <div className="switch-arrow" onClick={handleSwitch}>
-          ↔
-        </div>
       </main>
-
+      <Speedometer />
       <Footer />
     </div>
   );
