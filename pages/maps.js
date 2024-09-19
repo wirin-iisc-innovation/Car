@@ -4,7 +4,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
-import Speedometer from '../components/speed'
+import Speedometer from "../components/speed";
 
 export default function Home() {
   useEffect(() => {
@@ -58,7 +58,7 @@ export default function Home() {
         <div className="right-side">
           <div className="map-container">
             <iframe
-              src="https://ayushratan.pythonanywhere.com/"
+              src="http://127.0.0.1:5000"
               className="map-iframe"
               frameBorder="0"
               allowFullScreen
