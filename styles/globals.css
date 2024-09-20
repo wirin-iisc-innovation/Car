@@ -1098,9 +1098,9 @@ span {
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 20px );
 -webkit-backdrop-filter: blur( 20px );
-border-radius: 10px;
+
 border: 1px solid rgba( 255, 255, 255, 0.18 );
-  border-radius: 20px;
+
   padding: 20px;
   z-index:999;
   margin: auto;
@@ -1123,26 +1123,47 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   cursor: pointer;
 }
 
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 .search-bar input {
   position: absolute;
   width: 40%;
   left: 30%;
-  height:40px;
-  transform:translateY(-150%);
-  padding: 10px;
+  height: 40px;
+  transform: translateY(-130%);
+  padding: 10px 50px 10px 20px; /* Add right padding to make space for the icon */
   border-radius: 40px;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 23px;
   background-color: #4A5675;
-  color: white; /* Change text color to white */
+  color: white;
 }
+
+.search-button {
+  position: absolute;
+ 
+  transform: translate(1150%,-222%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button img {
+  width: 60px;
+  height: 60px;
+}
+
 
 
 h3 {
   color: white;
   margin-top: 120px;
-  font-size: 1.4em;
+  font-size: 2em;
   gap:1000px;
   border-radius: 200px;
 }
@@ -1161,13 +1182,13 @@ h3 {
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 13px );
 -webkit-backdrop-filter: blur( 13px );
-border-radius: 10px;
+border-radius: 20px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   margin: 0 10px;
   height: 300px;
   width: 1000px;
-  gap:0px;
+ 
 }
 
 .app-icon img {
@@ -1178,13 +1199,13 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .app-icon span {
   color: white;
-  font-size: 14px;
+  font-size: 30px;
   text-align: center;
  
 }
 
 .app-icon:hover {
-  transform: scale(1.1,1.2); /* Keeps the overall scaling effect */
+  transform: scale(0.9); /* Keeps the overall scaling effect */
 
 }
 
@@ -1199,15 +1220,20 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 
   .app-icon span {
-    font-size: 16px;
+    font-size: 30px;
   }
 }
 
 .alice-carousel__prev-btn-item,
 .alice-carousel__next-btn-item {
-  background: rgba(255, 255, 255, 0.2);
+  position:relative;
+  top:25px;
+  width:24px;
+  height:24px;
+  background: black;
   padding: 10px;
   border-radius: 60%;
+  
 }
 
 .alice-carousel__dots {
@@ -1217,14 +1243,14 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   display: flex;
   justify-content: center;
   gap: 40px; /* Space between buttons */
-  margin: 20px 0; /* Margin for spacing */
+  margin: 10px 0; /* Margin for spacing */
 }
 
 .app-button {
   background: none;
  
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   padding: 10px 20px;
   border-radius: 8px;
   border:none;
