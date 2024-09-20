@@ -1092,24 +1092,24 @@ span {
 }
 .app-carousel-container {
   position: absolute;
-  width:1955px;
-  height:550px;
-  background: rgba( 255, 255, 255, 0.05 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 20px );
--webkit-backdrop-filter: blur( 20px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  width: 1955px;
+  height: 550px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 20px;
   padding: 20px;
-  z-index:999;
+  z-index: 999;
   margin: auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .app-carousel-content {
   position: relative;
-  gap:1000px;
+  gap: 1000px;
 }
 
 .close-button {
@@ -1127,23 +1127,22 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   position: absolute;
   width: 40%;
   left: 30%;
-  height:40px;
-  transform:translateY(-150%);
+  height: 40px;
+  transform: translateY(-150%);
   padding: 10px;
   border-radius: 40px;
   border: none;
   outline: none;
   font-size: 16px;
-  background-color: #4A5675;
+  background-color: #4a5675;
   color: white; /* Change text color to white */
 }
-
 
 h3 {
   color: white;
   margin-top: 120px;
   font-size: 1.4em;
-  gap:1000px;
+  gap: 1000px;
   border-radius: 200px;
 }
 
@@ -1157,17 +1156,17 @@ h3 {
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
   border-radius: 200px;
-  background: rgba( 255, 255, 255, 0.15 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 13px );
--webkit-backdrop-filter: blur( 13px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   margin: 0 10px;
   height: 300px;
   width: 1000px;
-  gap:0px;
+  gap: 0px;
 }
 
 .app-icon img {
@@ -1180,18 +1179,16 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   color: white;
   font-size: 14px;
   text-align: center;
- 
 }
 
 .app-icon:hover {
-  transform: scale(1.1,1.2); /* Keeps the overall scaling effect */
-
+  transform: scale(1.1, 1.2); /* Keeps the overall scaling effect */
 }
 
 @media (min-width: 1024px) {
   .app-icon {
     height: 275px;
-    width:275px;
+    width: 275px;
   }
 
   .app-icon img {
@@ -1222,26 +1219,23 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 .app-button {
   background: none;
- 
+
   color: white;
   font-size: 20px;
   padding: 10px 20px;
   border-radius: 8px;
-  border:none;
+  border: none;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
 }
 
 .app-button.active {
- 
   color: white; /* Change text color for active button */
 }
 
 .app-button:not(.active) {
   opacity: 0.5; /* Dim inactive button */
 }
-
-
 
 @keyframes slideUp {
   0% {
@@ -1387,9 +1381,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 .map-container {
   position: absolute;
-  width: 92%;
+  width: 80%;
   height: 100%;
-  left: 40%;
+  left: 50%;
 
   transform: translate(1.8%, -10%);
 }
