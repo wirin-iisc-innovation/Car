@@ -12,29 +12,37 @@ const Tyres: React.FC = () => {
       {/* Front Right Wheel */}
       <div className="tyre-box front-right">
         <h3>Front Right Wheel</h3>
-        <p>Tyre Pressure (0 to 50 psi)</p>
-        <p>{frontRightPressure} psi</p> {/* Using the variable */}
+        <div className="tyre-box-content">
+          <span className="tyre-box-detail">Tyre Pressure <br/> (0 to 50 psi)</span>
+          <span className="tyre-box-value"> {frontRightPressure} psi</span> {/* Using the variable */}
+        </div>
       </div>
 
       {/* Front Left Wheel */}
       <div className="tyre-box front-left">
         <h3>Front Left Wheel</h3>
-        <p>Tyre Pressure (0 to 50 psi)</p>
-        <p>{frontLeftPressure} psi</p> {/* Using the variable */}
+        <div className="tyre-box-content">
+          <span className="tyre-box-detail">Tyre Pressure <br/> (0 to 50 psi)</span>
+          <span className="tyre-box-value"> {frontLeftPressure} psi</span> {/* Using the variable */}
+        </div>
       </div>
 
       {/* Back Right Wheel */}
       <div className="tyre-box back-right">
         <h3>Back Right Wheel</h3>
-        <p>Tyre Pressure (0 to 50 psi)</p>
-        <p>{backRightPressure} psi</p> {/* Using the variable */}
+        <div className="tyre-box-content">
+          <span className="tyre-box-detail">Tyre Pressure <br/> (0 to 50 psi)</span>
+          <span className="tyre-box-value"> {backRightPressure} psi</span> {/* Using the variable */}
+        </div>
       </div>
 
       {/* Back Left Wheel */}
       <div className="tyre-box back-left">
         <h3>Back Left Wheel</h3>
-        <p>Tyre Pressure (0 to 50 psi)</p>
-        <p>{backLeftPressure} psi</p> {/* Using the variable */}
+        <div className="tyre-box-content">
+          <span className="tyre-box-detail">Tyre Pressure <br/> (0 to 50 psi)</span>
+          <span className="tyre-box-value"> {backLeftPressure} psi</span> {/* Using the variable */}
+        </div>
       </div>
 
       {/* Car Image */}

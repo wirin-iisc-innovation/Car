@@ -145,13 +145,6 @@
   width: 100%;
   font-family: "Urbanist", sans-serif; /* Apply Urbanist font */
 }
-.seating-lights-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 0px;
-  color: white;
-  transform: translate(13%, 30%);
-}
 
 /* Lighting */
 .lighting-box {
@@ -202,39 +195,10 @@
   position: absolute;
 }
 
-.car-internal-lighting-container {
-  position: relative;
-  transform: translate(-34.5%, -6%);
-}
-
-.car-image-internal-lighting {
-  width: 900px;
-  height: 377.5px;
-  transform: translate(10%, 10%);
-}
-
 .car-image-external-lighting {
   width: 900px;
   height: 377.5px;
   transform: translate(40%, 25%);
-}
-
-.arrow-internal-lighting {
-  position: absolute;
-  width: 350px;
-  height: auto;
-  top: 18%;
-  left: 50.25%;
-  transform: translate(-127%, -20%);
-}
-
-.arrow-vertical {
-  position: absolute;
-  width: auto;
-  height: 100px;
-  top: 18.5%;
-  left: 38.8%;
-  transform: translate(-55%, -0%);
 }
 
 .external-lighting-box {
@@ -264,7 +228,7 @@
   border-radius: 12px;
   width: 434px;
   height: 183px;
-  transform: translate(108%, -20%);
+  transform: translate(163%, 20%);
   display: flex;
   flex-direction: column; /* Vertical orientation */
   justify-content: space-between;
@@ -278,7 +242,7 @@
   border-radius: 12px;
   width: 434px;
   height: 183px;
-  transform: translate(-17.8%, 95%);
+  transform: translate(158%, 35%);
   display: flex;
   flex-direction: column; /* Vertical orientation */
   justify-content: space-between;
@@ -286,9 +250,9 @@
 }
 
 .car-image-seating {
-  width: 900px;
+  width: 665.5px;
   height: 177.5px;
-  transform: translate(-10%, 60%);
+  transform: translate(190%, -120%);
 }
 
 .seating-item {
@@ -323,7 +287,7 @@
   height: auto;
   top: 18%;
   left: 50.25%;
-  transform: translate(-149%, -60%);
+  transform: translate(-117%, -60%);
 }
 
 .arrow-seating2 {
@@ -332,7 +296,7 @@
   height: auto;
   top: 18%;
   left: 50.25%;
-  transform: translate(-155%, 1500%);
+  transform: translate(-123%, 1500%);
 }
 
 .table-status-box {
@@ -342,7 +306,7 @@
   border-radius: 12px;
   width: 434px;
   height: 183px;
-  transform: translate(108%, -20%);
+  transform: translate(163%, 20%);
   display: flex;
   flex-direction: column; /* Vertical orientation */
   justify-content: space-between;
@@ -356,7 +320,7 @@
   border-radius: 12px;
   width: 434px;
   height: 183px;
-  transform: translate(-18%, 100%);
+  transform: translate(158%, 35%);
   display: flex;
   flex-direction: column; /* Vertical orientation */
   justify-content: space-between;
@@ -395,7 +359,7 @@
   height: auto;
   top: 18%;
   left: 50.25%;
-  transform: translate(-149%, -50%);
+  transform: translate(-117%, -30%);
 }
 
 .arrow-table-lighting2 {
@@ -404,13 +368,13 @@
   height: auto;
   top: 18%;
   left: 50.25%;
-  transform: translate(-155%, 2000%);
+  transform: translate(-123%, 2000%);
 }
 
 .car-image-table-lighting {
-  width: 900px;
+  width: 665.5px;
   height: 177.5px;
-  transform: translate(-10%, 60%);
+  transform: translate(190%, -120%);
 }
 
 @import "Battery.css";
