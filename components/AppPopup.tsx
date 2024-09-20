@@ -7,19 +7,19 @@ const AppCarousel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const router = useRouter();
   const [activeButton, setActiveButton] = useState('frequently'); // State to track active button
   const apps = [
-    { name: 'YouTube', icon: 'images_pop/Group 427319037.svg' },
-    { name: 'Google', icon: 'images_pop/Group 427319036.svg' },
-    { name: 'Google Maps', icon: 'images_pop/Group 427319034.svg' },
-    { name: 'Spotify', icon: 'images_pop/Group 427319035.svg' },
-    { name: 'Chess', icon: 'images_pop/Group 427319043.svg' },
-    { name: 'YouTube Music', icon: 'images_pop/Vector.svg' },
-    { name: 'Play Store', icon: 'images_pop/Group 427319045.svg' },
-    { name: 'Tetris', icon: 'images_pop/Group 427319046.svg' },
-    { name: 'Native Maps', icon: 'images_pop/Group 427319038.svg' },
-    { name: 'Phone', icon: 'images_pop/Group 427319047.svg' },
-    { name: 'Netflix', icon: 'images_pop/Vector.svg' },
-    { name: 'Calculator', icon: 'images_pop/Group 427319050.svg' },
-    { name: 'Assistant', icon: 'images_pop/Group 427319051.svg', link: '/AI' },
+    { name: 'YouTube', icon: 'images_pop/Group 4569.svg' },
+    { name: 'Google', icon: 'images_pop/Group 427319032.svg' },
+    { name: 'Google Maps', icon: 'images_pop/Group 427319033.svg' },
+    { name: 'Spotify', icon: 'images_pop/Vector (10).svg' },
+    { name: 'Chess', icon: 'images_pop/Vector (11).svg' },
+    { name: 'YouTube Music', icon: 'images_pop/Group 427319019.svg' },
+    { name: 'Play Store', icon: 'images_pop/Vector (12).svg' },
+    { name: 'Tetris', icon: 'images_pop/Vector (13).svg' },
+    { name: 'Native Maps', icon: 'images_pop/Vector (14).svg' },
+    { name: 'Phone', icon: 'images_pop/Vector (15).svg' },
+    { name: 'Netflix', icon: 'images_pop/Vector (16).svg' },
+    { name: 'Calculator', icon: 'images_pop/Vector (17).svg' },
+    { name: 'Assistant', icon: 'images_pop/Assistant.svg', link: '/AI' },
   ];
 
   const handleAppClick = (app: { name: string; icon: string; link?: string }) => {
@@ -52,8 +52,12 @@ const AppCarousel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           <br></br>
           
           <div className="search-bar">
-            <input type="text" placeholder="Search for app or command" />
-          </div>
+  <input type="text" placeholder="Search for app or command" />
+  <button className="search-button">
+    <img src="/images_pop/Group 427318951.svg" alt="Search" />
+  </button>
+</div>
+
           <div className="button-container">
             <button 
               className={`app-button ${activeButton === 'frequently' ? 'active' : ''}`}
