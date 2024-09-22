@@ -558,8 +558,12 @@ body {
 }
 
 .icon-button:hover {
-  color: #76c7c0;
-}
+
+    
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 10)); /* Keeps the overall scaling effect */
+  
+  }
+
 
 #favs-title {
   color: white;
@@ -1341,8 +1345,8 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .icon-container img {
-  width: 90px; /* Increased size */
-  height: 90px; /* Increased size */
+  width: 110px; /* Increased size */
+  height: 110px; /* Increased size */
 }
 
 .icon-container span {
