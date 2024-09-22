@@ -9,18 +9,20 @@ const NewComponent: React.FC = () => {
     <div className="new-doors-container">
       {/* First Door Status */}
       <div className="new-door-box first-door">
-        <h3>First Door</h3>
-        <p>Status</p>
-        <p>(Open/Close/Opening/Closing)</p>
-        <p className="new-status">{firstDoorStatus}</p> {/* Using the variable */}
+        <h2>First Door</h2>
+        <div className="new-door-box-content">
+          <span className="new-status-row">Status (Open/Close/Opening/Closing)</span>
+          <span className="new-status">{firstDoorStatus}</span> {/* Using the variable */}
+        </div>
       </div>
 
       {/* Second Door Status */}
       <div className="new-door-box second-door">
-        <h3>Second Door</h3>
-        <p>Status</p>
-        <p>(Open/Close/Opening/Closing)</p>
-        <p className="new-status">{secondDoorStatus}</p> {/* Using the variable */}
+        <h2>Second Door</h2>
+        <div className="new-door-box-content">
+          <span className="new-status-row">Status (Open/Close/Opening/Closing)</span>
+          <span className="new-status">{secondDoorStatus}</span> {/* Using the variable */}
+        </div>
       </div>
 
       {/* Car Image */}

@@ -16,7 +16,7 @@ const TableStatusm: React.FC = () => {
   };
 
   return (
-    <div className="seating-lights-container">
+    <div>
       <div className="table-status-box">
         <h2>Table Status</h2>
         <div className="table-lighting-item">
