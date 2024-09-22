@@ -9,9 +9,18 @@ const MainContent: React.FC = () => {
   const [distanceFormatting, setDistanceFormatting] = useState('miles');
   const [temperatureFormatting, setTemperatureFormatting] = useState('°c');
   const [brightness, setBrightness] = useState(10);
+  const [distanceValue, setDistanceValue] = useState(5);
 
   const handleBrightnessChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setBrightness(Number(event.target.value));
+  };
+
+  const increaseValue = () => {
+    setDistanceValue((prevValue) => (prevValue < 10 ? prevValue + 1 : prevValue));
+  };
+
+  const decreaseValue = () => {
+    setDistanceValue((prevValue) => (prevValue > 1 ? prevValue - 1 : prevValue));
   };
 
   return (
@@ -175,6 +184,67 @@ const MainContent: React.FC = () => {
               </div>
             </div>
           </>
+        ) : activeTab === 'Safety & Security' ? (
+          <>
+            <div className="settings-group">
+              <div className="parking-brake-group-title">Parking Brake</div>
+              <button className="parking-brake-button1">
+                <div className="icon-text1">
+                  <div className="icon1">
+                    <img src="images_set/Parking Brake Icon.svg" alt="PI" />
+                  </div>
+                  <div className="text12">
+                    <div>PARKING BRAKE</div>
+                  </div>
+                </div>
+                <div className="text21">
+                  <div>BRAKE IS OFF</div>
+                </div>
+              </button>
+            </div>
+            <div className="settings-group">
+              <div className="parking-brake-group-title">Vehicle Power</div>
+              <button className="vehicle-power">
+                <div className="vehicle-power-text">
+                  <div>power off</div>
+                </div>
+              </button>
+            </div>
+            <div className="beside-parking-brake">
+              <div>Setting park on the</div>
+              <div>steering column will also</div>
+              <div>set the</div>
+              <div>parking brake</div>
+            </div>
+            <div className="below-vehicle-power">Pressing the brake pedal will turn the car on again</div>
+          </>
+
+        ) : activeTab === 'Autopilot' ? (
+          <>
+            <div className="setting-option">
+              <div className="cruise-group-title">Cruise Follow Distance</div>
+              <div className="slider-container">
+                <button className="slider-btn1" onClick={decreaseValue}>&#8249;</button>
+                <span className="distanceValue">{distanceValue}</span>
+                <button className="slider-btn2" onClick={increaseValue}>&#8250;</button>
+              </div>
+            </div>           
+            <div className="setting-option">
+              <span>Automate Drive (Beta)</span>
+              <label className="switch">
+                <input type="checkbox" />
+                <span className="slider"></span>
+              </label>
+            </div>
+            <div className="setting-option">
+              <span>Auto Lane Change</span>
+              <label className="switch">
+                <input type="checkbox" defaultChecked />
+                <span className="slider"></span>
+              </label>
+            </div>
+          </>
+
         ) : activeTab === 'Lights' ? (
           <>
             <div className="settings-group">
