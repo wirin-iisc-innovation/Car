@@ -18,7 +18,7 @@ const AppCarousel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     { name: 'Play Store', icon: 'images_pop/Vector (12).svg' },
     { name: 'Tetris', icon: 'images_pop/Vector (13).svg' },
     { name: 'Native Maps', icon: 'images_pop/Vector (14).svg' },
-    { name: 'Phone', icon: 'images_pop/Vector (15).svg' },
+    { name: 'Phone', icon: 'images_pop/Vector (15).svg', },
     { name: 'Netflix', icon: 'images_pop/Vector (16).svg' },
     { name: 'Calculator', icon: 'images_pop/Vector (17).svg' },
     { name: 'Assistant', icon: 'images_pop/Assistant.svg', link: '/AI' },

@@ -12,39 +12,37 @@ const InternalLighting: React.FC = () => {
     const [BoatLightsStatus, setBoatLightsStatus] = useState('ON');
 
   return (
-    <div className="seating-lights-container">
-        <div className="lighting-box">
-            <h2>Internal Lighting</h2>
-            <br/>
-            <div className="lighting-item">
-                <span className="lighting-label">Roof Light</span>
-                <span className="lighting-status">{RoofLightStatus}</span>
-                <span className="lighting-status-detail">{RoofLightValue}</span>
-            </div>
-            <div className="lighting-item">
-                <span className="lighting-label">Door Puddle</span>
-                <span className="lighting-status">{DoorPuddleStatus}</span>
-                <span className="lighting-status-detail">{DoorPuddleValue}</span>
-            </div>
-            <div className="lighting-item">
-                <span className="lighting-label">Floor Lights</span>
-                <span className="lighting-status">{FloorLightsStatus}</span>
-                <span className="lighting-status-detail">{FloorLightsValue}</span>
-            </div>
-            <div className="lighting-item">
-                <span className="lighting-label">Dashboard Lights</span>
-                <span className="lighting-status">{DashboardLightsStatus}</span>
-                <span className="lighting-status-detail">{DashboardLightsValue}</span>
-            </div>
-            <div className="lighting-item">
-                <span className="lighting-label">Boat Lights</span>
-                <span className="lighting-status">{BoatLightsStatus}</span>
-                <span className="lighting-status-detail">-</span>
-            </div>
-        </div>
-      <div className="car-internal-lighting-container">
-        <img src="/images/Car image1.svg" alt="Car3" className="car-image-internal-lighting" />
-        <img src="/images/Group 427319068.svg" alt="Arrow" className="arrow-internal-lighting" />
+    <div className="external-lighting-box">
+      <h2>Internal Lighting</h2>
+      <br/>
+      <div className="lighting-item">
+          <span className="lighting-label">Roof Light</span>
+          <span className="lighting-status">{RoofLightStatus}</span>
+          <span className="lighting-status-detail">{RoofLightValue}</span>
+      </div>
+      <div className="lighting-item">
+          <span className="lighting-label">Door Puddle</span>
+          <span className="lighting-status">{DoorPuddleStatus}</span>
+          <span className="lighting-status-detail">{DoorPuddleValue}</span>
+      </div>
+      <div className="lighting-item">
+          <span className="lighting-label">Floor Lights</span>
+          <span className="lighting-status">{FloorLightsStatus}</span>
+          <span className="lighting-status-detail">{FloorLightsValue}</span>
+      </div>
+      <div className="lighting-item">
+          <span className="lighting-label">Dashboard Lights</span>
+          <span className="lighting-status">{DashboardLightsStatus}</span>
+          <span className="lighting-status-detail">{DashboardLightsValue}</span>
+      </div>
+      <div className="lighting-item">
+          <span className="lighting-label">Boat Lights</span>
+          <span className="lighting-status">{BoatLightsStatus}</span>
+          <span className="lighting-status-detail">-</span>
+      </div>
+      <div className="car-external-lighting-container">
+        <img src="/images/Car image1.svg" alt="Car3" className="car-image-external-lighting" />
+        <img src="/images/Group 427319068.svg" alt="Arrow3" className="arrow-external-lighting-image" />
       </div>
     </div>
   );

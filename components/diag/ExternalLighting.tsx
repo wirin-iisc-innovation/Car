@@ -32,7 +32,7 @@ const ExternalLighting: React.FC = () => {
       </div>
       <div className="car-external-lighting-container">
         <img src="/images/Car image1.svg" alt="Car2" className="car-image-external-lighting" />
-        <img src="/images/Group 427319068.svg" alt="Arrow3" className="arrow-external-lighting-image" />
+        <img src="/images/Group 427319068.svg" alt="Arrow2" className="arrow-external-lighting-image" />
       </div>
     </div>
   );
