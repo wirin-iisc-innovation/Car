@@ -2358,3 +2358,182 @@ iframe {
     transform: translateX(0); /* Slide in to original position */
   }
 }
+
+.parking-brake-button1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 264px;
+  height: 141.6px;
+  background-color: #0E0E0E; /* Button background color */
+  border: 1.6px solid #FFFFFF66; /* Updated button border color */
+  border-radius: 40px; /* Updated corner radius */
+  padding: 20px;
+  color: white;
+  font-family: 'Montserrat', sans-serif; /* Set font to Montserrat */
+  font-size: 20px; /* Set font size to 20px */
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  top: 100px;
+  left: 558px;
+  transition: background-color 0.3s;
+}
+
+.parking-brake-button1:hover {
+  background-color: grey;
+}
+
+.icon-text1 {
+  display: flex;
+  align-items: center;
+}
+
+.parking-brake-button1 .icon img {
+  width: 50px; /* Adjust the size of the image */
+  margin-right: 10px;
+}
+
+.parking-brake-button1 .text12,
+.parking-brake-button1 .text21 {
+  text-align: center;
+}
+
+.parking-brake-button1 .text12 {
+  font-size: 20px;
+}
+
+.parking-brake-button1 .text21{
+  margin-top: 10px; /* Space between the two text sections */
+  font-size: 20px;
+}
+
+.vehicle-power{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 176px;
+  height: 48px;
+  background-color: #0E0E0E; /* Button background color */
+  border: 1.6px solid #FFFFFF66; /* Updated button border color */
+  border-radius: 40px; /* Updated corner radius */
+  padding: 20px;
+  color: white;
+  font-family: 'Montserrat', sans-serif; /* Set font to Montserrat */
+  font-size: 20px; /* Set font size to 20px */
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  top: 330px;
+  left: 558px;
+  transition: background-color 0.3s;
+}
+
+.vehicle-power:hover{
+  background-color: grey;
+}
+
+.below-vehicle-power{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  top: 392px;
+  left: 285px;
+  position: absolute;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  margin-left: 275px;
+  margin-bottom: 500px;
+  color: #515151;
+  font-weight: bold;
+}
+
+.beside-parking-brake{
+  font-family: 'Montserrat',sans-serif;
+  font-size: 20px;
+  position: absolute;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  top: 117px;
+  left: 860px;
+  color: #515151;
+  font-weight: bold;
+}
+
+.parking-brake-group-title {
+  font-size: 21px;
+  font-family: "Urbanist", sans-serif;
+  margin-bottom: 210px;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center; /* Centers the content */
+  align-items: center; /* Aligns items vertically */
+  width: 200px; /* Adjust as needed */
+  position: relative; /* Allows us to position the buttons and value */
+}
+
+.slider-btn1 {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translate(-1730%,-110%);
+}
+
+.slider-btn2 {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translate(-1030%,-110%);
+}
+
+
+.slider-btn1.left {
+  left: 0;
+}
+
+.slider-btn1.right {
+  right: 0; 
+}
+
+.slider-btn2.left {
+  left: 0;
+}
+
+.slider-btn2.right {
+  right: 0; 
+}
+
+.distanceValue {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  width: 50px;
+  display: inline-block;
+  position: relative;
+  transform: translate(-790%, -55%);
+}
+
+
+.cruise-group-title {
+  font-size: 21px;
+  font-family: "Urbanist", sans-serif;
+  transform: translate(0%,-380%);
+}
