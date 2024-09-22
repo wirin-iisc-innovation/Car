@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "concurrently \"npm run start-car\" \"npm run start-maps\" \"npm run start-backend\"",
     "start-car": "next dev",
-    "start-maps": "cd ./maps-mapbox-v2 && python app.py",
-    "start-backend": "cd ./speedometer_app &&  uvicorn real_time_app:app --host 0.0.0.0 --port 8000",
+    "start-maps": "cd ./maps-mapbox-v && python app.py",
+    "start-backend": "cd ./speedometer_app1 &&  uvicorn real_time_app:app --host 0.0.0.0 --port 8000",
     "lint": "next lint"
   },
   "dependencies": {

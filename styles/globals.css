@@ -1098,9 +1098,9 @@ span {
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 20px );
 -webkit-backdrop-filter: blur( 20px );
-border-radius: 10px;
+
 border: 1px solid rgba( 255, 255, 255, 0.18 );
-  border-radius: 20px;
+
   padding: 20px;
   z-index:999;
   margin: auto;
@@ -1123,26 +1123,47 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   cursor: pointer;
 }
 
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 .search-bar input {
   position: absolute;
   width: 40%;
   left: 30%;
-  height:40px;
-  transform:translateY(-150%);
-  padding: 10px;
+  height: 40px;
+  transform: translateY(-95%);
+  padding: 10px 50px 10px 20px; /* Add right padding to make space for the icon */
   border-radius: 40px;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 23px;
   background-color: #4A5675;
-  color: white; /* Change text color to white */
+  color: white;
 }
+
+.search-button {
+  position: absolute;
+ 
+  transform: translate(1150%,-188%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button img {
+  width: 60px;
+  height: 60px;
+}
+
 
 
 h3 {
   color: white;
   margin-top: 120px;
-  font-size: 1.4em;
+  font-size: 2em;
   gap:1000px;
   border-radius: 200px;
 }
@@ -1161,13 +1182,13 @@ h3 {
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 13px );
 -webkit-backdrop-filter: blur( 13px );
-border-radius: 10px;
+border-radius: 20px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   margin: 0 10px;
   height: 300px;
   width: 1000px;
-  gap:0px;
+ 
 }
 
 .app-icon img {
@@ -1178,20 +1199,21 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .app-icon span {
   color: white;
-  font-size: 14px;
+  font-size: 30px;
   text-align: center;
  
 }
 
 .app-icon:hover {
-  transform: scale(1.1,1.2); /* Keeps the overall scaling effect */
+  transform: scale(0.9); /* Keeps the overall scaling effect */
 
 }
+
 
 @media (min-width: 1024px) {
   .app-icon {
     height: 275px;
-    width:275px;
+    width: 275px;
   }
 
   .app-icon img {
@@ -1199,14 +1221,19 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 
   .app-icon span {
-    font-size: 16px;
+    font-size: 30px;
   }
 }
 
 .alice-carousel__prev-btn-item,
 .alice-carousel__next-btn-item {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 10px;
+  position:relative;
+  width:25px;
+  height:25px;
+
+  top:100%;  
+  background: black;
+  
   border-radius: 60%;
 }
 
@@ -1222,25 +1249,30 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 .app-button {
   background: none;
- 
+
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   padding: 10px 20px;
   border-radius: 8px;
-  border:none;
+  border: none;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
 }
 
 .app-button.active {
- 
   color: white; /* Change text color for active button */
 }
 
 .app-button:not(.active) {
   opacity: 0.5; /* Dim inactive button */
 }
-
+.filtered-apps-container {
+  display: flex;
+  flex-wrap: wrap; /* This allows icons to wrap to the next line if needed */
+  justify-content: flex-start; /* Aligns apps to the left */
+  gap: 20px; /* Adds space between each app icon */
+ 
+}
 
 
 @keyframes slideUp {
@@ -1387,9 +1419,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 .map-container {
   position: absolute;
-  width: 92%;
+  width: 80%;
   height: 100%;
-  left: 40%;
+  left: 50%;
 
   transform: translate(1.8%, -10%);
 }

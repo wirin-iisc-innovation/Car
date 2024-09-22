@@ -24,6 +24,7 @@ const Speedometer = () => {
     setSelectedGear(gears[newIndex]);
   };
 
+  // Fetch both speed and power from the API
   useEffect(() => {
     const updateSpeedAndPower = async () => {
       try {
@@ -35,12 +36,23 @@ const Speedometer = () => {
         console.log("API Response:", data); // Log the API response
 
         const newSpeed = data.speed; // Extract speed from the API response
+        const newPower = data.power; // Extract power from the API response
+
         setSpeed(newSpeed);
-        setPower(Math.floor(Math.random() * 500)); // Random power value
+        // Fetch power data from the /power endpoint
+        const powerResponse = await fetch("http://127.0.0.1:8000/power");
+        if (!powerResponse.ok) {
+          throw new Error(`HTTP error! status: ${powerResponse.status}`);
+        }
+        const powerData = await powerResponse.json();
+        setPower(powerData.power);
 
         // Update the SVG arc with the new speed value
         updateArc("kmph-arc", "kmph-pointer", newSpeed, 240);
-      } catch (error) {}
+        updateArc("kwh-arc", "kwh-pointer", powerData.power, 100);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     };
 
     const intervalId = setInterval(updateSpeedAndPower, 1000);
@@ -115,6 +127,7 @@ const Speedometer = () => {
               </linearGradient>
             </defs>
             <circle cx="121.5" cy="121.5" r="115" fill="none" stroke="" />
+            <path id="kwh-arc" className="arc" stroke="url(#greenGradient)" />
             <circle id="kwh-pointer" r="6" fill="#2CBE6B" />
           </svg>
           <div className="circle-text">
