@@ -1,0 +1,7 @@
+fastapi==0.95.2
+uvicorn==0.22.0
+paho-mqtt==1.6.1
+aiofiles==23.1.0
+requests==2.31.0
+Flask==3.0.3
+requests==2.32.3

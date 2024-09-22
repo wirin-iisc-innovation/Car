@@ -1,11 +1,18 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import Header from '../components/Header';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 
 const Start: React.FC = () => {
+  const router = useRouter();
+
+  const handleStartClick = () => {
+    router.push('/maps'); // Redirect to the "maps" page
+  };
+
   return (
-    <div className="container">
+    <div className="container3">
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,14 +30,14 @@ const Start: React.FC = () => {
               <div key={`left-chevron-${i}`} className="chevron"></div>
             ))}
           </div>
-          <div className="start-button">
+          <div className="start-button" onClick={handleStartClick}>
             <div className="start-circle">
               <span className="start-text">START</span>
               <span className="mode-text">AUTO MODE</span>
             </div>
           </div>
           <div className="chevrons right-chevrons">
-            {[...Array(10)].map((_, i) => (
+            {[...Array(11)].map((_, i) => (
               <div key={`right-chevron-${i}`} className="chevron"></div>
             ))}
           </div>

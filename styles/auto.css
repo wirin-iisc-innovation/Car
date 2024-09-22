@@ -14,7 +14,7 @@ body {
   width: 100%;
   max-width: 2000px; /* Increased width to fit the icons */
   height: 100%;
-  max-height: 600px; /* Full height with a max */
+  max-height: 670px; /* Full height with a max */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -110,7 +110,10 @@ body {
 }
 
 .left-chevrons {
-  transform: scale(-1, 1);
+  transform: scale(-1.3, 2);
+}
+.right-chevrons{
+  transform: scale(1.3, 2);
 }
 
 .chevron {
@@ -153,8 +156,8 @@ body {
 }
 
 .start-circle {
-  width: 180px;
-  height: 180px;
+  width:375px;
+  height:375px;
   border-radius: 50%;
   background: linear-gradient(145deg, #1e3a5f, #0f1c2e);
   display: flex;
@@ -223,7 +226,7 @@ body {
   display: flex;
   align-items: center; /* Align items to the center vertically */
   justify-content: flex-end; /* Align items to the right */
-  margin-right: 50px; /* Adjust margin to align */
+  
   margin-top: auto; /* Push to the bottom */
   padding-bottom: 20px; /* Add padding to create space */
   position: absolute; /* Position absolute for precise alignment */
@@ -299,7 +302,7 @@ body {
   background-color: #2CBE6B;
   position: absolute;
   bottom: 0;
-  height: 85%; /* Initially set to 85% */
+ 
   border-radius:  0px 0px 170px 170px; /* Rounded top and bottom */
   
 }

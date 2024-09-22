@@ -3,6 +3,9 @@ import React, { useEffect, useState } from 'react';
 const Header: React.FC = () => {
   const [time, setTime] = useState('');
   const [date, setDate] = useState('');
+  const [batteryPercentage, setBatteryPercentage] = useState(85); // Initial battery percentage
+  const [remainingDistance, setRemainingDistance] = useState(204); // Initial remaining distance
+  const [averageWhPerKm, setAverageWhPerKm] = useState(128); // Initial average energy consumption
 
   useEffect(() => {
     const updateDateTime = () => {
@@ -18,10 +21,35 @@ const Header: React.FC = () => {
       setDate(formattedDate);
     };
 
-    updateDateTime();
-    const intervalId = setInterval(updateDateTime, 1000);
+    const generateRandomBattery = () => {
+      const randomBattery = Math.floor(Math.random() * 101); // Generate random battery percentage (0-100)
+      setBatteryPercentage(randomBattery);
+    };
 
-    return () => clearInterval(intervalId);
+    // You can simulate backend updates for remaining distance and energy consumption with this function
+    const updateBackendData = () => {
+      const randomDistance = Math.floor(Math.random() * 300); // Random distance between 0 and 300 km
+      const randomWhPerKm = Math.floor(Math.random() * 200); // Random energy consumption between 0 and 200 Wh/km
+      setRemainingDistance(randomDistance);
+      setAverageWhPerKm(randomWhPerKm);
+    };
+
+    // Update time every second
+    updateDateTime();
+    const timeIntervalId = setInterval(updateDateTime, 1000);
+
+    // Update battery percentage randomly every 5 seconds
+    const batteryIntervalId = setInterval(generateRandomBattery, 1000);
+
+    // Simulate backend data updates every 10 seconds
+    const backendDataIntervalId = setInterval(updateBackendData, 1000);
+
+    // Cleanup intervals when component unmounts
+    return () => {
+      clearInterval(timeIntervalId);
+      clearInterval(batteryIntervalId);
+      clearInterval(backendDataIntervalId);
+    };
   }, []);
 
   return (
@@ -47,21 +75,29 @@ const Header: React.FC = () => {
         <div className="battery-info-bar">
           <div className="battery-info">
             <div className="remaining">
-              <span className="remaining-km" id="distance">204</span><span className="unit">km</span>
+              <span className="remaining-km" id="distance">{remainingDistance}</span>
+              <span className="unit">km</span>
               <div className="remaining-text">Remaining</div>
             </div>
             <div className="battery">
-              <span className="battery-percentage" id="battery">85</span><span className="unit">%</span>
+              <span className="battery-percentage" id="battery">{batteryPercentage}</span>
+              <span className="unit">%</span>
               <div className="battery-text">Battery</div>
             </div>
             <div className="average">
-              <span className="avg-wh" id="average">128</span><span className="unit">Wh/km</span>
+              <span className="avg-wh" id="average">{averageWhPerKm}</span>
+              <span className="unit">Wh/km</span>
               <div className="average-text">Average</div>
             </div>
           </div>
           <div className="battery-bar-container">
             <div className="battery-bar-base">
-              <div className="battery-bar-fill" id="battery-bar-fill"></div>
+              {/* Dynamically set the height of the battery fill based on battery percentage */}
+              <div
+                className="battery-bar-fill"
+                id="battery-bar-fill"
+                style={{ height: `${batteryPercentage}%` }}  // Adjust battery fill based on percentage
+              ></div>
             </div>
           </div>
         </div>
