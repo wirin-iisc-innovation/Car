@@ -588,60 +588,32 @@ body {
   font-family: "Montserrat";
   font-weight: 500;
 }
-.ac-popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
 .ac-popup-content {
   width: 400px;
   height: 215.5px;
   background: #090909; /* Dark background */
   padding: 20px;
   border-radius: 23.5px;
-  position: relative;
+  position: absolute;
   color: #fff; /* White text color */
   padding: 40px; /* Added padding */
   box-sizing: border-box;
-  transform: translate(290px, 98px); /* Move to the right and down */
+  transform: translate(1100px, -325px); /* Move to the right and down */
 }
 
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
-  border: none;
-  font-size: 16px;
-  color: #fff;
-  cursor: pointer;
-}
-
-.ac-popup-body {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.temperature-control,
-.fan-speed-control {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.slider-container {
+.temperature-control .slider-container {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 300px; /* Increased width of the temperature slider container */
+}
+
+.fan-speed-control .slider-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end; /* Move fan speed control to the right */
+  width: 300px; /* Adjust width to control positioning */
 }
 
 input[type="range"] {
@@ -656,6 +628,7 @@ input[type="range"] {
 
 .temperature-slider {
   background: linear-gradient(90deg, #00ffff 0%, #d84343 100%);
+  width: 250px; /* Increase width of the temperature slider */
 }
 
 .temperature-slider::-webkit-slider-thumb {
@@ -678,6 +651,7 @@ input[type="range"] {
 
 .fan-speed-slider {
   background: #fff;
+  width: 150px; /* Adjust the width for fan speed slider */
 }
 
 .fan-speed-slider::-webkit-slider-thumb {
@@ -718,6 +692,8 @@ input[type="range"] {
 span {
   font-size: 20px;
 }
+
+
 
 .mode-buttons {
   display: flex;
