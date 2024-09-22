@@ -106,8 +106,6 @@ const Footer: React.FC = () => {
             <div className="ac-popup-body">
               <div className="temperature-control">
                 <span>❆ Temperature</span>
-                <br></br>
-                
                 <div className="slider-container">
                   <span>{temperature}°C</span>
                   <input
@@ -120,14 +118,9 @@ const Footer: React.FC = () => {
                   />
                 </div>
               </div>
-              <br></br>
-              
               <div className="fan-speed-control">
                 <span>♺ Fan speed</span>
-                
-                <br></br>
                 <div className="slider-container">
-                 
                   <span>{fanSpeed}</span>
                   <input
                     type="range"

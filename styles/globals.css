@@ -588,17 +588,55 @@ body {
   font-family: "Montserrat";
   font-weight: 500;
 }
+.ac-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
 .ac-popup-content {
+  position: relative;
   width: 400px;
   height: 215.5px;
   background: #090909; /* Dark background */
   padding: 20px;
   border-radius: 23.5px;
-  position: absolute;
+  position: relative;
   color: #fff; /* White text color */
   padding: 40px; /* Added padding */
   box-sizing: border-box;
-  transform: translate(1100px, -325px); /* Move to the right and down */
+  transform: translate(290px, 105px);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ac-popup-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.temperature-control,
+.fan-speed-control {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .temperature-control .slider-container {
@@ -692,7 +730,6 @@ input[type="range"] {
 span {
   font-size: 20px;
 }
-
 
 
 .mode-buttons {
