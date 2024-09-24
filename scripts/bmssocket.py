@@ -41,7 +41,7 @@ def broadcast_updates():
             socketio.emit('battery_capacity', {"Capacity": new_status["Battery"].get("Capacity", 0)})
             socketio.emit('battery_error_status', {"ERRORStatus": new_status["Battery"].get("ERRORStatus", 0)})
             socketio.emit('battery_temperature', {"Temperature": new_status["Battery"].get("Temperature", 0)})
-        time.sleep(0.1)  # Check every 10 seconds
+        time.sleep(10)  # Check every 10 seconds (adjusted to 10 seconds)
 
 # Serve the HTML template
 @app.route('/')
@@ -124,9 +124,9 @@ def get_battery_temperature():
 
 if __name__ == "__main__":
     # Start the background thread to check for updates
-    # update_thread = threading.Thread(target=broadcast_updates)
-    # update_thread.daemon = True
-    # update_thread.start()
+    update_thread = threading.Thread(target=broadcast_updates)
+    update_thread.daemon = True
+    update_thread.start()
 
     # Run the Flask-SocketIO application
     socketio.run(app, debug=True)

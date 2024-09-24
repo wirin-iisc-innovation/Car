@@ -57,8 +57,8 @@ const MainContent: React.FC = () => {
   const poorCells = 1;
   const totalCells = 40;
   const avgVoltage = 3.3; // Example average cell voltage
-  const [minVoltage,setminVoltage ]= useState("0.7"); // Example minimum cell voltage
-  const [maxVoltage,setmaxVoltage]= useState("4.57"); // Example maximum cell voltage
+  const [minVoltage, setminVoltage ]= useState(0.77); // Example minimum cell voltage
+  const [maxVoltage, setmaxVoltage]= useState(4.7); // Example maximum cell voltage
   const minCellCount = 10; // Example minimum cell count
   const maxCellCount = 12;
   const [mosfetCharging, setMosfetChargingState] = useState("OFF"); // Example dynamic value
@@ -68,7 +68,7 @@ const MainContent: React.FC = () => {
   const batteryStatus = "Currently Working Fine."; // Example dynamic value
   const lastErrorCode = "232"; // Example dynamic value
   const lastErrorTime = "23/7 15:30"; // Example dynamic value
-  const [batteryCapacity,setbatteryCapacity] = useState("25");
+  const [batteryCapacity,setbatteryCapacity] = useState(35);
   const currentTemp = "37";
   const acCurrent = "79"; // Example dynamic current value
   const acVoltage = "256"; // Example dynamic temperature value
@@ -381,14 +381,14 @@ const MainContent: React.FC = () => {
   socket.on('battery_temperature', (Json) => {
     setTemperature(Json["Temperature"]);
   })
-  socket.on('battery_capacity', (Json) => {
-    setTemperature(Json["Capacity"]);
+  socket.on('battery_capacity', (Json1) => {
+    setbatteryCapacity(Json1["Capacity"]);
   })
-  socket.on('battery_minimum_voltage', (Json) => {
-    setTemperature(Json["CellMinimumVoltage"]);
+  socket.on('battery_minimum_voltage', (Json2) => {
+    setminVoltage(Json2["CellMinimumVoltage"]);
   })
-  socket.on('battery_maximum_voltage', (Json) => {
-    setTemperature(Json["CellMaximumVoltage"]);
+  socket.on('battery_maximum_voltage', (Json3) => {
+    setmaxVoltage(Json3["CellMaximumVoltage"]);
   })
   
   
@@ -400,8 +400,8 @@ const MainContent: React.FC = () => {
       socket.emit('get_discharging_mosfet');
       socket.emit('get_temperature');
       socket.emit('get_capacity');
-      socket.emit('get_minimum_voltage');
-      socket.emit('get_maximum_voltage');
+      socket.emit('get_min_voltage');
+      socket.emit('get_max_voltage');
     }
 
     const id = setInterval(updateFunc, 2000);
