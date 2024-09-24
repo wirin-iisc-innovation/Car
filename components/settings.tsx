@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import { BrightnessSlider } from './BrightnessSlider';
+import { ExteriorModeOptions } from './ModeOptions';
+import { SettingsButton } from './SettingsButton';
+import { AdjustmentsButton } from './AdjustmentsButton';
+import { SteeringWheelSVG } from './SVGIcons';
 
 const MainContent: React.FC = () => {
   const [activeTab, setActiveTab] = useState('Service');

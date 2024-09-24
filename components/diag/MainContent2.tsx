@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import io from 'socket.io-client'
 import VoltageCurrentContent from "./VoltageCurrentContent";
 import ChargeLevel from "./ChargeLevel";
 import BatteryHealth from "./BatteryHealth";
@@ -50,8 +51,8 @@ const MainContent: React.FC = () => {
   const masterPIDOutput = 350;
   const currentDrawn = 245;
   const batteryVoltage = 67;
-  const chargePercentage = 85;
-  const temperature = 28;
+  const [chargePercentage, setChargePercentage] = useState(0);
+  const [temperature, setTemperature] = useState(0);
   const goodCells = 39;
   const poorCells = 1;
   const totalCells = 40;
@@ -60,8 +61,8 @@ const MainContent: React.FC = () => {
   const maxVoltage = 4.5; // Example maximum cell voltage
   const minCellCount = 10; // Example minimum cell count
   const maxCellCount = 12;
-  const mosfetCharging = "YES"; // Example dynamic value
-  const mosfetDischarging = "NO"; // Example dynamic value
+  const [mosfetCharging, setMosfetChargingState] = useState("OFF"); // Example dynamic value
+  const [mosfetDischarging, setMosfetDischargingState] = useState("ON"); // Example dynamic value
   const chargerStatus = "Not connected to charger";
   const errorImage = "images/Good cell.svg"; // Image source dynamically
   const batteryStatus = "Currently Working Fine."; // Example dynamic value
@@ -364,6 +365,34 @@ const MainContent: React.FC = () => {
     
     return null;
   };
+
+  const socket = io('http://127.0.0.1:5000');
+  socket.connect();
+
+  socket.on('battery_cell_voltage', (charge) => {
+    setChargePercentage(charge["Charge"]);
+  })
+  socket.on('battery_charging_mosfet', (mosftJson) => {
+    setMosfetChargingState(mosftJson["ChargingMOSFET"]);
+  })
+  socket.on('battery_discharging_mosfet', (Json) => {
+    setMosfetDischargingState(Json["DischargingMOSFET"]);
+  })
+  socket.on('battery_temperature', (Json) => {
+    setTemperature(Json["Temperature"]);
+  })
+
+  useEffect(() => {
+    const updateFunc = async () => {
+      socket.emit('get_cell_voltage');
+      socket.emit('get_charging_mosfet');
+      socket.emit('get_discharging_mosfet');
+      socket.emit('get_temperature');
+    }
+
+    const id = setInterval(updateFunc, 2000);
+    return () => clearInterval(id);
+  })
 
   return (
     <div className="body">
