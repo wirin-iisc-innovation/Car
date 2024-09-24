@@ -1,0 +1,4 @@
+Clone the repository onto your system. 
+To install the requirements, run command in command prompt-
+pip install -r requirements.txt
+Run app.py file

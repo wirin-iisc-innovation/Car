@@ -14,11 +14,18 @@ const MainContent: React.FC = () => {
   const [distanceFormatting, setDistanceFormatting] = useState('miles');
   const [temperatureFormatting, setTemperatureFormatting] = useState('°c');
   const [brightness, setBrightness] = useState(10);
-  const [exteriorLights, setExteriorLights] = useState('off');
-  const [interiorDomeLights, setInteriorDomeLights] = useState('off');
+  const [distanceValue, setDistanceValue] = useState(5);
 
   const handleBrightnessChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setBrightness(Number(event.target.value));
+  };
+
+  const increaseValue = () => {
+    setDistanceValue((prevValue) => (prevValue < 10 ? prevValue + 1 : prevValue));
+  };
+
+  const decreaseValue = () => {
+    setDistanceValue((prevValue) => (prevValue > 1 ? prevValue - 1 : prevValue));
   };
 
   return (
@@ -129,6 +136,7 @@ const MainContent: React.FC = () => {
             <div className="settings-group">
               <div className="settings-group-title">Traction Control</div>
               <div className="traction-control">
+                <br></br>
                 <div className="traction-control-option">
                   <button className={`traction-control-button ${tractionControl === 'slip start' ? 'active' : ''}`} onClick={() => setTractionControl('slip start')}>slip start</button>
                   <div className="settings-description-traction">
@@ -181,56 +189,95 @@ const MainContent: React.FC = () => {
               </div>
             </div>
           </>
-        ) : activeTab == 'Quick Controls' ? (
+        ) : activeTab === 'Safety & Security' ? (
           <>
-            <div className = "settings-group">
-              <div className='settings-group-title'>Display Brightness</div>
-              <div className='settings-options'>
-                <BrightnessSlider value={brightness} callback={handleBrightnessChange}/>
-              </div>
+            <div className="settings-group">
+              <div className="parking-brake-group-title">Parking Brake</div>
+              <button className="parking-brake-button1">
+                <div className="icon-text1">
+                  <div className="icon1">
+                    <img src="images_set/Parking Brake Icon.svg" alt="PI" />
+                  </div>
+                  <div className="text12">
+                    <div>PARKING BRAKE</div>
+                  </div>
+                </div>
+                <div className="text21">
+                  <div>BRAKE IS OFF</div>
+                </div>
+              </button>
             </div>
-
-            <div className = "settings-group">
-              <div className='settings-group-title'>Exterior Lights</div>
-              <div className='settings-options'>
-                <ExteriorModeOptions options={["off", "parking", "on", "auto"]} selected={exteriorLights} callback={setExteriorLights}/>
-                <SettingsButton text={"front fog"} callback={() => {}}/>
-              </div>
+            <div className="settings-group">
+              <div className="parking-brake-group-title">Vehicle Power</div>
+              <button className="vehicle-power">
+                <div className="vehicle-power-text">
+                  <div>power off</div>
+                </div>
+              </button>
             </div>
-
-            <div className = "settings-group">
-              <div className='settings-group-title'>Adjustments</div>
-              <div className='settings-options'>
-                <AdjustmentsButton callback={() => {}}>
-                  MIRRORS
-                </AdjustmentsButton>
-                <AdjustmentsButton callback={() => {}}>
-                  <SteeringWheelSVG/> <br/>
-                  STEERING WHEEL
-                </AdjustmentsButton>
-              </div>
+            <div className="beside-parking-brake">
+              <div>Setting park on the</div>
+              <div>steering column will also</div>
+              <div>set the</div>
+              <div>parking brake</div>
             </div>
-
+            <div className="below-vehicle-power">Pressing the brake pedal will turn the car on again</div>
           </>
+
+        ) : activeTab === 'Autopilot' ? (
+          <>
+            <div className="setting-option">
+              <div className="cruise-group-title">Cruise Follow Distance</div>
+              <div className="slider-container">
+                <button className="slider-btn1" onClick={decreaseValue}>&#8249;</button>
+                <span className="distanceValue">{distanceValue}</span>
+                <button className="slider-btn2" onClick={increaseValue}>&#8250;</button>
+              </div>
+            </div>           
+            <div className="setting-option">
+              <span>Automate Drive (Beta)</span>
+              <label className="switch">
+                <input type="checkbox" />
+                <span className="slider"></span>
+              </label>
+            </div>
+            <div className="setting-option">
+              <span>Auto Lane Change</span>
+              <label className="switch">
+                <input type="checkbox" defaultChecked />
+                <span className="slider"></span>
+              </label>
+            </div>
+          </>
+
         ) : activeTab === 'Lights' ? (
           <>
-          <div className = "settings-group">
-              <div className='settings-group-title'>Exterior Headlights</div>
-              <div className='settings-options'>
-                <ExteriorModeOptions options={["off", "parking", "on", "auto"]} selected={exteriorLights} callback={setExteriorLights}/>
+            <div className="settings-group">
+              <div className="settings-group-title">Headlights</div>
+              <div className="settings-options">
+                <button className="button-light-adjust">
+                  <img src="images_set/headlight-adjust.svg" alt="Adjust Headlights" className="button-icon" />
+                  <span className="button-text">Adjust Headlights</span>
+                </button>
+                <button className="button-light-reset">
+                  <img src="images_set/headlight-reset.svg" alt="Reset Headlights" className="button-icon" />
+                  <span className="button-text">Reset Headlights</span>
+                </button>
               </div>
-              <SettingsButton text={"front fog"} callback={() => {}}/>
             </div>
-            <div className = "settings-group">
-              <div className='settings-group-title'>Interior Dome Lights</div>
-              <div className='settings-options'>
-                <ExteriorModeOptions options={["off", "on", "auto"]} selected={interiorDomeLights} callback={setInteriorDomeLights}/>
+            <div className="settings-group">
+              <div className="settings-group-title">Interior Lights</div>
+              <div className="settings-options">
+                <label className="switch">
+                  <input type="checkbox" />
+                  <span className="slider"></span>
+                </label>
+                <span>Enable Interior Lights</span>
               </div>
-              <SettingsButton text={"ambient lights"} callback={() => {}}/>
             </div>
           </>
-        ) 
-        : (
+        
+        ) : (
           <div className="settings-content">{activeTab}</div>
         )}
       </div>

@@ -1,0 +1,376 @@
+/* Apply a modern, sans-serif font */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1b1b1b; /* Dark background for a tech-like look */
+    color: #e0e0e0; /* Light text for readability */
+    overflow: hidden; /* Prevents body from scrolling */
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: left 0.4s, right 0.4s; /* Smoother transition */
+}
+
+#sidebar.open + #map {
+    left: 200px;
+    right: 200px;
+}
+
+.mapboxgl-ctrl-top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.mapboxgl-ctrl-top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.mapboxgl-ctrl-group.time-of-day-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 150px;
+    padding: 5px;
+}
+
+/* Time-of-day control buttons with futuristic glow */
+.time-of-day-button {
+    width: 30px;
+    height: 30px;
+    background-color: #2c2c2c; /* Darker button */
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(44, 164, 208, 0.7); /* Soft blue glow */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.time-of-day-button:hover {
+    background-color: #333; /* Dark gray on hover */
+    box-shadow: 0 0 15px rgba(44, 164, 208, 1); /* Stronger glow on hover */
+}
+
+.time-of-day-button:focus {
+    outline: none;
+}
+
+/* Dropdown styling */
+.time-of-day-dropdown {
+    position: relative;
+    z-index: 3; /* Ensure dropdown container is above other controls */
+}
+
+/* Dropdown Menu Modernization */
+.dropdown-button {
+    background-color: #1b1b1b; /* Jet black */
+    box-shadow: 0 0 10px rgba(44, 164, 208, 0.7); /* Soft blue glow */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-button:hover {
+    background-color: #333; /* Dark gray on hover */
+}
+
+.dropdown-button:focus {
+    outline: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #2c2c2c;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: 4; /* Ensure dropdown menu is above other elements */
+    padding: 0; /* Remove padding from the menu */
+    width: auto; /* Adjust the width to fit the content */
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    color: black;
+    padding: 10px 20px; /* Adjust padding to ensure proper spacing */
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.dropdown-item:hover {
+    background-color: #e0e0e0;
+}
+
+/* Center right positioning for pitch, bearing, and zoom controls */
+.mapboxgl-ctrl-right-center {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.user-location-marker {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(25, 151, 241);
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles for the sidebar and the sidebar toggle button */
+#sidebar {
+    height: 100%;
+    width: 400px; /* Increased width */
+    position: absolute;
+    top: 0;
+    left: -400px; /* Adjusted for increased width */
+    background-color: #000000;
+    z-index: 3; /* Ensure the sidebar is above the map */
+    transition: left 0.4s;
+    padding: 20px; /* Increased padding for better spacing */
+    box-sizing: border-box;
+    color: #e0e0e0;
+}
+
+/* Adjust sidebar open state for increased width */
+#sidebar.open {
+    left: 0;
+}
+
+#sidebarToggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2; /* Ensure the button is above the sidebar */
+    background-color: #000000;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    color: #e0e0e0;
+    box-shadow: 0 0 8px rgba(44, 164, 208, 0.5);
+}
+
+#sidebarClose {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #1b1b1b;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 4;
+    color: #e0e0e0; /* Ensure it's above other elements */
+    transition: color 0.3s;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(44, 164, 208, 0.5); /* Soft blue glow */
+}
+
+#sidebarClose:hover {
+    color: #f53b57; /* Bright red hover effect */
+}
+
+#starting-location, #ending-location {
+    position: relative; /* Ensure relative positioning for suggestions */
+    background: #e8e8e8;
+    padding: 8px; /* Adjusted padding */
+    border-radius: 24px; /* More rounded edges */
+    display: flex;
+    align-items: center;
+    width: calc(100% - 16px); /* Adjusted width to fit inside the sidebar with padding */
+    margin-top: 16px; /* Position with some margin */
+    height: 30px; /* Adjust height */
+    border: 2px solid transparent; /* Blue border */
+    transition: border-color 0.3s;
+    user-select: none;
+}
+
+#starting-location:hover, #ending-location:hover,
+#starting-location:focus-within, #ending-location:focus-within {
+    border-color: #2fc0f2; /* Neon blue border on focus/hover */
+}
+
+#starting-location svg, #ending-location svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    fill: #aaa;
+    flex-shrink: 0; 
+    margin-left: 5px;
+}
+
+#starting-input, #ending-input {    
+    flex: 1;
+    padding: 8px; /* Adjusted padding */
+    border: none;
+    outline: none;
+    font-size: 16px; /* Adjust font size */
+    background: transparent;
+    width: 100%;
+    border-radius: 24px;
+    color: #000000
+}
+
+#starting-clear-button, #ending-clear-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24 px; /* Adjust font size */
+    color: #aaa;
+    margin-left: 8px; /* Adjust margin */
+    transition: color 0.3s;
+}
+
+#starting-clear-button:hover, #ending-clear-button:hover {
+    color: #e0e0e0;
+}
+
+#common-suggestions {
+    font-family: Calibri, sans-serif;
+    font-size: small;
+    position: relative;
+    z-index: 2;
+    background-color: rgb(0, 0, 0); /* Same as the sidebar background */
+    max-height: 350px; /* Adjust height to fit 6 suggestions */
+    overflow-y: auto; /* Scroll if more than 6 suggestions */
+    width: calc(100% + 32px); /* Full width of the sidebar plus compensating for padding */
+    margin-left: -16px;
+    margin-top: 30px;
+    border-top: none; /* Divider above the first suggestion */
+}
+
+.suggestion {
+    padding: 15px 16px; /* Adjusted padding */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-bottom: 1px solid #444; /* Divider with a darker color */
+    color: #e0e0e0; /* Light text color for contrast */
+    user-select: none;
+    overflow: hidden;
+}
+
+.suggestion:hover {
+    background: #333; /* Slightly lighter background on hover */
+}
+
+#common-suggestions .suggestion:first-child {
+    border-top: 1px solid #444; /* Remove top border for the first suggestion */
+}
+
+
+#sidebar-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Space between the title and the first input box */
+    color: rgb(44, 164, 208); /* Blue color to match the theme */
+}
+
+.instructions-container {
+    margin-top: 20px;
+    padding: 15px 16px; /* Consistent padding with suggestions */
+    max-height: 450px; /* Adjusted height to match suggestions */
+    overflow-y: auto;
+    width: 100%; /* Full width of the sidebar plus compensating for padding */
+    margin-left: -16px;
+    background-color: rgb(24, 23, 23); /* Same background as the sidebar */
+    color: #e0e0e0; /* Light text color for contrast */
+    user-select: none;
+    cursor: default;
+}
+
+.instructions-container h3 {
+    font-size: 18px; /* Slightly larger to stand out */
+    margin-bottom: 10px;
+    color: rgb(44, 164, 208); /* Blue color to match the theme */
+    text-align: center; /* Center align the heading */
+}
+
+.instructions-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Ensure no extra spacing around the list */
+}
+
+.instructions-container li {
+    margin-bottom: 15px; /* Space between instructions */
+    padding-left: 10px; /* Padding for better readability */
+    border-left: 3px ; /* Blue left border for visual separation */
+    font-size: 14px; /* Match font size with suggestions */
+    color: #e0e0e0; /* Ensure text color consistency */
+    line-height: 1.5; /* Improve readability with line height */
+}
+
+.instructions-container li::before {
+    content: '•';
+    color: rgb(44, 164, 208); /* Blue bullet point */
+    font-size: 18px; /* Slightly larger bullet point */
+    vertical-align: middle;
+    margin-right: 10px; /* Space between bullet and text */
+}
+
+#route-instructions {
+    display: none;
+    background-color: #000000; /* Hide the instructions container by default */
+}
+
+#route-details {
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.route-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.route-duration, .route-distance {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.route-traffic {
+    font-size: 12px;
+    color: #666;
+}
+
+
+/* Button initially hidden off-screen */
+#directions-button {
+    position: fixed;
+    bottom: -60px; /* Hidden off-screen */
+    left: 200px;
+    transform: translateX(-50%);
+    background-color: rgb(44, 164, 208); 
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1000;
+    transition: bottom 0.5s ease-in-out; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+/* Button visible when triggered */
+#directions-button.show {
+    bottom: 30px; /* Slide up to 30px from the bottom */
+}

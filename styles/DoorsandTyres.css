@@ -1,0 +1,328 @@
+.tyres-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .car12-image-container {
+    position: absolute;
+    left: 60%;
+    transform: translate(-20%, 80%);
+  }
+  
+  .car12-image {
+    max-width: 675px;
+    /* Adjust according to your needs */
+  }
+  
+  .tyre-box {
+    position: absolute;
+    background-color: #515151BF;
+    color: white;
+    padding: 10px;
+    border-radius: 12px;
+    width: 297px;
+    height: 144px;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+  }
+  
+  .tyre-box h3 {
+    font-size: 22;
+    margin: 0;               /* Removes extra margin to avoid overflow */
+    padding: 0;
+  }
+  
+  .tyre-box-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    text-align: left;
+  }
+
+  .tyre-box-detail {
+    font-size: 20; /* Increase font size for the paragraph */
+    flex: 2;
+    color: #c9c9c9;
+  }
+
+  .tyre-box-value {
+    flex: 1;
+    font-family: 'Urbanist', sans-serif;
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    }
+  
+  /* Positioning the tyre boxes around the car */
+  .front-right {
+    transform: translate(0%, 60%);
+  }
+  
+  .front-left {
+    transform: translate(10%, 300%);
+  }
+  
+  .back-right {
+    transform: translate(240%, 60%);
+  }
+  
+  .back-left {
+    transform: translate(230%, 300%);
+  }
+
+  /*side doors */
+  .side-doors-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .car-image-container13 {
+    position: absolute;
+    left: 60%;
+    transform: translate(0%, 90%);
+  }
+  
+  .car-image13 {
+    max-width: 735px;
+  }
+  
+  .door-box {
+    position: absolute;
+    background-color: #515151BF;
+    color: white;
+    padding-left: 30px;
+    border-radius: 12px;
+    width: 434px;
+    height: 144px;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+  }
+  
+  .door-box h2 {
+    font-size: 22;
+  }
+  
+  .door-box-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  /* Aligning "Status" and the "Open" text horizontally */
+  .status-row {
+    font-size: 20; /* Increase font size for the paragraph */
+    flex: 2;
+    color: #c9c9c9;
+  }
+  
+  .status {
+    flex: 1;
+    font-family: 'Urbanist', sans-serif;
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 50px;
+  }
+  
+  /* Positioning the door boxes around the car */
+  .left-door {
+    transform: translate(-10%, 100%);
+  }
+  
+  .right-door {
+    transform: translate(-10%, 280%);
+  }
+  
+  /* Vertical arrow style (with ::after) */
+  .left-door::after, .right-door::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: white;
+    top: 50%;
+    left: -50px;
+    z-index: 5;
+    transform: translateY(-51%);
+  }
+  
+  /* For the left door (vertical arrow) */
+  .left-door::after {
+    height: 100px;
+    left: 750px;
+    transform: translate(2000%,0%);
+  }
+  
+  /* For the right door (vertical arrow) */
+  .right-door::after {
+    height: 100px;
+    left: 750px;
+    transform: translate(3200%,-97%);
+  }
+  
+  /* Horizontal arrow style (with ::before) */
+  .left-door::before, .right-door::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: white;
+    top: 50%;
+    z-index: 5;
+  }
+  
+  /* For the left door (horizontal arrow) */
+  .left-door::before {
+    width: 325px;
+    left: 750px;
+    transform: translateX(-88%);
+  }
+  
+  /* For the right door (horizontal arrow) */
+  .right-door::before {
+    width: 352px;
+    left: 400px;
+    transform: translate(18%,0%);
+  }
+  
+   /* roof and boot*/
+   .new-doors-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .new-car-image-container {
+    position: absolute;
+    left: 60%;
+    transform: translate(0%, 90%);
+  }
+  
+  .new-car-image {
+    max-width: 735px;
+  }
+  
+  .new-door-box {
+    position: absolute;
+    background-color: #515151BF;
+    color: white;
+    padding-left: 30px;
+    border-radius: 12px;
+    width: 434px;
+    height: 144px;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .new-door-box h2 {
+    font-size: 22;
+  }
+
+  .new-door-box-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  /* Aligning "Status" and the "Open" text horizontally */
+  .new-status-row {
+    font-size: 20; /* Increase font size for the paragraph */
+    flex: 2;
+    color: #c9c9c9;
+  }
+  
+  .new-status {
+    flex: 1;
+    font-family: 'Urbanist', sans-serif;
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 50px;
+  }
+  
+  /* Positioning the door boxes around the car */
+  .first-door {
+    transform: translate(-10%, 100%);
+  }
+  
+  .second-door {
+    transform: translate(-10%, 280%);
+  }
+  
+  /* Vertical arrow style (with ::after) */
+  .first-door::after, .second-door::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: white;
+    top: 50%;
+    left: -50px;
+    z-index: 5;
+    transform: translateY(-51%);
+  }
+  
+  /* For the first door (vertical arrow) */
+  .first-door::after {
+    height: 100px;
+    left: 750px;
+    transform: translate(2000%,0%);
+  }
+  
+  /* For the second door (vertical arrow) */
+  .second-door::after {
+    height: 100px;
+    left: 750px;
+    transform: translate(3200%,-97%);
+  }
+  
+  /* Horizontal arrow style (with ::before) */
+  .first-door::before, .second-door::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: white;
+    top: 50%;
+    z-index: 5;
+  }
+  
+  /* For the first door (horizontal arrow) */
+  .first-door::before {
+    width: 325px;
+    left: 750px;
+    transform: translateX(-88%);
+  }
+  
+  /* For the second door (horizontal arrow) */
+  .second-door::before {
+    width: 352px;
+    left: 400px;
+    transform: translate(18%,0%);
+  }
+  
+
+  
+  

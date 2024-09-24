@@ -1,0 +1,445 @@
+.voltage-current-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 570px;
+  background-color: linear-gradient(
+      to bottom,
+      #131d43 0%,
+      #131e41 25%,
+      #1d2a5d 40%,
+      #12224f 68%,
+      #081f44 100%
+    ),
+    #313131;
+}
+
+.car-container2 {
+  position: relative;
+  width: 60%;
+  max-width: 600px;
+  margin: auto;
+  margin-left: 55%;
+  margin-bottom: 175px;
+}
+
+.panel-container {
+  position: fixed;
+  width: 60%;
+  max-width: 600px;
+  margin: auto;
+  margin-left: 1150px;
+}
+
+.battery-current {
+  position: fixed;
+  background-color: #515151;
+  opacity: 0.75;
+  color: white;
+  padding: 10px;
+  border-radius: 12px;
+  width: 260px;
+  height: 150px;
+  margin-left: 400px;
+  margin-bottom: 360px;
+}
+
+.battery-voltage {
+  position: fixed;
+  background-color: #515151;
+  opacity: 0.75;
+  color: white;
+  padding: 10px;
+  border-radius: 12px;
+  width: 260px;
+  height: 150px;
+  margin-right: 200px;
+  margin-bottom: 75px;
+}
+
+.panel-title {
+  font-weight: bold;
+  font-size: 22px;
+  margin-left: 25px;
+  margin-top: 5px;
+  color: white;
+}
+
+.panel-info {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  color: #c0c0c0;
+  font-weight: bold;
+}
+
+.panel-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-left: 190px;
+  margin-top: -60px;
+}
+
+.battery-current::before,
+.battery-voltage::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: white;
+}
+
+.battery-voltage::before {
+  height: 50px;
+  right: -309px;
+  bottom: 50%;
+  width: 309px;
+  height: 1.5px;
+}
+
+.battery-current::before {
+  background-color: white;
+  height: 50px;
+  right: -274px;
+  bottom: 50%;
+  width: 274px;
+  height: 2px;
+  margin-bottom: 13px;
+}
+
+.battery-current::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background-color: white;
+  right: -275px;
+  top: 50%;
+  transform: translateY(-15%);
+}
+
+.charge-level {
+  position: fixed;
+  background-color: #515151;
+  opacity: 0.75;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 12px;
+  width: 260px;
+  height: 150px;
+  margin-left: -20px;
+  margin-bottom: 350px;
+}
+
+.charge-level::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 67px; /* Adjust this height as needed */
+  background-color: white;
+  right: -368px; /* Align with the end of the horizontal line */
+  top: 50%; /* Start the vertical line from the center of the box */
+  transform: translateY(-23%);
+}
+
+.battery-percent {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-left: 195px;
+  margin-top: -27px;
+}
+
+.charging-status {
+  font-size: 15px;
+  margin-top: 30px;
+  margin-left: 45px;
+  margin-bottom: 5px;
+  color: #8e8f95;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.line {
+  position: absolute;
+  top: 41%; /* Adjust according to your design */
+  left: 100%;
+  width: 368px; /* Adjust length as needed */
+  height: 1.5px;
+  background-color: white;
+}
+
+.battery-health {
+  position: fixed;
+  background-color: #515151;
+  opacity: 0.75;
+  color: white;
+  padding: 10px;
+  border-radius: 12px;
+  width: 260px;
+  height: 240px;
+  margin-left: -20px;
+  margin-bottom: 260px;
+}
+
+.temp {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.temp-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-left: 195px;
+  margin-top: -30px;
+}
+
+.cell-text {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  color: #8e8f95;
+}
+
+.cell-image {
+  margin-top: -22px;
+  margin-left: 70px;
+}
+
+.cells-value {
+  margin-top: -25px;
+  margin-left: 195px;
+  font-size: 20px;
+}
+
+.cells {
+  margin-top: 2px;
+  margin-left: 195px;
+  font-size: 20px;
+}
+
+.battery-health-line {
+  position: absolute;
+  top: 15%; /* Adjust according to your design */
+  left: 100%;
+  width: 378px; /* Adjust length as needed */
+  height: 1.5px;
+  background-color: white;
+}
+
+.battery-health::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 97px; /* Adjust this height as needed */
+  background-color: white;
+  right: -378px; /* Align with the end of the horizontal line */
+  top: 50%; /* Start the vertical line from the center of the box */
+  transform: translateY(-93%);
+}
+
+.cell-voltage {
+  position: fixed;
+  background-color: #515151;
+  opacity: 0.75;
+  color: white;
+  padding: 10px;
+  border-radius: 12px;
+  width: 260px;
+  height: 450px;
+  margin-left: -20px;
+  margin-bottom: 50px;
+}
+
+.cell-voltage-line {
+  position: absolute;
+  top: 15%; /* Adjust according to your design */
+  left: 100%;
+  width: 378px; /* Adjust length as needed */
+  height: 1.5px;
+  background-color: white;
+}
+
+.cell-voltage::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 73px; /* Adjust this height as needed */
+  background-color: white;
+  right: -378px; /* Align with the end of the horizontal line */
+  top: 50%; /* Start the vertical line from the center of the box */
+  transform: translateY(-223%);
+}
+
+.voltage-value-avg {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-left: 195px;
+  margin-top: -370px;
+}
+
+.voltage-value-min {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-left: 195px;
+  margin-top: 85px;
+}
+
+.voltage-value-max {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-left: 195px;
+  margin-top: 70px;
+}
+
+.min-max {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-left: 195px;
+  margin-top: 47px;
+}
+
+.status-charge-line {
+  position: absolute;
+  top: 15%; /* Adjust according to your design */
+  left: 100%;
+  width: 378px; /* Adjust length as needed */
+  height: 1.5px;
+  background-color: white;
+}
+
+.status-charge {
+  position: fixed;
+  background-color: #515151;
+  opacity: 0.75;
+  color: white;
+  padding: 10px;
+  border-radius: 12px;
+  width: 260px;
+  height: 260px;
+  margin-left: -20px;
+  margin-bottom: 240px;
+}
+
+.status-charge::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 97px; /* Adjust this height as needed */
+  background-color: white;
+  right: -378px; /* Align with the end of the horizontal line */
+  top: 50%; /* Start the vertical line from the center of the box */
+  transform: translateY(-101%);
+}
+
+.mosfet-status {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-left: 195px;
+  margin-top: -53px;
+}
+
+.status-battery-error {
+  position: fixed;
+  background-color: #515151;
+  opacity: 0.75;
+  color: white;
+  padding: 10px;
+  border-radius: 12px;
+  width: 260px;
+  height: 200px;
+  margin-left: 400px;
+  margin-bottom: 320px;
+}
+
+.battery-capacity {
+  position: fixed;
+  background-color: #515151;
+  opacity: 0.75;
+  color: white;
+  padding: 10px;
+  border-radius: 12px;
+  width: 260px;
+  height: 150px;
+  margin-right: 200px;
+  margin-bottom: 75px;
+}
+
+.status-battery-error::before,
+.battery-capacity::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: white;
+}
+
+.battery-capacity::before {
+  height: 50px;
+  right: -309px;
+  bottom: 50%;
+  width: 309px;
+  height: 1.5px;
+}
+
+.status-battery-error::before {
+  background-color: white;
+  height: 50px;
+  right: -273px;
+  bottom: 50.5%;
+  width: 273px;
+  height: 2px;
+  margin-bottom: 13px;
+}
+
+.status-battery-error::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 67px; /* Adjust this height as needed */
+  background-color: white;
+  right: -273px; /* Align with the end of the horizontal line */
+  top: 50%; /* Start the vertical line from the center of the box */
+  transform: translateY(-23%);
+}
+
+.error-status-image {
+  margin-top: -10px;
+  margin-left: 115px;
+}
+
+.battery-working {
+  font-family: "Urbanist", sans-serif;
+  font-style: italic;
+  margin-left: 45px;
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.status-panel-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-left: 170px;
+  margin-top: -63px;
+}
+
+.check-history {
+  margin-left: 205px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  transform: translate(0px, -80px);
+}

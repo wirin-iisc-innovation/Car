@@ -8,3 +8,152 @@ body {
     overflow: hidden;
     font-family: 'Urbanist', sans-serif;
 }
+.sidebar {
+    position:absolute;
+    width: 17%;
+    height: 570px;
+    background-color: #161616;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-button {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: left;
+    font-size: 23px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Urbanist', sans-serif;
+  }
+  
+  .sidebar-button.active .sidebar-text {
+    color: white; /* Makes the text glow white */
+    font-weight: bold; /* Optional: Make the text bold */
+    text-shadow: 0 0 5px white; /* Optional: Add a glowing effect */
+  }
+  
+  .sidebar-text{
+    margin-left: 60px;
+    margin-bottom: 0px;
+    color: #737373;
+    font-weight: bold;
+    font-size: x-large;
+  }
+  
+  .sidebar-text:hover{
+    color: white;
+  }
+  
+  .sidebar-icon{
+    margin-top: 0px;
+    position: absolute;
+    align-content: center;
+  }
+  
+  .arrow{
+    margin-left: 50px;
+    margin-bottom: 490px;
+  }
+  
+  .mini-sidebar {
+    position:absolute;
+    width: 17%;
+    height: 570px;  
+    margin-left: 20%;
+    margin-top: -570px;
+    padding: 0px;
+    background-color: #292929;
+    font-family: 'Urbanist', sans-serif;
+    transform: translate(-20%,100%);
+    z-index: 2;
+  }
+  
+  .mini-sidebar-button {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    position: static;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: left;
+    font-size: 23px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Urbanist', sans-serif;
+    transition: color 0.3s ease;
+  }
+  
+  .mini-sidebar-button.active .mini-sidebar-text {
+    color: white; /* Makes the text glow white */
+    font-weight: bold; /* Optional: Make the text bold */
+    text-shadow: 0 0 5px white; /* Optional: Add a glowing effect */
+  }
+  
+  .mini-sidebar-text{
+    margin-left: 0px;
+    margin-bottom: 0px;
+    color: #737373;
+    font-weight: bold;
+    font-size: x-large;
+  }
+  
+  .mini-sidebar-text:hover{
+    color: white;
+  }
+  
+  .diagnostics-arrow-section{
+    margin-left: 40%;
+    top: 40%;
+    margin-top: -625px;
+    height: 570px;
+  }
+  
+  .diagnostics-arrow-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    border: #090909;
+    background: linear-gradient(
+      to bottom,
+      #131D43 0%,
+      #131E41 25%,
+      #1D2A5D 40%,
+      #12224F 68%,
+      #081f44 100%
+    ), #313131;
+    position: relative;
+    width: 25;
+    height: 50px;
+    max-width: 25;
+    max-height: 5;
+  }
+  
+  .diagnostics-arrow{
+    margin-left: 20px;
+    margin-bottom: 0px;
+  }
+  
+  .screen-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 250px;
+    padding: 90px;
+    width: 100%;
+    font-family: 'Urbanist', sans-serif; /* Apply Urbanist font */
+  }
+@import 'Battery.css';
+@import 'OBC.css';
+@import 'VehicularControl.css';
