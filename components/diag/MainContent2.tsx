@@ -68,7 +68,7 @@ const MainContent: React.FC = () => {
   const batteryStatus = "Currently Working Fine."; // Example dynamic value
   const lastErrorCode = "232"; // Example dynamic value
   const lastErrorTime = "23/7 15:30"; // Example dynamic value
-  const batteryCapacity = "257";
+  const [batteryCapacity,setbatteryCapacity] = useState("25");
   const currentTemp = "37";
   const acCurrent = "79"; // Example dynamic current value
   const acVoltage = "256"; // Example dynamic temperature value
@@ -80,7 +80,7 @@ const MainContent: React.FC = () => {
   const errorCode = "232"; // Example dynamic error code
   const errorDate = "23/7 15:30"; // Example dynamic error date
   const isWorkingFine = true;
-  const temperature2 = 37; // Example dynamic temperature value
+  const temperature2 = 32; // Example dynamic temperature value
   const isGood = true;
 
   const handleSidebar2Click = (category: string) => {
@@ -381,6 +381,11 @@ const MainContent: React.FC = () => {
   socket.on('battery_temperature', (Json) => {
     setTemperature(Json["Temperature"]);
   })
+  socket.on('battery_capacity', (Json) => {
+    setTemperature(Json["Capacity"]);
+  })
+  
+  
 
   useEffect(() => {
     const updateFunc = async () => {
@@ -388,6 +393,7 @@ const MainContent: React.FC = () => {
       socket.emit('get_charging_mosfet');
       socket.emit('get_discharging_mosfet');
       socket.emit('get_temperature');
+      socket.emit('get_capacity');
     }
 
     const id = setInterval(updateFunc, 2000);
