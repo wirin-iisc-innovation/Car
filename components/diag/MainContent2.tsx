@@ -57,8 +57,8 @@ const MainContent: React.FC = () => {
   const poorCells = 1;
   const totalCells = 40;
   const avgVoltage = 3.3; // Example average cell voltage
-  const minVoltage = 0.5; // Example minimum cell voltage
-  const maxVoltage = 4.5; // Example maximum cell voltage
+  const [minVoltage,setminVoltage ]= useState("0.7"); // Example minimum cell voltage
+  const [maxVoltage,setmaxVoltage]= useState("4.57"); // Example maximum cell voltage
   const minCellCount = 10; // Example minimum cell count
   const maxCellCount = 12;
   const [mosfetCharging, setMosfetChargingState] = useState("OFF"); // Example dynamic value
@@ -384,6 +384,12 @@ const MainContent: React.FC = () => {
   socket.on('battery_capacity', (Json) => {
     setTemperature(Json["Capacity"]);
   })
+  socket.on('battery_minimum_voltage', (Json) => {
+    setTemperature(Json["CellMinimumVoltage"]);
+  })
+  socket.on('battery_maximum_voltage', (Json) => {
+    setTemperature(Json["CellMaximumVoltage"]);
+  })
   
   
 
@@ -394,6 +400,8 @@ const MainContent: React.FC = () => {
       socket.emit('get_discharging_mosfet');
       socket.emit('get_temperature');
       socket.emit('get_capacity');
+      socket.emit('get_minimum_voltage');
+      socket.emit('get_maximum_voltage');
     }
 
     const id = setInterval(updateFunc, 2000);
