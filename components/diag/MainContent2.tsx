@@ -26,11 +26,13 @@ import TableStatus from "./TableStatus";
 import Tyres from "./Tyres";
 import SideDoors from "./sidedoors";
 import RoofAndBootDoors from "./roofandbootdoors";
-/*import CarModePopup from "./CarModePopup";
+
+import CarModePopup from "./CarModePopup";
 import ByWirePopup from "./ByWirePopup";
 import CarStatusUI from "./CarDataLevel2";
 import TV from "./TV";
-import CarDataLevel1 from "./CarDataLevel1";*/
+import CarDataLevel1 from "./CarDataLevel1";
+
 
 const MainContent: React.FC = () => {
   const [activeSidebar2, setActiveSidebar2] = useState("Battery");
@@ -360,27 +362,51 @@ const MainContent: React.FC = () => {
       return <RoofAndBootDoors/>;
     }
     if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "Car Mode"){
-      /*return <CarModePopup onClose={function (): void {
+
+      return <CarModePopup onClose={function (): void {
         throw new Error("Function not implemented.");
-      } } />;*/
+      } } />;
     }
     if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "ByWire System"){
-      /*return <ByWirePopup onClose={function (): void {
+      return <ByWirePopup onClose={function (): void {
         throw new Error("Function not implemented.");
-      } } />;*/
+      } } />;
     }
     if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "TV"){
-      /*return <TV onClose={function (): void {
+      return <TV onClose={function (): void {
         throw new Error("Function not implemented.");
-      } } />;*/
+      } } />;
     }
     if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "Car Data Level 1"){
-      /*return <CarDataLevel1 onClose={function (): void {
+      return <CarDataLevel1 onClose={function (): void {
         throw new Error("Function not implemented.");
-      } } />;*/
+      } } />;
     }
     if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "Car Data Level 2"){
-      /*return <CarStatusUI />;*/
+      return <CarStatusUI />;
+
+      return <CarModePopup onClose={function (): void {
+        throw new Error("Function not implemented.");
+      } } />;
+    }
+    if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "ByWire System"){
+      return <ByWirePopup onClose={function (): void {
+        throw new Error("Function not implemented.");
+      } } />;
+    }
+    if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "TV"){
+      return <TV onClose={function (): void {
+        throw new Error("Function not implemented.");
+      } } />;
+    }
+    if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "Car Data Level 1"){
+      return <CarDataLevel1 onClose={function (): void {
+        throw new Error("Function not implemented.");
+      } } />;
+    }
+    if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "Car Data Level 2"){
+      return <CarStatusUI />;
+
     }
     
     return null;
