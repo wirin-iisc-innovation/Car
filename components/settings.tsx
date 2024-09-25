@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import { BrightnessSlider } from './BrightnessSlider';
+import { ExteriorModeOptions } from './ModeOptions';
+import { SettingsButton } from './SettingsButton';
+import { AdjustmentsButton } from './AdjustmentsButton';
+import { SteeringWheelSVG } from './SVGIcons';
 
 const MainContent: React.FC = () => {
   const [activeTab, setActiveTab] = useState('Service');
@@ -10,6 +15,8 @@ const MainContent: React.FC = () => {
   const [temperatureFormatting, setTemperatureFormatting] = useState('°c');
   const [brightness, setBrightness] = useState(10);
   const [distanceValue, setDistanceValue] = useState(5);
+  const [exteriorLights, setExteriorLights] = useState('off');
+  const [interiorDomeLights, setInteriorDomeLights] = useState('off');
 
   const handleBrightnessChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setBrightness(Number(event.target.value));
@@ -245,34 +252,56 @@ const MainContent: React.FC = () => {
             </div>
           </>
 
+        ) : activeTab == 'Quick Controls' ? (
+          <>
+            <div className = "settings-group">
+              <div className='settings-group-title'>Display Brightness</div>
+              <div className='settings-options'>
+                <BrightnessSlider value={brightness} callback={handleBrightnessChange}/>
+              </div>
+            </div>
+
+            <div className = "settings-group">
+              <div className='settings-group-title'>Exterior Lights</div>
+              <div className='settings-options'>
+                <ExteriorModeOptions options={["off", "parking", "on", "auto"]} selected={exteriorLights} callback={setExteriorLights}/>
+                <SettingsButton text={"front fog"} callback={() => {}}/>
+              </div>
+            </div>
+
+            <div className = "settings-group">
+              <div className='settings-group-title'>Adjustments</div>
+              <div className='settings-options'>
+                <AdjustmentsButton callback={() => {}}>
+                  MIRRORS
+                </AdjustmentsButton>
+                <AdjustmentsButton callback={() => {}}>
+                  <SteeringWheelSVG/> <br/>
+                  STEERING WHEEL
+                </AdjustmentsButton>
+              </div>
+            </div>
+
+          </>
         ) : activeTab === 'Lights' ? (
           <>
-            <div className="settings-group">
-              <div className="settings-group-title">Headlights</div>
-              <div className="settings-options">
-                <button className="button-light-adjust">
-                  <img src="images_set/headlight-adjust.svg" alt="Adjust Headlights" className="button-icon" />
-                  <span className="button-text">Adjust Headlights</span>
-                </button>
-                <button className="button-light-reset">
-                  <img src="images_set/headlight-reset.svg" alt="Reset Headlights" className="button-icon" />
-                  <span className="button-text">Reset Headlights</span>
-                </button>
+          <div className = "settings-group">
+              <div className='settings-group-title'>Exterior Headlights</div>
+              <div className='settings-options'>
+                <ExteriorModeOptions options={["off", "parking", "on", "auto"]} selected={exteriorLights} callback={setExteriorLights}/>
               </div>
+              <SettingsButton text={"front fog"} callback={() => {}}/>
             </div>
-            <div className="settings-group">
-              <div className="settings-group-title">Interior Lights</div>
-              <div className="settings-options">
-                <label className="switch">
-                  <input type="checkbox" />
-                  <span className="slider"></span>
-                </label>
-                <span>Enable Interior Lights</span>
+            <div className = "settings-group">
+              <div className='settings-group-title'>Interior Dome Lights</div>
+              <div className='settings-options'>
+                <ExteriorModeOptions options={["off", "on", "auto"]} selected={interiorDomeLights} callback={setInteriorDomeLights}/>
               </div>
+              <SettingsButton text={"ambient lights"} callback={() => {}}/>
             </div>
           </>
-        
-        ) : (
+        ) 
+        : (
           <div className="settings-content">{activeTab}</div>
         )}
       </div>
