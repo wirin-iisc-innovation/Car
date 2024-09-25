@@ -44,31 +44,7 @@ const Start: React.FC = () => {
         </div>
       </main>
       
-      <div className="battery-info-bar">
-        <div className="battery-info">
-          <div className="remaining">
-            <span id="distance" className="remaining-km">204</span>
-            <span className="unit">km</span>
-            <div className="remaining-text">Remaining</div>
-          </div>
-          <div className="battery">
-            <span id="battery" className="battery-percentage">85</span>
-            <span className="unit">%</span>
-            <div className="battery-text">Battery</div>
-          </div>
-          <div className="average">
-            <span id="average" className="avg-wh">128</span>
-            <span className="unit">Wh/km</span>
-            <div className="average-text">Average</div>
-          </div>
-        </div>
-        <div className="battery-bar-container">
-          <div className="battery-bar-base">
-            <div id="battery-bar-fill" className="battery-bar-fill"></div>
-          </div>
-        </div>
-        
-      </div>
+      
       <Footer />
       
     </div>
