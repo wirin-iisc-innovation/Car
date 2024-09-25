@@ -17,16 +17,18 @@ const AppCarousel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     { name: 'YouTube Music', icon: 'images_pop/Group 427319019.svg' },
     { name: 'Play Store', icon: 'images_pop/Vector (12).svg' },
     { name: 'Tetris', icon: 'images_pop/Vector (13).svg' },
+    { name: 'Instagram', icon: 'images_pop/Group.svg' },
     { name: 'Native Maps', icon: 'images_pop/Vector (14).svg' },
     { name: 'Phone', icon: 'images_pop/Vector (15).svg', },
     { name: 'Netflix', icon: 'images_pop/Vector (16).svg' },
+    { name: 'Prime Video', icon: 'images_pop/120px-Amazon_Prime_Logo 1.svg' },
     { name: 'Calculator', icon: 'images_pop/Vector (17).svg' },
     { name: 'Assistant', icon: 'images_pop/Assistant.svg', link: '/AI' },
   ];
 
   // Filter for frequently used apps
   const frequentlyUsedApps = allApps.filter(app =>
-    ['YouTube', 'Google', 'Google Maps', 'Spotify', 'Netflix', 'YouTube Music'].includes(app.name)
+    ['YouTube', 'Google', 'Google Maps', 'Spotify', 'Netflix', 'YouTube Music','Instagram'].includes(app.name)
   );
 
   // Determine which apps to show based on active button and search

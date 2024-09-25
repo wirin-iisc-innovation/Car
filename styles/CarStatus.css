@@ -331,14 +331,7 @@
     background-color: white;
   }
   
-  .car-image {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 700px;
-  }
-  
+
   .car-image img {
     width: 100%;
     height: auto;
