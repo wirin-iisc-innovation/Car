@@ -12,9 +12,9 @@ const ACPower: React.FC<ACPowerProps> = ({ acPower }) => {
       </div>
       <div className="charge-level">
         <div className="panel-title">AC Power</div>
+        <br/><br/>
         <div className="panel-info">Est. AC Power</div>
-        <div className="panel-info">Consumption (0</div>
-        <div className="panel-info">to 4000W)</div>
+        <div className="panel-info">Consumption</div>
         <div className="charge-level-value">{acPower} W</div>
         <div className="line"></div>
       </div>

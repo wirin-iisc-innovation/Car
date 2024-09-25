@@ -9,19 +9,10 @@ const SideDoors: React.FC = () => {
     <div className="side-doors-container">
       {/* Left Door Status */}
       <div className="door-box left-door">
-        <h2>Left Door</h2>
+        <h2>Door</h2>
         <div className="door-box-content">
           <span className="status-row">Status (Open/Close/Opening/Closing)</span>
           <span className="status">{leftDoorStatus}</span> {/* Using the variable */}
-        </div>
-      </div>
-
-      {/* Right Door Status */}
-      <div className="door-box right-door">
-        <h2>Right Door</h2>
-        <div className="door-box-content">
-          <span className="status-row">Status (Open/Close/Opening/Closing)</span>
-          <span className="status">{rightDoorStatus}</span> {/* Using the variable */}
         </div>
       </div>
 

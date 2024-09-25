@@ -22,7 +22,6 @@ const LowLevelControls: React.FC<LowLevelControlsProps> = ({
         <div className="control-item">
           <span className="control-label">Autonomous</span>
           <br></br>
-          <span className="control-detail">Level 1 out of 5</span>
           <span className="control-status">{autonomousStatus}</span>
         </div>
         <div className="control-item">

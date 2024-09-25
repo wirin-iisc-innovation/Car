@@ -16,16 +16,16 @@ const DcVoltageAndCurrent: React.FC<DcVoltageAndCurrentProps> = ({
       </div>
       <div className="battery-current">
         <div className="panel-title">DC Current</div>
+        <br/>
         <div className="panel-info">Est. DC</div>
         <div className="panel-info">Current drawn</div>
-        <div className="panel-info">(0 to 100A)</div>
         <div className="panel-value">{dcCurrent} A</div>
       </div>
       <div className="battery-voltage">
         <div className="panel-title">DC Voltage</div>
+        <br/>
         <div className="panel-info">Est. DC</div>
-        <div className="panel-info">Voltage (0 to</div>
-        <div className="panel-info">100v)</div>
+        <div className="panel-info">Voltage</div>
         <div className="panel-value">{dcVoltage} V</div>
       </div>
     </div>
