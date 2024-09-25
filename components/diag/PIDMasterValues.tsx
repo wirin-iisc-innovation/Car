@@ -21,23 +21,23 @@ const PIDMasterValues: React.FC<PIDMasterValuesProps> = ({
         <div className="panel-title">PID Master Values</div>
         <div className="pid-values">
           <div className="pid-value-item">
-            <span className="pid-label">Steering PID Output (+/- 1024)</span>
+            <span className="pid-label">Steering PID Output</span>
             <span className="pid-value">{steeringPIDOutput}</span>
           </div>
           <div className="pid-value-item">
-            <span className="pid-label">Brake PID Output (+/- 1024)</span>
+            <span className="pid-label">Brake PID Output</span>
             <span className="pid-value">{brakePIDOutput}</span>
           </div>
           <div className="pid-value-item">
-            <span className="pid-label">Motor R PID Output (0 to 5000)</span>
+            <span className="pid-label">Motor R PID Output</span>
             <span className="pid-value">{motorRPIDOutput1}</span>
           </div>
           <div className="pid-value-item">
-            <span className="pid-label">Motor R PID Output (0 to 5000)</span>
+            <span className="pid-label">Motor R PID Output</span>
             <span className="pid-value">{motorRPIDOutput2}</span>
           </div>
           <div className="pid-value-item">
-            <span className="pid-label">Master PID Output (0 to 1000)</span>
+            <span className="pid-label">Master PID Output</span>
             <span className="pid-value">{masterPIDOutput}</span>
           </div>
         </div>

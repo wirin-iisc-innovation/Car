@@ -26,11 +26,13 @@ import TableStatus from "./TableStatus";
 import Tyres from "./Tyres";
 import SideDoors from "./sidedoors";
 import RoofAndBootDoors from "./roofandbootdoors";
+
 import CarModePopup from "./CarModePopup";
 import ByWirePopup from "./ByWirePopup";
 import CarStatusUI from "./CarDataLevel2";
 import TV from "./TV";
 import CarDataLevel1 from "./CarDataLevel1";
+
 
 const MainContent: React.FC = () => {
   const [activeSidebar2, setActiveSidebar2] = useState("Battery");
@@ -73,7 +75,7 @@ const MainContent: React.FC = () => {
   const batteryStatus = "Currently Working Fine."; // Example dynamic value
   const lastErrorCode = "232"; // Example dynamic value
   const lastErrorTime = "23/7 15:30"; // Example dynamic value
-  const [batteryCapacity,setbatteryCapacity] = useState(35);
+  const [batteryCapacity,setbatteryCapacity] = useState("35");
   const currentTemp = "37";
   const acCurrent = "79"; // Example dynamic current value
   const acVoltage = "256"; // Example dynamic temperature value
@@ -360,6 +362,7 @@ const MainContent: React.FC = () => {
       return <RoofAndBootDoors/>;
     }
     if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "Car Mode"){
+
       return <CarModePopup onClose={function (): void {
         throw new Error("Function not implemented.");
       } } />;
@@ -381,6 +384,29 @@ const MainContent: React.FC = () => {
     }
     if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "Car Data Level 2"){
       return <CarStatusUI />;
+
+      return <CarModePopup onClose={function (): void {
+        throw new Error("Function not implemented.");
+      } } />;
+    }
+    if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "ByWire System"){
+      return <ByWirePopup onClose={function (): void {
+        throw new Error("Function not implemented.");
+      } } />;
+    }
+    if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "TV"){
+      return <TV onClose={function (): void {
+        throw new Error("Function not implemented.");
+      } } />;
+    }
+    if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "Car Data Level 1"){
+      return <CarDataLevel1 onClose={function (): void {
+        throw new Error("Function not implemented.");
+      } } />;
+    }
+    if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "Car Data Level 2"){
+      return <CarStatusUI />;
+
     }
     
     return null;

@@ -36,9 +36,9 @@ const BatteryStatus: React.FC<BatteryStatusProps> = ({
       </div>
       <div className="battery-capacity">
         <div className="panel-title">Battery Capacity</div>
+        <br/>
         <div className="panel-info">Est. Battery</div>
-        <div className="panel-info">Capacity (0 to</div>
-        <div className="panel-info">300Ah)</div>
+        <div className="panel-info">Capacity </div>
         <div className="status-panel-value">{batteryCapacity} Ah</div>
       </div>
     </div>

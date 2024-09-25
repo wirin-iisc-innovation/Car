@@ -22,9 +22,9 @@ const CellVoltage: React.FC<CellVoltageProps> = ({
       </div>
       <div className="cell-voltage">
         <div className="panel-title">Cell Voltages</div>
+        <br/>
         <div className="panel-info">Avg Cell</div>
-        <div className="panel-info">Voltage (0 to</div>
-        <div className="panel-info">5 V)</div>
+        <div className="panel-info">Voltage</div>
         <br></br>
         <div className="panel-info">Min Cell</div>
         <div className="panel-info">Voltage</div>
