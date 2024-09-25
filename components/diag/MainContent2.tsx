@@ -39,6 +39,7 @@ const MainContent: React.FC = () => {
   const [activeMiniSidebar2, setActiveMiniSidebar2] = useState<string | null>(
     null
   );
+  const [showGrid,setshowGrid] = useState(false);
   const [heartbeatStatus, setHeartbeatStatus] = useState("BEATING");
   const heartbeat1Status = "BEATING";
   const activeStatus = "ACTIVE";
@@ -76,6 +77,7 @@ const MainContent: React.FC = () => {
   const lastErrorCode = "232"; // Example dynamic value
   const lastErrorTime = "23/7 15:30"; // Example dynamic value
   const [batteryCapacity,setbatteryCapacity] = useState("35");
+  const [arrayVoltage,setarrayVoltage] = useState([3.8, 3.7, 3.9, 3.6, 3.8, 3.7, 3.9, 3.6, 3.8, 3.7, 3.9, 3.6, 3.8, 3.7, 3.9, 3.6, 3.8, 3.7, 3.9, 3.6, 3.8, 3.7, 3.9]);
   const currentTemp = "37";
   const acCurrent = "79"; // Example dynamic current value
   const acVoltage = "256"; // Example dynamic temperature value
@@ -128,6 +130,7 @@ const MainContent: React.FC = () => {
       "Error Statuses",
     ],
     "Doors and Tyres": ["Tyres", "Side Doors", "Roof and Boot Doors"],
+    "Seating and Lights":["Seating","Internal Lighting","External Lighting","Table Status"],
     "Vehicular Control": [
       "Low Level Controls",
       "PID Master Values",
@@ -165,6 +168,7 @@ const MainContent: React.FC = () => {
         <VoltageCurrentContent
           currentDrawn={currentDrawn}
           batteryVoltage={batteryVoltage}
+          arrayVoltage={arrayVoltage}
         />
       );
     }
@@ -436,6 +440,10 @@ const MainContent: React.FC = () => {
   socket.on('battery_maximum_voltage', (Json3) => {
     setmaxVoltage(Json3["CellMaximumVoltage"]);
   })
+
+  socket.on('battery_voltage',(Json4) => {
+    setarrayVoltage(Json4["Voltage"]);
+  })
   
   
 
@@ -448,6 +456,7 @@ const MainContent: React.FC = () => {
       socket.emit('get_capacity');
       socket.emit('get_min_voltage');
       socket.emit('get_max_voltage');
+      socket.emit('get_voltage');
     }
 
     const id = setInterval(updateFunc, 2000);

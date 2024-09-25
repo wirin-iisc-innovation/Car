@@ -2,10 +2,11 @@ import React, { useState, useRef } from 'react';
 
 interface BatteryVoltageGridProps {
     onClose: () => void;
+    voltages: number[];
 }
 
-const FullScreenGrid: React.FC<BatteryVoltageGridProps> = ({ onClose }) => {
-    const cellValues = [3.8, 3.7, 3.9, 3.6, 3.8, 3.7, 3.9, 3.6, 3.8, 3.7, 3.9, 3.6, 3.8, 3.7, 3.9, 3.6, 3.8, 3.7, 3.9, 3.6, 3.8, 3.7, 3.9]; 
+const FullScreenGrid: React.FC<BatteryVoltageGridProps> = ({ onClose,voltages }) => {
+    const cellValues = voltages; 
 
     const gridRef = useRef<HTMLDivElement>(null);
 

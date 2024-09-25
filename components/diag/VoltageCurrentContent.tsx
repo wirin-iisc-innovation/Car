@@ -4,11 +4,14 @@ import BatteryVoltageGrid from "./BatteryVoltageGrid";
 interface VoltageCurrentContentProps {
   currentDrawn: number;
   batteryVoltage: number;
+  arrayVoltage:number[];
+  //showGrid: boolean;
 }
 
 const VoltageCurrentContent: React.FC<VoltageCurrentContentProps> = ({
   currentDrawn,
   batteryVoltage,
+  arrayVoltage,
 }) => {
   // State to show/hide the grid
   const [showGrid, setShowGrid] = useState(false);
@@ -38,7 +41,7 @@ const VoltageCurrentContent: React.FC<VoltageCurrentContentProps> = ({
           Show All Battery Voltages
         </button>
         {/* Conditionally show the grid */}
-        {showGrid && <BatteryVoltageGrid onClose={toggleGrid} />}
+        {showGrid && <BatteryVoltageGrid voltages={arrayVoltage} onClose={toggleGrid} />}
       </div>
     </div>
   );
