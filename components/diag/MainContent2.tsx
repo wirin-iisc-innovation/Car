@@ -26,6 +26,11 @@ import TableStatus from "./TableStatus";
 import Tyres from "./Tyres";
 import SideDoors from "./sidedoors";
 import RoofAndBootDoors from "./roofandbootdoors";
+/*import CarModePopup from "./CarModePopup";
+import ByWirePopup from "./ByWirePopup";
+import CarStatusUI from "./CarDataLevel2";
+import TV from "./TV";
+import CarDataLevel1 from "./CarDataLevel1";*/
 
 const MainContent: React.FC = () => {
   const [activeSidebar2, setActiveSidebar2] = useState("Battery");
@@ -68,7 +73,7 @@ const MainContent: React.FC = () => {
   const batteryStatus = "Currently Working Fine."; // Example dynamic value
   const lastErrorCode = "232"; // Example dynamic value
   const lastErrorTime = "23/7 15:30"; // Example dynamic value
-  const [batteryCapacity,setbatteryCapacity] = useState(35);
+  const [batteryCapacity,setbatteryCapacity] = useState("35");
   const currentTemp = "37";
   const acCurrent = "79"; // Example dynamic current value
   const acVoltage = "256"; // Example dynamic temperature value
@@ -110,21 +115,14 @@ const MainContent: React.FC = () => {
       "OBC Status",
       "Temperature Data",
     ],
-    AC: ["Temperature", "Fan Speed", "AC Status"],
-    "Seating and Lights": [
-      "Seating",
-      "External Lighting",
-      "Internal Lighting",
-      "Table Status",
-    ],
     "Car Status": [
       "Car Mode",
-      "Bywire System",
+      "ByWire System",
       "TV",
-      "Car Data Level1",
-      "Car Data Level2",
-      "Car Data Level3",
-      "Car Data Level4",
+      "Car Data Level 1",
+      "Car Data Level 2",
+      "Car Data Level 3",
+      "Car Data Level 4",
       "Error Statuses",
     ],
     "Doors and Tyres": ["Tyres", "Side Doors", "Roof and Boot Doors"],
@@ -361,7 +359,29 @@ const MainContent: React.FC = () => {
     if(activeSidebar2 ==="Doors and Tyres" && activeMiniSidebar2 ==="Roof and Boot Doors"){
       return <RoofAndBootDoors/>;
     }
-    
+    if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "Car Mode"){
+      /*return <CarModePopup onClose={function (): void {
+        throw new Error("Function not implemented.");
+      } } />;*/
+    }
+    if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "ByWire System"){
+      /*return <ByWirePopup onClose={function (): void {
+        throw new Error("Function not implemented.");
+      } } />;*/
+    }
+    if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "TV"){
+      /*return <TV onClose={function (): void {
+        throw new Error("Function not implemented.");
+      } } />;*/
+    }
+    if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "Car Data Level 1"){
+      /*return <CarDataLevel1 onClose={function (): void {
+        throw new Error("Function not implemented.");
+      } } />;*/
+    }
+    if(activeSidebar2 === "Car Status" && activeMiniSidebar2 === "Car Data Level 2"){
+      /*return <CarStatusUI />;*/
+    }
     
     return null;
   };
@@ -433,7 +453,7 @@ const MainContent: React.FC = () => {
           </div>
           <div className="sidebar2-text">OBC</div>
         </button>
-        <button
+        {/*<button
           className={`sidebar2-button ${
             activeSidebar2 === "AC" ? "active" : ""
           }`}
@@ -443,7 +463,7 @@ const MainContent: React.FC = () => {
             <img src="images/AC.svg" alt="AC" />
           </div>
           <div className="sidebar2-text">AC</div>
-        </button>
+        </button>*/}
         <button
           className={`sidebar2-button ${
             activeSidebar2 === "Seating and Lights" ? "active" : ""
