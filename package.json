@@ -16,6 +16,7 @@
     "@babel/runtime": "^7.25.0",
     "core-js": "^3.37.1",
     "cors": "^2.8.5",
+    "dom": "^0.0.3",
     "next": "^14.2.4",
     "next-transpile-modules": "^10.0.1",
     "react": "^18.3.1",
