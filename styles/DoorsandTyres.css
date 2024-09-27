@@ -134,7 +134,11 @@
   font-family: 'Urbanist', sans-serif;
   flex: 1;
   color: #c9c9c9;
-  margin-top: -70px;
+  margin-top: -35px;
+}
+.openclose{
+  transform:translate(-27%,0%);
+  color: #c9c9c9;
 }
 
 .status {
@@ -144,8 +148,8 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
-  margin-left: 50px;
-  margin-top: -70px;
+  margin-left: 20px;
+  margin-top: -40px;
 }
 
 /* Positioning the door boxes around the car */

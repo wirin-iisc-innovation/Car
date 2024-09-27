@@ -1223,7 +1223,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 .app-icon:hover {
   transform: scale(0.9); /* Keeps the overall scaling effect */
-
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)); 
 }
 
 
@@ -1321,12 +1321,12 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 .fullscreen-popup {
   width: 80%;
-  height: 175px;
+  height: 187px;
   padding: 10%;
   border-radius: 10px;
   color: white;
   backdrop-filter: blur(10px);
-  animation: slideUp 0.5s ease-out;
+  animation: slideUp1 0.5s ease-out;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1372,7 +1372,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)); /* Glowing effect */
 }
 
-@keyframes slideUp {
+@keyframes slideUp1 {
   from {
     transform: translateY(100%);
     opacity: 0;
@@ -1436,11 +1436,11 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 .map-container {
   position: absolute;
-  width: 80%;
+  width: 88%;
   height: 100%;
   left: 50%;
 
-  transform: translate(1.8%, -10%);
+  transform: translate(-5.2%, -10%);
 }
 
 .map-iframe {

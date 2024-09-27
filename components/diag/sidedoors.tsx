@@ -11,7 +11,8 @@ const SideDoors: React.FC = () => {
       <div className="door-box left-door">
         <h2>Door</h2>
         <div className="door-box-content">
-          <span className="status-row">Status (Open/Close/Opening/Closing)</span>
+          <span className="status-row">Status</span>
+          <span className="openclose">(Open/Close/Opening/Closing)</span>
           <span className="status">{leftDoorStatus}</span> {/* Using the variable */}
         </div>
       </div>
