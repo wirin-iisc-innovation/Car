@@ -2014,7 +2014,7 @@ input:checked + .slider:before {
   border-radius: 24px;
   box-shadow: none;
   border-style: solid;
-  transform:translate(15%,10%);
+  transform:translate(0%,10%);
 }
 
 .button-settings-button:hover,

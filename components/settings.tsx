@@ -312,19 +312,8 @@ const handleLightOptionClick = (option: string) => {
                 </div>
               </div>
               <div className="settings-options">
-                {['off', 'parking', '10%', 'on', 'auto'].map((option) => (
-                  <button
-                    key={option}
-                    className={
-                      selectedLightOption === option
-                        ? 'exterior-light-button-option-selected'
-                        : 'exterior-light-button-option'
-                    }
-                    onClick={() => handleLightOptionClick(option)}
-                  >
-                    {option}
-                  </button>
-                ))}
+              <ExteriorModeOptions options={["off", "parking", "10%","on", "auto"]} selected={exteriorLights} callback={setExteriorLights}/>
+                
                 <button className="button-settings-button">front fog</button>
               </div>
             </div>
