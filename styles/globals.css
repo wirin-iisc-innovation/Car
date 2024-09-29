@@ -98,28 +98,37 @@ body {
 }
 
 .time-date #time {
+  position: absolute;
   font-size: 36px;
-  margin-bottom: 2px; /* Reduced line width */
+  margin-bottom: 2px;
+  transform:translateY(-125%); /* Reduced line width */
 }
 
 .time-date #date {
-  font-size: 18px;
-  margin-top: 2px; /* Reduced line width */
+  position: relative;
+  font-size: 24px;
+  margin-top: 2px;
+  transform:translate(57%,-38%);  /* Reduced line width */
 }
 
 .weather {
   display: flex;
   align-items: center;
-  margin-left: 10px; /* Ensure there is space between time and weather */
+  margin-left: 10px;
+  z-index:999; /* Ensure there is space between time and weather */
 }
 
 .weather #weather-icon {
+  position: relative;
   font-size: 24px;
   margin-right: 10px;
+  transform: translate(650%,-52%);
 }
 
 .weather #temperature {
+  position: relative;
   font-size: 18px;
+  transform: translate(180%,-90%);
 }
 
 .connectivity-icons {
@@ -1115,7 +1124,7 @@ span {
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 20px );
 -webkit-backdrop-filter: blur( 20px );
-
+animation: slideUp2 0.5s ease-out;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 
   padding: 20px;
@@ -1292,17 +1301,17 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 
-@keyframes slideUp {
+@keyframes slideUp2 {
   0% {
     transform: translateY(100%);
     opacity: 0;
   }
   80% {
-    transform: translateY(0);
+    transform: translateY(0%);
     opacity: 1;
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(0%);
     opacity: 1;
   }
 }
@@ -1439,7 +1448,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   width: 88%;
   height: 100%;
   left: 50%;
-
+  z-index:999;
   transform: translate(-5.2%, -10%);
 }
 
@@ -1875,10 +1884,15 @@ span {
   background-color: #4d4d4d;
 }
 
-.button-icon {
-  margin-right: 10px;
-  width: 50px;
-  height: 50px;
+.title-container {
+  display: flex;           /* Use Flexbox for alignment */
+  align-items: center;    /* Center align items vertically */
+}
+
+.button-icon1 {
+  width: 60px;            /* Adjust icon size */
+  height: 60px;           /* Adjust icon size */
+  margin-right: 10px;      /* Space between icon and text */
 }
 
 .button-text {
@@ -1949,6 +1963,90 @@ input:focus + .slider {
 input:checked + .slider:before {
   transform: translateX(26px);
 }
+.exterior-light-button-option {
+  font-family: 'Urbanist',sans-serif;
+  height: 48px;
+  width: 170px;
+  border-radius: 24px;
+  border: none;
+  color: white;
+  background-color: #262626;
+  font-size: 20px;
+  cursor: pointer; /* Ensures the button looks clickable */
+}
+
+.exterior-light-button-option-selected {
+  font-family: 'Urbanist',sans-serif;
+  height: 48px;
+  width: 170px;
+  border-radius: 24px;
+  border: none;
+  color: white;
+  background-color: #6e6e6e;
+  font-size: 20px;
+  cursor: pointer; /* Ensures the button looks clickable */
+}
+
+
+.exterior-light-option-checkbox {
+  width: 170px;
+  height: 48px;
+}
+
+.div-button-exterior {
+  background-color: #262626;
+  height: 48px;
+  border-radius: 24px;
+  margin-right: 40px;
+  font-family: 'Urbanist',sans-serif;
+  
+}
+
+.button-settings-button {
+  font-family: "Urbanist", sans-serif;
+  font-size: 20px;
+  height: 48px;
+  width: 220px;
+  border-width: 2px;
+  border-color: #6e6e6e;
+  color: white;
+  background-color: #0e0e0e;
+  border-radius: 24px;
+  box-shadow: none;
+  border-style: solid;
+  transform:translate(15%,10%);
+}
+
+.button-settings-button:hover,
+.button-settings-button.active {
+  background-color: #4d4d4d;
+  border: 2px solid white; /* Ensure the border stays white on hover and active states */
+}
+/* 6e6e6e */
+
+.button-settings-button-adjustments {
+  width: 304px;
+  height: 95px;
+  font-family: "Urbanist", sans-serif;
+  background-color: #262626;
+  border-radius: 20px;
+  border-style: solid;
+  color: white;
+}
+
+.button-settings-button-adjustments:hover,
+.button-settings-button-adjustments.active {
+  background-color: #4d4d4d;
+  border: 2px solid white; /* Ensure the border stays white on hover and active states */
+}
+
+.button-settings-button-adjustments + .button-settings-button-adjustments {
+  margin-left: 80px;
+}
+
+.button-settings-button-adjustments + .button-settings-button {
+  margin-left: 40px;
+}
 
 .main-content3 {
   flex: 1;
@@ -1970,7 +2068,7 @@ input:checked + .slider:before {
   height: 68%;
   padding: 10px;
   margin-left: 8%;
-  transform: translate(23%, 37%);
+  transform: translate(23%, -55%);
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2153,10 +2251,12 @@ input:checked + .slider:before {
 }
 .speedometer-container {
   position: relative;
+  
   width: 6%;
-  height: 150vh;
+  height: 180vh;
   transform: translate(20%, 17%);
 }
+
 
 .circle-container {
   display: flex;
