@@ -19,8 +19,8 @@ const Home: React.FC = () => {
       </Head>
 
       <Header />
-      <MainContent />
-      <Speedometer />
+      <Speedometer/>
+      <MainContent/>
       <Footer />
     </div>
   );

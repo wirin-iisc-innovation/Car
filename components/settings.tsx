@@ -15,6 +15,14 @@ const MainContent: React.FC = () => {
   const [temperatureFormatting, setTemperatureFormatting] = useState('°c');
   const [brightness, setBrightness] = useState(10);
   const [distanceValue, setDistanceValue] = useState(5);
+  const [exteriorLights, setExteriorLights] = useState('off');
+  const [interiorDomeLights, setInteriorDomeLights] = useState('off');
+const [selectedLightOption, setSelectedLightOption] = useState('auto'); // Set default value
+
+const handleLightOptionClick = (option: string) => {
+  
+  setSelectedLightOption(option);
+};
 
   const handleBrightnessChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setBrightness(Number(event.target.value));
@@ -252,32 +260,98 @@ const MainContent: React.FC = () => {
 
         ) : activeTab === 'Lights' ? (
           <>
+            
             <div className="settings-group">
-              <div className="settings-group-title">Headlights</div>
-              <div className="settings-options">
-                <button className="button-light-adjust">
-                  <img src="images_set/headlight-adjust.svg" alt="Adjust Headlights" className="button-icon" />
-                  <span className="button-text">Adjust Headlights</span>
-                </button>
-                <button className="button-light-reset">
-                  <img src="images_set/headlight-reset.svg" alt="Reset Headlights" className="button-icon" />
-                  <span className="button-text">Reset Headlights</span>
-                </button>
+              <div className='settings-group-title'>Exterior Headlights</div>
+              <br></br>
+              <div className='settings-options'>
+                <ExteriorModeOptions options={["off", "parking", "on", "auto"]} selected={exteriorLights} callback={setExteriorLights} />
               </div>
+              <br></br>
+              <SettingsButton text={"front fog"} callback={() => {}} />
             </div>
+            <br></br>
+            
+        
             <div className="settings-group">
-              <div className="settings-group-title">Interior Lights</div>
-              <div className="settings-options">
-                <label className="switch">
-                  <input type="checkbox" />
-                  <span className="slider"></span>
-                </label>
-                <span>Enable Interior Lights</span>
+              <div className='settings-group-title'>Interior Dome Lights</div>
+              <br></br>
+              <div className='settings-options'>
+                <ExteriorModeOptions options={["off", "on", "auto"]} selected={interiorDomeLights} callback={setInteriorDomeLights} />
               </div>
+              <br></br>
+              <SettingsButton text={"ambient lights"} callback={() => {}} />
             </div>
           </>
         
-        ) : (
+        
+        ) :activeTab === 'Quick Controls' ? (
+          <>
+            <div className="settings-group">
+              <div className="settings-group-title">
+                {/* SVG for Display Brightness */}
+                <div className="title-container">
+                  <img src="images_set/display.svg" alt="Display Brightness" className="button-icon1" />
+                  <span>Display Brightness</span>
+                </div>
+              </div>
+              <div className="settings-options">
+                <div className="brightness-slider">
+                  <input type="range" min="0" max="100" value={brightness} onChange={handleBrightnessChange} />
+                  <div className="slider-thumb-text">{brightness}%</div>
+                </div>
+              </div>
+            </div>
+        
+            <div className="settings-group">
+              <div className="settings-group-title">
+                {/* SVG for Exterior Lights */}
+                <div className="title-container">
+                  <img src="images_set/headlights-small.svg" alt="Exterior Lights" className="button-icon1" />
+                  <span>Exterior Lights</span>
+                </div>
+              </div>
+              <div className="settings-options">
+                {['off', 'parking', '10%', 'on', 'auto'].map((option) => (
+                  <button
+                    key={option}
+                    className={
+                      selectedLightOption === option
+                        ? 'exterior-light-button-option-selected'
+                        : 'exterior-light-button-option'
+                    }
+                    onClick={() => handleLightOptionClick(option)}
+                  >
+                    {option}
+                  </button>
+                ))}
+                <button className="button-settings-button">front fog</button>
+              </div>
+            </div>
+        
+            <div className="settings-group">
+              <div className="settings-group-title">
+                {/* SVG for Adjustments */}
+                <div className="title-container">
+                  <img src="images_set/adjustments.svg" alt="Adjustments" className="button-icon1" />
+                  <span>Adjustments</span>
+                </div>
+              </div>
+              <div className="settings-options">
+                <button className="button-settings-button-adjustments">
+                  <img src="images_set/Group (1).svg" alt="Mirrors" className="button-icon1" />
+                  <span className="button-text">MIRRORS</span>
+                </button>
+                <button className="button-settings-button-adjustments">
+                  <img src="images_set/steering wheel-small.svg" alt="Steering Wheel" className="button-icon1" />
+                  <span className="button-text">STEERING WHEEL</span>
+                </button>
+                <button className="button-settings-button">fold mirrors</button>
+              </div>
+            </div>
+          </>
+        ) 
+        : (
           <div className="settings-content">{activeTab}</div>
         )}
       </div>
