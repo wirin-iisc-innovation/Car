@@ -42,22 +42,12 @@ body {
   align-items: center;
 }
 
-.time-date {
-  display: flex;
-  flex-direction: column;
-  padding-left: 20px;
-  margin-right: 10px;
-}
+
 
 .time {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 2px;
-}
-
-.date {
-  font-size: 18px;
-  margin-top: 2px;
 }
 
 .weather {

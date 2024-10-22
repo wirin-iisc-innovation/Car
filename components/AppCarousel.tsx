@@ -19,7 +19,7 @@ const AppCarousel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     { name: 'Tetris', icon: 'images_pop/Vector (13).svg' },
     { name: 'Instagram', icon: 'images_pop/Group.svg' },
     { name: 'Native Maps', icon: 'images_pop/Vector (14).svg' },
-    { name: 'Phone', icon: 'images_pop/Vector (15).svg',link: '/call'},
+    { name: 'Phone', icon: 'images_pop/Vector (15).svg', link: '/call' },
     { name: 'Netflix', icon: 'images_pop/Vector (16).svg' },
     { name: 'Prime Video', icon: 'images_pop/120px-Amazon_Prime_Logo 1.svg' },
     { name: 'Calculator', icon: 'images_pop/Vector (17).svg' },
@@ -28,7 +28,7 @@ const AppCarousel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
   // Filter for frequently used apps
   const frequentlyUsedApps = allApps.filter(app =>
-    ['YouTube', 'Google', 'Google Maps', 'Spotify', 'Netflix', 'YouTube Music','Instagram'].includes(app.name)
+    ['YouTube', 'Google', 'Google Maps', 'Spotify', 'Netflix', 'YouTube Music', 'Instagram'].includes(app.name)
   );
 
   // Determine which apps to show based on active button and search
@@ -47,9 +47,9 @@ const AppCarousel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
   // Updated flexbox layout to display apps side-by-side when less than 3
   const renderApps = filteredApps.length < 3 ? (
-    <div className="filtered-apps-container side-by-side">
+    <div className="filtered-apps-container2 side-by-side">
       {filteredApps.map((app, index) => (
-        <div className="app-icon" key={index} onClick={() => handleAppClick(app)}>
+        <div className="app-icon2" key={index} onClick={() => handleAppClick(app)}>
           <img src={app.icon} alt={`${app.name} icon`} />
           <span>{app.name}</span>
         </div>
@@ -59,7 +59,7 @@ const AppCarousel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     <AliceCarousel
       mouseTracking
       items={filteredApps.map((app, index) => (
-        <div className="app-icon" key={index} onClick={() => handleAppClick(app)}>
+        <div className="app-icon2" key={index} onClick={() => handleAppClick(app)}>
           <img src={app.icon} alt={`${app.name} icon`} />
           <span>{app.name}</span>
         </div>
@@ -83,42 +83,39 @@ const AppCarousel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <div className="app-carousel-container">
-      <div className="app-carousel">
-        <div className="app-carousel-content">
-          <button className="close-button" onClick={onClose}>&times;</button>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+    <div className="app-carousel-container2">
+      <div className="app-carousel2">
+        <div className="app-carousel-content2">
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
 
-          <div className="search-bar">
+          <div className="search-bar2">
             <input
               type="text"
               placeholder="Search for app or command"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <button className="search-button" onClick={handleSearch}>
-              <img src="/images_pop/Group 427318951.svg" alt="Search" />
-            </button>
+            {/* Removed search button */}
           </div>
 
-          <div className="button-container">
+          <div className="button-container2">
             <button
-              className={`app-button ${activeButton === 'frequently' ? 'active' : ''}`}
+              className={`app-button1 ${activeButton === 'frequently' ? 'active' : ''}`}
               onClick={() => handleButtonClick('frequently')}
             >
               Frequently Used
             </button>
             <button
-              className={`app-button ${activeButton === 'all' ? 'active' : ''}`}
+              className={`app-button1 ${activeButton === 'all' ? 'active' : ''}`}
               onClick={() => handleButtonClick('all')}
             >
               All Apps
             </button>
-         
+            <br />
           </div>
 
           {renderApps}

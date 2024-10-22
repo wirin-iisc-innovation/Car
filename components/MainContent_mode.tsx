@@ -16,9 +16,11 @@ const MainContent = () => {
                             <img src="/images_mode/Drive Glow.svg" alt="Drive Icon" />
                         </div>
                     </Link>
+                    <Link href="/start2">
                     <div className="mode-button">
                         <img src="/images_mode/parked.svg" alt="Parked Icon" />
                     </div>
+                    </Link>
                     <Link href="/start">
                         <div className="mode-button">
                             <img src="/images_mode/auto.svg" alt="Auto Icon" />

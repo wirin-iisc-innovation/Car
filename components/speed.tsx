@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const Speedometer = () => {
-  const [selectedGear, setSelectedGear] = useState("P");
+  const [selectedGear, setSelectedGear] = useState("D");
   const [speed, setSpeed] = useState(0);
   const [power, setPower] = useState(0);
 
@@ -132,14 +132,14 @@ const Speedometer = () => {
           </svg>
           <div className="circle-text">
             <div className="number">{power}</div>
-            <div className="unit">kw/h</div>
+            <div className="unit">kw/km</div>
           </div>
         </div>
         <div className="car-container">
           <div className="gear-selector">
             <div
               className="gear-arrow gear-arrow-left"
-              onClick={() => handleArrowClick("left")}
+             
             ></div>
             {gears.map((gear) => (
               <button
@@ -157,7 +157,7 @@ const Speedometer = () => {
             ))}
             <div
               className="gear-arrow gear-arrow-right"
-              onClick={() => handleArrowClick("right")}
+             
             ></div>
             <div className="gear-selector-line"></div>
           </div>
@@ -207,7 +207,7 @@ const Speedometer = () => {
           </svg>
           <div className="circle-text">
             <div className="number">{speed}</div>
-            <div className="unit">kmph</div>
+            <div className="unit">km/h</div>
           </div>
         </div>
       </div>
