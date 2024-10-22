@@ -93,8 +93,8 @@ body {
 .time-date {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
-  margin-right: 10px;
+  padding-left: 15px;
+
 }
 
 .time-date #time {
@@ -108,13 +108,14 @@ body {
   position: relative;
   font-size: 24px;
   margin-top: 2px;
-  transform:translate(57%,-38%);  /* Reduced line width */
+  transform:translateY(-38%);
+  left:67%;  /* Reduced line width */
 }
 
 .weather {
   display: flex;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 5px;
   z-index:999; /* Ensure there is space between time and weather */
 }
 
@@ -122,13 +123,13 @@ body {
   position: relative;
   font-size: 24px;
   margin-right: 10px;
-  transform: translate(650%,-52%);
+  transform: translate(650%,-55%);
 }
 
 .weather #temperature {
   position: relative;
   font-size: 18px;
-  transform: translate(180%,-90%);
+  transform: translate(180%,-88%);
 }
 
 .connectivity-icons {
@@ -153,7 +154,7 @@ body {
   display: flex;
   align-items: center; /* Align items to the center vertically */
   justify-content: flex-end; /* Align items to the right */
-
+  z-index: 1000;
   margin-top: 80px; /* Push to the bottom */
   padding-bottom: 20px; /* Add padding to create space */
   position: absolute; /* Position absolute for precise alignment */
@@ -607,7 +608,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 1501;
 }
 
 .ac-popup-content {
@@ -1118,17 +1119,17 @@ span {
 }
 .app-carousel-container {
   position: absolute;
-  width:1955px;
+  width:97.85%;
   height:550px;
   background: rgba( 255, 255, 255, 0.05 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 20px );
+backdrop-filter: blur( 30px );
 -webkit-backdrop-filter: blur( 20px );
 animation: slideUp2 0.5s ease-out;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 
   padding: 20px;
-  z-index:999;
+  z-index:1001;
   margin: auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
@@ -1233,6 +1234,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 .app-icon:hover {
   transform: scale(0.9); /* Keeps the overall scaling effect */
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)); 
+  border: 3px solid rgba(255, 255, 255, 1.4); 
 }
 
 
@@ -1253,15 +1255,61 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 .alice-carousel__prev-btn-item,
 .alice-carousel__next-btn-item {
-  position:relative;
-  width:25px;
-  height:25px;
-
-  top:100%;  
-  background: black;
-  
+  position: absolute;
+  top: 45%;
+  transform: translateY(-100%);
+  background: rgb(0, 8, 10);
+  width: 60px; /* Adjust size as needed */
+  height: 60px;
   border-radius: 60%;
+  z-index: 10;
 }
+
+.alice-carousel__prev-btn-item {
+  left: 0; /* Position to the extreme left */
+}
+
+.alice-carousel__next-btn-item {
+  right: 0; /* Position to the extreme right */
+}
+
+.alice-carousel__prev-btn, .alice-carousel__next-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alice-carousel__prev-btn-item::before,
+.alice-carousel__next-btn-item::before {
+  position: relative;
+
+  content: '';
+  display: inline-table;
+  border: solid rgb(4, 15, 221);
+  border-width: 0 10px 10px 0;
+  padding: 10px;
+  transform: rotate(45deg);
+  transform: scale(0.9);
+  
+}
+
+.alice-carousel__prev-btn-item::before {
+  transform: rotate(135deg);
+  left:0px;
+  top:5px; /* Arrow pointing left */
+}
+.alice-carousel__prev-btn-item:hover{
+  filter: drop-shadow(0 0 10px rgba(1, 255, 255, 2)); 
+}
+.alice-carousel__next-btn-item:hover{
+  filter: drop-shadow(0 0 10px rgba(1, 255, 255, 2)); 
+}
+.alice-carousel__next-btn-item::before {
+  transform: rotate(-45deg);
+  right:-9px;
+  top:5px; /* Arrow pointing right */
+}
+
 
 .alice-carousel__dots {
   display: none;
@@ -1325,7 +1373,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 1500;
 }
 
 .fullscreen-popup {
@@ -2067,6 +2115,7 @@ input:checked + .slider:before {
   width: 48.5%;
   height: 68%;
   padding: 10px;
+  
   margin-left: 8%;
   transform: translate(23%, -55%);
   background: rgba(255, 255, 255, 0.07);
@@ -2077,6 +2126,7 @@ input:checked + .slider:before {
   border-radius: 38px;
   margin-left: 8%;
 }
+
 
 .keypad-section {
   flex: 0 0 33%;
@@ -2746,4 +2796,157 @@ iframe {
 .voltage-current-container.grid-open {
   pointer-events: none; /* Disables clicking in the background */
   opacity: 0.5; /* Slightly dim the background */
+}
+.app-carousel-container2 {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.app-carousel2 {
+  position: absolute;
+  width: 68%;
+  height: 420px;
+  background: rgba( 255, 255, 255, 0.1 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+  border-radius: 20px;
+  border:2px;
+  border-color:whitesmoke;
+ 
+  
+  padding: 20px;
+  transform:translate(-40%,65%); /* Adjusted translate to push content upwards */
+}
+
+.app-carousel-content2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-bar2 {
+  position: relative;
+  top: -80px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+  justify-content: center;
+}
+
+.search-bar2 input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 40px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.search-bar2 .search-button2 img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* Pushes buttons slightly higher */
+.button-container2 {
+  position:relative;
+  top:-50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size:20px;
+  
+   /* Increased margin from top to push the buttons upward */
+}
+
+
+.app-button1 {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #1e2a46;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.app-button1.active {
+  background-color: #4e7aed;
+}
+
+/* App Icon Styling */
+.app-icon2 {
+  width:140px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 200px;
+  background: rgba( 255, 255, 255, 0.15 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 13px );
+-webkit-backdrop-filter: blur( 13px );
+border-radius: 20px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  transition: all 0.3s ease-in-out; /* Added smooth transition for hover effect */
+}
+
+.app-icon2 img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 18px;
+}
+
+.app-icon2 span {
+  color: #fff;
+  font-size: 20px;
+}
+.app-icon2:hover {
+   /* Keeps the overall scaling effect */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)); 
+  border: 2px solid rgba(255, 255, 255, 0.8); 
+}
+/* Hover effect for glowing border */
+
+
+/* Styling for when there are less than 3 apps */
+.side-by-side1 {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.filtered-apps-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Custom gap between icons */
+  flex-wrap: nowrap; /* Ensure icons don’t wrap unless you want them to */
+}
+
+.close-button2 {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
