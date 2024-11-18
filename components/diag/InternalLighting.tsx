@@ -1,4 +1,5 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
+import {io} from 'socket.io-client';
 
 const InternalLighting: React.FC = () => {
     const [RoofLightStatus, setRoofLightStatus] = useState('ON');
@@ -10,6 +11,44 @@ const InternalLighting: React.FC = () => {
     const [DashboardLightsStatus, setDashboardLightsStatus] = useState('OFF');
     const [DashboardLightsValue, setDashboardLightsValue] = useState('OFF');
     const [BoatLightsStatus, setBoatLightsStatus] = useState('ON');
+
+    useEffect(() =>{
+      console.log("Setting up InternalLighting hooks")
+
+      const updateFunction = () => {
+        fetch('http://0.0.0.0:5001/int_lighting')
+          .then(async response => {
+            const data = await response.json()
+            console.log("Lighing data: ")
+            console.log(data)   
+
+
+            const int = data["Internal"]
+            const dashboard = int["DashboardLights"]
+            const bootLights = int["BootLights"]
+            const doorpuddle = int["DoorPuddleLights"]
+            const floor = int["FloorLights"]
+            const roof = int["RoofLight"]
+
+            setDashboardLightsStatus(dashboard["Status"] ? "ON" : "OFF")
+            setDashboardLightsValue(dashboard["Brightness"])
+
+            setRoofLightStatus(roof["Status"] ? "ON" : "OFF")
+            setRoofLightValue(roof["Brightness"])
+
+            setFloorLightsStatus(floor["Status"] ? "ON" : "OFF")
+            setFloorLightsValue(floor["Brightness"])
+
+            setDoorPuddleStatus(doorpuddle["Status"] ? "ON" : "OFF")
+            setDoorPuddleValue(doorpuddle["Brightness"])
+
+            setBoatLightsStatus(bootLights["Status"] ? "ON" : "OFF")
+        })
+      }
+      const id = setInterval(updateFunction, 1000)
+      return () => clearInterval(id)
+
+    })
 
   return (
     <div className="external-lighting-box">
