@@ -1,4 +1,1 @@
-[submodule "websockets"]
-	path = websockets
-	url = https://github.com/its-ME-007/websockets.git
-	branch = threaded
+
