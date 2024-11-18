@@ -21,7 +21,7 @@ const MainContent6: React.FC = () => {
         </h1>
         <h2>Hello Billy! Where do you want to go today?</h2>
         <button className="action-button-xy29" onClick={handleButtonClick}>
-          Let's GO WIPOD
+          GO WIPOD
         </button>
       </div>
     </div>

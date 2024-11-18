@@ -19,7 +19,7 @@ const Diag: React.FC = () => {
           rel="stylesheet"
         />
         <link rel="stylesheet" href="/styles/globals.css" />
-        <title>Car Dashboard with Music Toolbar</title>
+        <title>WIPO</title>
       </Head>
 
       <MainContent />

@@ -94,42 +94,41 @@ body {
   display: flex;
   flex-direction: column;
   padding-left: 15px;
-
 }
 
 .time-date #time {
   position: absolute;
   font-size: 36px;
   margin-bottom: 2px;
-  transform:translateY(-125%); /* Reduced line width */
+  transform: translateY(-125%); /* Reduced line width */
 }
 
 .time-date #date {
   position: relative;
   font-size: 24px;
   margin-top: 2px;
-  transform:translateY(-38%);
-  left:67%;  /* Reduced line width */
+  transform: translateY(-38%);
+  left: 67%; /* Reduced line width */
 }
 
 .weather {
   display: flex;
   align-items: center;
   margin-left: 5px;
-  z-index:999; /* Ensure there is space between time and weather */
+  z-index: 999; /* Ensure there is space between time and weather */
 }
 
 .weather #weather-icon {
   position: relative;
   font-size: 24px;
   margin-right: 10px;
-  transform: translate(650%,-55%);
+  transform: translate(650%, -55%);
 }
 
 .weather #temperature {
   position: relative;
   font-size: 18px;
-  transform: translate(180%,-88%);
+  transform: translate(180%, -88%);
 }
 
 .connectivity-icons {
@@ -568,12 +567,10 @@ body {
 }
 
 .icon-button:hover {
-
-    
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 10)); /* Keeps the overall scaling effect */
-  
-  }
-
+  filter: drop-shadow(
+    0 0 8px rgba(255, 255, 255, 10)
+  ); /* Keeps the overall scaling effect */
+}
 
 #favs-title {
   color: white;
@@ -740,7 +737,6 @@ input[type="range"] {
 span {
   font-size: 20px;
 }
-
 
 .mode-buttons {
   display: flex;
@@ -1119,24 +1115,24 @@ span {
 }
 .app-carousel-container {
   position: absolute;
-  width:97.85%;
-  height:550px;
-  background: rgba( 255, 255, 255, 0.05 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 30px );
--webkit-backdrop-filter: blur( 20px );
-animation: slideUp2 0.5s ease-out;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  width: 97.85%;
+  height: 550px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(20px);
+  animation: slideUp2 0.5s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 
   padding: 20px;
-  z-index:1001;
+  z-index: 1001;
   margin: auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .app-carousel-content {
   position: relative;
-  gap:1000px;
+  gap: 1000px;
 }
 
 .close-button {
@@ -1167,14 +1163,14 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   border: none;
   outline: none;
   font-size: 23px;
-  background-color: #4A5675;
+  background-color: #4a5675;
   color: white;
 }
 
 .search-button {
   position: absolute;
- 
-  transform: translate(1150%,-188%);
+
+  transform: translate(1150%, -188%);
   background: none;
   border: none;
   cursor: pointer;
@@ -1185,13 +1181,11 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   height: 60px;
 }
 
-
-
 h3 {
   color: white;
   margin-top: 120px;
   font-size: 2em;
-  gap:1000px;
+  gap: 1000px;
   border-radius: 200px;
 }
 
@@ -1205,17 +1199,16 @@ h3 {
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
   border-radius: 200px;
-  background: rgba( 255, 255, 255, 0.15 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 13px );
--webkit-backdrop-filter: blur( 13px );
-border-radius: 20px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   margin: 0 10px;
   height: 300px;
   width: 1000px;
- 
 }
 
 .app-icon img {
@@ -1228,15 +1221,13 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   color: white;
   font-size: 30px;
   text-align: center;
- 
 }
 
 .app-icon:hover {
   transform: scale(0.9); /* Keeps the overall scaling effect */
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)); 
-  border: 3px solid rgba(255, 255, 255, 1.4); 
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+  border: 3px solid rgba(255, 255, 255, 1.4);
 }
-
 
 @media (min-width: 1024px) {
   .app-icon {
@@ -1273,7 +1264,8 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   right: 0; /* Position to the extreme right */
 }
 
-.alice-carousel__prev-btn, .alice-carousel__next-btn {
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1283,33 +1275,31 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 .alice-carousel__next-btn-item::before {
   position: relative;
 
-  content: '';
+  content: "";
   display: inline-table;
   border: solid rgb(4, 15, 221);
   border-width: 0 10px 10px 0;
   padding: 10px;
   transform: rotate(45deg);
   transform: scale(0.9);
-  
 }
 
 .alice-carousel__prev-btn-item::before {
   transform: rotate(135deg);
-  left:0px;
-  top:5px; /* Arrow pointing left */
+  left: 0px;
+  top: 5px; /* Arrow pointing left */
 }
-.alice-carousel__prev-btn-item:hover{
-  filter: drop-shadow(0 0 10px rgba(1, 255, 255, 2)); 
+.alice-carousel__prev-btn-item:hover {
+  filter: drop-shadow(0 0 10px rgba(1, 255, 255, 2));
 }
-.alice-carousel__next-btn-item:hover{
-  filter: drop-shadow(0 0 10px rgba(1, 255, 255, 2)); 
+.alice-carousel__next-btn-item:hover {
+  filter: drop-shadow(0 0 10px rgba(1, 255, 255, 2));
 }
 .alice-carousel__next-btn-item::before {
   transform: rotate(-45deg);
-  right:-9px;
-  top:5px; /* Arrow pointing right */
+  right: -9px;
+  top: 5px; /* Arrow pointing right */
 }
-
 
 .alice-carousel__dots {
   display: none;
@@ -1345,9 +1335,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   flex-wrap: wrap; /* This allows icons to wrap to the next line if needed */
   justify-content: flex-start; /* Aligns apps to the left */
   gap: 20px; /* Adds space between each app icon */
- 
 }
-
 
 @keyframes slideUp2 {
   0% {
@@ -1496,7 +1484,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   width: 88%;
   height: 100%;
   left: 50%;
-  z-index:999;
+  z-index: 999;
   transform: translate(-5.2%, -10%);
 }
 
@@ -1933,14 +1921,14 @@ span {
 }
 
 .title-container {
-  display: flex;           /* Use Flexbox for alignment */
-  align-items: center;    /* Center align items vertically */
+  display: flex; /* Use Flexbox for alignment */
+  align-items: center; /* Center align items vertically */
 }
 
 .button-icon1 {
-  width: 60px;            /* Adjust icon size */
-  height: 60px;           /* Adjust icon size */
-  margin-right: 10px;      /* Space between icon and text */
+  width: 60px; /* Adjust icon size */
+  height: 60px; /* Adjust icon size */
+  margin-right: 10px; /* Space between icon and text */
 }
 
 .button-text {
@@ -2012,7 +2000,7 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 .exterior-light-button-option {
-  font-family: 'Urbanist',sans-serif;
+  font-family: "Urbanist", sans-serif;
   height: 48px;
   width: 170px;
   border-radius: 24px;
@@ -2024,7 +2012,7 @@ input:checked + .slider:before {
 }
 
 .exterior-light-button-option-selected {
-  font-family: 'Urbanist',sans-serif;
+  font-family: "Urbanist", sans-serif;
   height: 48px;
   width: 170px;
   border-radius: 24px;
@@ -2034,7 +2022,6 @@ input:checked + .slider:before {
   font-size: 20px;
   cursor: pointer; /* Ensures the button looks clickable */
 }
-
 
 .exterior-light-option-checkbox {
   width: 170px;
@@ -2046,8 +2033,7 @@ input:checked + .slider:before {
   height: 48px;
   border-radius: 24px;
   margin-right: 40px;
-  font-family: 'Urbanist',sans-serif;
-  
+  font-family: "Urbanist", sans-serif;
 }
 
 .button-settings-button {
@@ -2062,7 +2048,7 @@ input:checked + .slider:before {
   border-radius: 24px;
   box-shadow: none;
   border-style: solid;
-  transform:translate(0%,10%);
+  transform: translate(0%, 10%);
 }
 
 .button-settings-button:hover,
@@ -2115,7 +2101,7 @@ input:checked + .slider:before {
   width: 48.5%;
   height: 68%;
   padding: 10px;
-  
+
   margin-left: 8%;
   transform: translate(23%, -55%);
   background: rgba(255, 255, 255, 0.07);
@@ -2126,7 +2112,6 @@ input:checked + .slider:before {
   border-radius: 38px;
   margin-left: 8%;
 }
-
 
 .keypad-section {
   flex: 0 0 33%;
@@ -2301,12 +2286,11 @@ input:checked + .slider:before {
 }
 .speedometer-container {
   position: relative;
-  
+
   width: 6%;
   height: 180vh;
   transform: translate(20%, 17%);
 }
-
 
 .circle-container {
   display: flex;
@@ -2496,24 +2480,42 @@ iframe {
   animation: slideInFromLeft 2s ease-out; /* Car animation */
 }
 
-.welcome-text-xy29 {
-  text-align: left;
-  color: white;
-  max-width: 400px; /* Limit the width of the text */
+.welcome-text-xy29 h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #f5f5f5;
 }
 
-.welcome-text-xy29 h1 strong {
-  color: #e1e1e1;
+.welcome-text-xy29 h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: #b2becd;
 }
-
 .action-button-xy29 {
-  background-color: #28a745;
-  color: white;
-  padding: 10px 20px;
+  background: #ff4d4d;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
-  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(255, 77, 77, 0.5);
+}
+
+.action-button-xy29:hover {
+  background: #ff6b6b;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 15px rgba(255, 77, 77, 0.7);
+}
+
+.action-button-xy29 span {
+  display: inline-block;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Animation for the car coming in from the left */
@@ -2533,12 +2535,12 @@ iframe {
   justify-content: center;
   width: 264px;
   height: 141.6px;
-  background-color: #0E0E0E; /* Button background color */
-  border: 1.6px solid #FFFFFF66; /* Updated button border color */
+  background-color: #0e0e0e; /* Button background color */
+  border: 1.6px solid #ffffff66; /* Updated button border color */
   border-radius: 40px; /* Updated corner radius */
   padding: 20px;
   color: white;
-  font-family: 'Montserrat', sans-serif; /* Set font to Montserrat */
+  font-family: "Montserrat", sans-serif; /* Set font to Montserrat */
   font-size: 20px; /* Set font size to 20px */
   cursor: pointer;
   outline: none;
@@ -2571,24 +2573,24 @@ iframe {
   font-size: 20px;
 }
 
-.parking-brake-button1 .text21{
+.parking-brake-button1 .text21 {
   margin-top: 10px; /* Space between the two text sections */
   font-size: 20px;
 }
 
-.vehicle-power{
+.vehicle-power {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 176px;
   height: 48px;
-  background-color: #0E0E0E; /* Button background color */
-  border: 1.6px solid #FFFFFF66; /* Updated button border color */
+  background-color: #0e0e0e; /* Button background color */
+  border: 1.6px solid #ffffff66; /* Updated button border color */
   border-radius: 40px; /* Updated corner radius */
   padding: 20px;
   color: white;
-  font-family: 'Montserrat', sans-serif; /* Set font to Montserrat */
+  font-family: "Montserrat", sans-serif; /* Set font to Montserrat */
   font-size: 20px; /* Set font size to 20px */
   cursor: pointer;
   outline: none;
@@ -2598,12 +2600,12 @@ iframe {
   transition: background-color 0.3s;
 }
 
-.vehicle-power:hover{
+.vehicle-power:hover {
   background-color: grey;
 }
 
-.below-vehicle-power{
-  font-family: 'Montserrat', sans-serif;
+.below-vehicle-power {
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   top: 392px;
   left: 285px;
@@ -2617,8 +2619,8 @@ iframe {
   font-weight: bold;
 }
 
-.beside-parking-brake{
-  font-family: 'Montserrat',sans-serif;
+.beside-parking-brake {
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   position: absolute;
   cursor: pointer;
@@ -2657,7 +2659,7 @@ iframe {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  transform: translate(-1730%,-110%);
+  transform: translate(-1730%, -110%);
 }
 
 .slider-btn2 {
@@ -2668,16 +2670,15 @@ iframe {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  transform: translate(-1030%,-110%);
+  transform: translate(-1030%, -110%);
 }
-
 
 .slider-btn1.left {
   left: 0;
 }
 
 .slider-btn1.right {
-  right: 0; 
+  right: 0;
 }
 
 .slider-btn2.left {
@@ -2685,7 +2686,7 @@ iframe {
 }
 
 .slider-btn2.right {
-  right: 0; 
+  right: 0;
 }
 
 .distanceValue {
@@ -2698,24 +2699,23 @@ iframe {
   transform: translate(-790%, -55%);
 }
 
-
 .cruise-group-title {
   font-size: 21px;
   font-family: "Urbanist", sans-serif;
-  transform: translate(0%,-380%);
+  transform: translate(0%, -380%);
 }
 
 @keyframes slideUp {
   0% {
-    transform: translate(25%,100%);
+    transform: translate(25%, 100%);
     opacity: 0;
   }
   80% {
-    transform: translate(25%,0%);
+    transform: translate(25%, 0%);
     opacity: 1;
   }
   100% {
-    transform: translate(25%,0%);
+    transform: translate(25%, 0%);
     opacity: 1;
   }
 }
@@ -2725,7 +2725,7 @@ iframe {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgb(0, 0, 0,1);
+  background-color: rgb(0, 0, 0, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2741,14 +2741,13 @@ iframe {
   border-radius: 10px;
   color: white;
   backdrop-filter: blur(10px);
-  transform: translate(25%,0%);
+  transform: translate(25%, 0%);
   animation: slideUp 0.5s ease-out;
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index:9999;
+  z-index: 9999;
 }
-
 
 .grid-container {
   display: grid;
@@ -2812,17 +2811,19 @@ iframe {
   position: absolute;
   width: 68%;
   height: 420px;
-  background: rgba( 255, 255, 255, 0.1 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 20px );
--webkit-backdrop-filter: blur( 20px );
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 20px;
-  border:2px;
-  border-color:whitesmoke;
- 
-  
+  border: 2px;
+  border-color: whitesmoke;
+
   padding: 20px;
-  transform:translate(-40%,65%); /* Adjusted translate to push content upwards */
+  transform: translate(
+    -40%,
+    65%
+  ); /* Adjusted translate to push content upwards */
 }
 
 .app-carousel-content2 {
@@ -2858,16 +2859,15 @@ backdrop-filter: blur( 20px );
 
 /* Pushes buttons slightly higher */
 .button-container2 {
-  position:relative;
-  top:-50px;
+  position: relative;
+  top: -50px;
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
-  font-size:20px;
-  
-   /* Increased margin from top to push the buttons upward */
-}
+  font-size: 20px;
 
+  /* Increased margin from top to push the buttons upward */
+}
 
 .app-button1 {
   padding: 10px 20px;
@@ -2886,7 +2886,7 @@ backdrop-filter: blur( 20px );
 
 /* App Icon Styling */
 .app-icon2 {
-  width:140px;
+  width: 140px;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
@@ -2896,12 +2896,12 @@ backdrop-filter: blur( 20px );
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
   border-radius: 200px;
-  background: rgba( 255, 255, 255, 0.15 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 13px );
--webkit-backdrop-filter: blur( 13px );
-border-radius: 20px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   margin: 0;
   transition: all 0.3s ease-in-out; /* Added smooth transition for hover effect */
@@ -2918,12 +2918,11 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   font-size: 20px;
 }
 .app-icon2:hover {
-   /* Keeps the overall scaling effect */
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)); 
-  border: 2px solid rgba(255, 255, 255, 0.8); 
+  /* Keeps the overall scaling effect */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+  border: 2px solid rgba(255, 255, 255, 0.8);
 }
 /* Hover effect for glowing border */
-
 
 /* Styling for when there are less than 3 apps */
 .side-by-side1 {
