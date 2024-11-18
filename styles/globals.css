@@ -2949,3 +2949,86 @@ iframe {
   top: 20px;
   right: 20px;
 }
+.carousel-header {
+  text-align: center;
+  margin: 1rem 0;
+  color: #fff;
+}
+
+.carousel-header h2 {
+  font-size: 1.5rem;
+}
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+  width: 69%;
+  height:70%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Custom Prev Button */
+.custom-prev-btn,
+.custom-next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.custom-prev-btn:hover,
+.custom-next-btn:hover {
+  background: rgba(255, 255, 255, 0.7);
+  color: #000;
+}
+
+.custom-prev-btn {
+  left: -110px; /* Adjust based on design */
+}
+
+.custom-next-btn {
+  right: -20px; /* Adjust based on design */
+}
+
+/* Profile Card */
+.profile-card {
+  width:325px;
+  height:375px;
+  background: rgba( 143, 223, 247, 0.1 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 14.5px );
+  -webkit-backdrop-filter: blur( 14.5px );
+
+
+
+border: 6px solid rgba( 255, 255, 255, 0.18 ); /* Semi-transparent background */
+  border-radius: 25px;
+  padding: 1rem;
+  text-align: center;
+  
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: scale(0.9); /* Keeps the overall scaling effect */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)); 
+  border: 9px solid rgba(255, 255, 255, 1.4); 
+}
+
+/* Profile Image */
+.profile-image {
+  transform:translateY(40%);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}

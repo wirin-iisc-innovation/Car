@@ -11,7 +11,7 @@ export default function Home() {
   useEffect(() => {
     // Redirect to /mode after 5 seconds (for example)
     const timer = setTimeout(() => {
-      router.push("/main");
+      router.push("/profile");
     }, 7000);
 
     // Clean up the timer if the component unmounts
