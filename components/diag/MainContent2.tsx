@@ -416,52 +416,52 @@ const MainContent: React.FC = () => {
     return null;
   };
 
-  const socket = io('http://127.0.0.1:5000');
-  socket.connect();
+  // const socket = io('http://127.0.0.1:5000');
+  // socket.connect();
 
-  socket.on('battery_cell_voltage', (charge) => {
-    setChargePercentage(charge["Charge"]);
-  })
-  socket.on('battery_charging_mosfet', (mosftJson) => {
-    setMosfetChargingState(mosftJson["ChargingMOSFET"]);
-  })
-  socket.on('battery_discharging_mosfet', (Json) => {
-    setMosfetDischargingState(Json["DischargingMOSFET"]);
-  })
-  socket.on('battery_temperature', (Json) => {
-    setTemperature(Json["Temperature"]);
-  })
-  socket.on('battery_capacity', (Json1) => {
-    setbatteryCapacity(Json1["Capacity"]);
-  })
-  socket.on('battery_minimum_voltage', (Json2) => {
-    setminVoltage(Json2["CellMinimumVoltage"]);
-  })
-  socket.on('battery_maximum_voltage', (Json3) => {
-    setmaxVoltage(Json3["CellMaximumVoltage"]);
-  })
+  // socket.on('battery_cell_voltage', (charge) => {
+  //   setChargePercentage(charge["Charge"]);
+  // })
+  // socket.on('battery_charging_mosfet', (mosftJson) => {
+  //   setMosfetChargingState(mosftJson["ChargingMOSFET"]);
+  // })
+  // socket.on('battery_discharging_mosfet', (Json) => {
+  //   setMosfetDischargingState(Json["DischargingMOSFET"]);
+  // })
+  // socket.on('battery_temperature', (Json) => {
+  //   setTemperature(Json["Temperature"]);
+  // })
+  // socket.on('battery_capacity', (Json1) => {
+  //   setbatteryCapacity(Json1["Capacity"]);
+  // })
+  // socket.on('battery_minimum_voltage', (Json2) => {
+  //   setminVoltage(Json2["CellMinimumVoltage"]);
+  // })
+  // socket.on('battery_maximum_voltage', (Json3) => {
+  //   setmaxVoltage(Json3["CellMaximumVoltage"]);
+  // })
 
-  socket.on('battery_voltage',(Json4) => {
-    setarrayVoltage(Json4["Voltage"]);
-  })
+  // socket.on('battery_voltage',(Json4) => {
+  //   setarrayVoltage(Json4["Voltage"]);
+  // })
   
   
 
-  useEffect(() => {
-    const updateFunc = async () => {
-      socket.emit('get_cell_voltage');
-      socket.emit('get_charging_mosfet');
-      socket.emit('get_discharging_mosfet');
-      socket.emit('get_temperature');
-      socket.emit('get_capacity');
-      socket.emit('get_min_voltage');
-      socket.emit('get_max_voltage');
-      socket.emit('get_voltage');
-    }
+  // useEffect(() => {
+  //   const updateFunc = async () => {
+  //     socket.emit('get_cell_voltage');
+  //     socket.emit('get_charging_mosfet');
+  //     socket.emit('get_discharging_mosfet');
+  //     socket.emit('get_temperature');
+  //     socket.emit('get_capacity');
+  //     socket.emit('get_min_voltage');
+  //     socket.emit('get_max_voltage');
+  //     socket.emit('get_voltage');
+  //   }
 
-    const id = setInterval(updateFunc, 2000);
-    return () => clearInterval(id);
-  })
+  //   const id = setInterval(updateFunc, 2000);
+  //   return () => clearInterval(id);
+  // })
 
   return (
     <div className="body">
