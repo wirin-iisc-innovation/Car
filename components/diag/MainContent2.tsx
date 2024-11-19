@@ -93,8 +93,9 @@ const MainContent: React.FC = () => {
   const isGood = true;
 
 
-  const updateFunction = () => {
-    fetch('http://0.0.0.0:5002/bms').then( async response => {
+  const updateFunction = async () => {
+    try {
+      const response = await fetch('http://0.0.0.0:5002/bms');
       const data = await response.json()
 
       const battery = data["Battery"];
@@ -112,12 +113,37 @@ const MainContent: React.FC = () => {
       setminVoltage(battery["CellMinimumVoltage"])
       setbatteryCapacity(battery["Capacity"])
       setErrorCode(battery["ErrorStatus"])
-    })
+    } catch(e) {  
+      console.log("Fetch error")
+      window.alert("BMS Service encountered an error")
+    }
+  }
+
+
+  const controlUnitUpdate = async () => {
+     try {
+      const response = await fetch('http://0.0.0.0:5004/lvl2cu')
+    const data = (await response.json())["LEVEL2_CU"];
+
+    for(const unit in data) {
+      const heartbeat = data[unit]["Heartbeat"]
+      if(heartbeat == 0) {
+        window.alert("HEARTBEAT GONE")
+      }
+    }
+  } catch(e) {
+    console.log("BAD ERROR")
+    window.alert("Control Unit 2 has encountered an error!")
+  }
   }
 
   useEffect(() => {
-    const id = setInterval(updateFunction, 1000)
-    return () => clearInterval(id)
+    const bms = setInterval(updateFunction, 1000)
+    const id = setInterval(controlUnitUpdate, 1000)
+    return () => { 
+      clearInterval(id)
+      clearInterval(bms)
+    }
   })
 
   const handleSidebar2Click = (category: string) => {
