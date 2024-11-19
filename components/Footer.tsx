@@ -113,7 +113,19 @@ const Footer: React.FC = () => {
                     min="16"
                     max="30"
                     value={temperature}
-                    onChange={(e) => setTemperature(parseInt(e.target.value))}
+                    onChange={(e) => {
+                      setTemperature(parseInt(e.target.value))
+                      fetch(`http://127.0.0.1:5009/hvac/Temperature/${temperature}`, { method: 'POST'})
+                        .then( async reponse => {
+                          if(reponse.ok) {
+                            console.log("Successfuly updated HVAC Temperature")
+                            console.log(await reponse.json())
+                          }
+                        })
+                        .catch( reason => {
+                          console.log(reason)
+                        })
+                    }}
                     className="temperature-slider"
                   />
                 </div>
@@ -127,7 +139,19 @@ const Footer: React.FC = () => {
                     min="1"
                     max="5"
                     value={fanSpeed}
-                    onChange={(e) => setFanSpeed(parseInt(e.target.value))}
+                    onChange={(e) => {
+                      setFanSpeed(parseInt(e.target.value))
+                      fetch(`http://127.0.0.1:5009/hvac/FanSpeed/${fanSpeed}`, { method: 'POST'})
+                        .then( async reponse => {
+                          if(reponse.ok) {
+                            console.log("Successfuly updated HVAC Fan Speed")
+                            console.log(await reponse.json())
+                          }
+                        })
+                        .catch( reason => {
+                          console.log(reason)
+                        })
+                    }}
                     className="fan-speed-slider"
                   />
                   <div className="fan-speed-dots">

@@ -36,6 +36,10 @@ const handleLightOptionClick = (option: string) => {
     setDistanceValue((prevValue) => (prevValue > 1 ? prevValue - 1 : prevValue));
   };
 
+  const updateFunction = () => {
+    // post data to server
+  }
+
   return (
     <div className="main-content3">
       <div className="sidebar">
