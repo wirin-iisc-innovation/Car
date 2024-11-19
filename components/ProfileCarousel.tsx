@@ -1,14 +1,15 @@
+
 import React, { useRef } from "react";
 import { useRouter } from "next/router";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import Footer from "../components/Footer"; // Untouched Footer import
+import Footer from "../components/Footer";
 
 const profiles = [
   {
     id: 1,
     name: "Mr Bean",
-    image: "/images/mrbean.jpeg", // Replace with actual profile image
+    image: "/images/mrbean.jpeg",
     time: "10:30 AM",
   },
   {
@@ -39,18 +40,17 @@ const profiles = [
 
 const ProfileCarousel = () => {
   const router = useRouter();
-  const carouselRef = useRef<AliceCarousel>(null); // Ref for manual navigation
+  const carouselRef = useRef<AliceCarousel>(null);
 
-  const handleProfileClick = (profileId: number) => {
-    router.push(`/main?profileId=${profileId}`);
+  const handleProfileClick = (profileId: number, profileName: string) => {
+    router.push(`/main?profileId=${profileId}&profileName=${encodeURIComponent(profileName)}`);
   };
 
-  // Items for the carousel
   const items = profiles.map((profile) => (
     <div
       key={profile.id}
       className="profile-card"
-      onClick={() => handleProfileClick(profile.id)}
+      onClick={() => handleProfileClick(profile.id, profile.name)}
     >
       <img src={profile.image} alt={profile.name} className="profile-image" />
       <h3>{profile.name}</h3>
@@ -83,13 +83,13 @@ const ProfileCarousel = () => {
           responsive={responsive}
           controlsStrategy="responsive"
           disableDotsControls
-          disableButtonsControls // Disable default buttons
+          disableButtonsControls
         />
         <button className="custom-next-btn" onClick={slideNext}>
           &#8594;
         </button>
       </div>
-      <Footer /> {/* Untouched Footer */}
+      <Footer />
     </div>
   );
 };
