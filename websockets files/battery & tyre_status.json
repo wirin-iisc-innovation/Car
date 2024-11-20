@@ -1,0 +1,47 @@
+{
+    "Battery": {
+        "Voltage": [
+            2.1,
+            2,
+            2.1,
+            2.1,
+            2.1,
+            2.1,
+            2.2,
+            2.2,
+            2.2,
+            2.2,
+            2.1,
+            2.1,
+            2.1,
+            2.1,
+            2.1,
+            2.1,
+            2.2,
+            2.2,
+            2.2,
+            2.2,
+            2.3,
+            2.4,
+            2.5,
+            2.6
+        ],
+        "Current": 4.3,
+        "SOC": 85,
+        "NumberOfCells": 6,
+        "CellVoltage": 54,
+        "ChargingMOSFET": "ON",
+        "DischargingMOSFET": "ON",
+        "CellMinimumVoltage": 2.1,
+        "CellMaximumVoltage": 2.2,
+        "Capacity": 55,
+        "ERRORStatus": 0,
+        "Temperature": 81
+    },
+    "Tyre": {
+        "Right_Front": 7,
+        "Right_Back": 29,
+        "Left_Front": 26,
+        "Left_Back": 29
+    }
+}

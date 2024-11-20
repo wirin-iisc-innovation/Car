@@ -1,0 +1,19 @@
+{
+    "External": {
+        "Headlights": {
+            "Status": 1
+        },
+        "TailLights": {
+            "Status": 1
+        },
+        "BrakeLights": {
+            "Status": 0
+        },
+        "TurnSignals": {
+            "Status": 1
+        },
+        "FogLights": {
+            "Status": 0
+        }
+    }
+}
